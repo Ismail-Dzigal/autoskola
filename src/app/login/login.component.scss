@@ -1,0 +1,44 @@
+.logo-wrapper {
+    margin-top: 200px;
+    img {
+        margin-left: auto;
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    h3 {
+        margin-right: auto;
+    }
+}
+.login-wrapper {
+    font-size: 1.5rem;
+    form {
+        margin: 40px auto;
+        border: 2px solid rgba(150,150,150,0.6);
+        border-radius: 10px;
+        padding: 50px;
+        background-color: rgb(240,240,240);
+        h3 {
+            margin-bottom: 50px;
+        }
+        .form-group {
+            margin-bottom: 30px;
+            label {
+                width: 160px;
+            }
+            input {
+                width: 400px;
+                font-size: 1.3rem;
+                border-radius: 6px;
+                background-color: rgb(230,240,250);
+            }
+        }
+ 
+        button {
+            margin-top: 10px;
+            font-size: 1.3rem;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+}
