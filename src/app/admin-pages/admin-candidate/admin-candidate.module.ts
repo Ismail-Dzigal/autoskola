@@ -4,6 +4,7 @@ import { AddCandidateComponent } from './add-candidate/add-candidate.component';
 import { EditCandidateComponent } from './edit-candidate/edit-candidate.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AdminCandidateRoutingModule } from './admin-candidate-routing.module';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -11,6 +12,7 @@ import { AdminCandidateRoutingModule } from './admin-candidate-routing.module';
   declarations: [CandidatesListComponent, AddCandidateComponent, EditCandidateComponent],
   imports: [
     SharedModule,
+    NgbPaginationModule,
     AdminCandidateRoutingModule
   ]
 })

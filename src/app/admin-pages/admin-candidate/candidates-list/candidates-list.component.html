@@ -34,7 +34,55 @@
     </div>
     <div class="row main-content">
        <div class="col-md-8">
-
+           <div class="row search-wrapper">
+               <div class="col-md-10">
+                   <input type="text" class="search-list" placeholder="Search"/>
+               </div>
+               <div class="col-md-2">
+                   <button class="btn btn-secondary">Search</button>
+               </div>
+           </div>
+           <div class="row list-wrapper">
+               <div class="col-md-12 list-container">
+                  <div class="row candidate">
+                      <div class="col-md-9">
+                          <p>Ismail Džigal</p>
+                      </div>
+                      <div class="col-md-3">
+                          <button>Edit</button>
+                          <button>Delete</button>
+                      </div>
+                  </div>
+                  <div class="row candidate">
+                    <div class="col-md-9">
+                        <p>Stefan Balaban</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <div class="row candidate">
+                    <div class="col-md-9">
+                        <p>Andrej Marjanović</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+               </div>
+               <!-- <div class="col-md-12 empty-list">
+                   <p>Nema pronađenih kandidata</p>
+               </div> -->
+           </div>
+           <ngb-pagination class="pagination" [collectionSize]="totalCount" 
+           [pageSize]="pageSize"
+           [(page)]="currentPage"
+           [maxSize]="3"
+           [rotate]="true"
+           [boundaryLinks]="true">
+           </ngb-pagination>
        </div>
        <div class="col-md-4">
           <app-side-panels></app-side-panels>
