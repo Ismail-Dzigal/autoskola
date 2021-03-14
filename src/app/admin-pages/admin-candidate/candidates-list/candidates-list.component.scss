@@ -1,0 +1,186 @@
+.container {
+    background-color: #D9E4ED;
+    height: 95vh;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin-top: 20px;
+    .navbar-container {
+        border-radius: 10px;
+        border: 1px solid green;
+        background-color: #C9E5E5;
+        .logo-wrapper {
+            margin-top: 10px;
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+                margin-left: 10px;
+            }
+            h3 {
+                margin-right: 40px;
+                margin-top: 5px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        .navbar-wrapper {
+            .nav {
+                font-size: 1rem;
+                .border {
+                    margin-top: 15px;
+                    height: 20px;
+                    width: 4px;
+                    background-color: green;
+                }
+                .nav-item {
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                    .nav-link {
+                        color: black;
+                        font-weight: bold;
+                    }
+                    .active {
+                        border-bottom: 3px solid green;
+                    }
+                }
+            }
+        }
+        .logout {
+           a {
+               display: inline-block;
+               color: black;
+               font-size: 1rem;
+               font-weight: bold;
+               margin-top: 15px;
+               margin-left: 250px;
+           }
+        }
+    }
+    .main-content {
+        margin-top: 25px;
+        .col-md-8 {
+            .row {
+                .col-md-6 {
+                    margin-bottom: 20px;
+                    .card-wrapper {
+                        text-align: center;
+                        background-color: rgb(201,229,229);
+                        display: inline-block;
+                        border: 2px solid gray;
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 300px;
+                        position: relative;
+                        margin: 10px;
+                        .image-wrapper {
+                            margin: 15px;
+                            background-color: white;
+                            height: 270px;
+                            border-radius: 6px;
+                            border: 1px solid gray;
+                            img {
+                                display: inline-block;
+                                margin-top: 20px;
+                                width: 80%;
+                                height: 70%;
+                            }
+                            p {
+                               position: absolute;
+                               bottom: 0;
+                               left: 130px;
+                               color: black;
+                               font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .col-md-4 {
+            .content-wrapper {
+                min-height: 80vh;
+                margin-left: 10px;
+                border-left: 1px solid gray;
+                h5 {
+                  margin-left: 40px;
+                }
+                .notifications-wrapper {
+                    background-color: rgb(201,229,229);
+                    border: 1px solid gray;
+                    border-radius: 6px;
+                    margin-left: 15px;
+                    margin-bottom: 40px;
+                    .notification {
+                        display: flex;
+                        p {
+                           margin: 8px auto 8px 10px;
+                           font-size: 0.8rem;
+                        }
+                        .images-wrapper {
+                            margin-top: 6px;
+                            a {
+                                text-decoration: none;
+                                &:nth-child(2) {
+                                    .fas {
+                                        color: red;
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                .fas {
+                                    margin-right: 10px;
+                              
+                                }
+                            }
+                        }
+                    }
+                }
+                .reminders-wrapper {
+                    background-color: rgb(201,229,229);
+                    border: 1px solid gray;
+                    border-radius: 6px;
+                    margin-left: 15px;
+                    margin-bottom: 40px;
+                    .reminder {
+                        display: flex;
+                        p {
+                           margin: 8px auto 8px 10px;
+                           font-size: 0.8rem;
+                        }
+                        .images-wrapper {
+                            margin-top: 6px;
+                            a {
+                                text-decoration: none;
+                                .fas {
+                                    margin-right: 10px;
+                                    color: red;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                    .input-wrapper {
+                        .reminder-input {
+                            border-radius: 6px;
+                            margin-left: 10px;
+                            margin-right: 10px;;
+                            padding-left: 10px;
+                            background-color: rgb(217,228,237);
+                        }
+                        .fas:nth-of-type(2) {
+                            color: red;
+                            font-size: 1.2rem;
+                        }
+                    }
+            
+                    .add-reminder {
+                        background-color: green;
+                        border-radius: 6px;
+                        color: white;
+                        margin: 10px auto 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
