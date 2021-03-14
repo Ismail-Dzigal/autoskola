@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SidePanelsComponent } from './side-panels/side-panels/side-panels.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    SidePanelsComponent
   ],
-  declarations: [],
+  declarations: [SidePanelsComponent],
 })
 export class SharedModule { }

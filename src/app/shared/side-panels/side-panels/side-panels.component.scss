@@ -1,0 +1,83 @@
+.content-wrapper {
+    min-height: 80vh;
+    margin-left: 10px;
+    border-left: 1px solid gray;
+    h5 {
+      margin-left: 40px;
+    }
+    .notifications-wrapper {
+        background-color: rgb(201,229,229);
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-left: 15px;
+        margin-bottom: 40px;
+        .notification {
+            display: flex;
+            p {
+               margin: 8px auto 8px 10px;
+               font-size: 0.8rem;
+            }
+            .images-wrapper {
+                margin-top: 6px;
+                a {
+                    text-decoration: none;
+                    &:nth-child(2) {
+                        .fas {
+                            color: red;
+                            font-size: 1.2rem;
+                        }
+                    }
+                    .fas {
+                        margin-right: 10px;
+                  
+                    }
+                }
+            }
+        }
+    }
+    .reminders-wrapper {
+        background-color: rgb(201,229,229);
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-left: 15px;
+        margin-bottom: 40px;
+        .reminder {
+            display: flex;
+            p {
+               margin: 8px auto 8px 10px;
+               font-size: 0.8rem;
+            }
+            .images-wrapper {
+                margin-top: 6px;
+                a {
+                    text-decoration: none;
+                    .fas {
+                        margin-right: 10px;
+                        color: red;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        .input-wrapper {
+            .reminder-input {
+                border-radius: 6px;
+                margin-left: 10px;
+                margin-right: 10px;;
+                padding-left: 10px;
+                background-color: rgb(217,228,237);
+            }
+            .fas:nth-of-type(2) {
+                color: red;
+                font-size: 1.2rem;
+            }
+        }
+
+        .add-reminder {
+            background-color: green;
+            border-radius: 6px;
+            color: white;
+            margin: 10px auto 10px 10px;
+        }
+    }
+}
