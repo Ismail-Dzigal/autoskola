@@ -8,23 +8,23 @@
         <div class="navbar-wrapper">
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Početna</a>
+                  <a class="nav-link active" [routerLink]="['/main']" routerLinkActive="router-link-active" >Početna</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Kandidati</a>
+                  <a class="nav-link" [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active" >Kandidati</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Instruktori</a>
+                  <a class="nav-link" [routerLink]="['/admin-instructor/instructors-list']" routerLinkActive="router-link-active" >Instruktori</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Vozila</a>
+                  <a class="nav-link" [routerLink]="['/admin-vehicle/vehicles-list']" routerLinkActive="router-link-active" >Vozila</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Notifikacije</a>
+                    <a class="nav-link" [routerLink]="['/admin-notification/notifications-list']" routerLinkActive="router-link-active" >Notifikacije</a>
                 </li>
             </ul>
         </div>
@@ -36,7 +36,7 @@
        <div class="col-md-8">
          <div class="row">
            <div class="col-md-6">
-             <a [routerLink]="['/kandidati']" routerLinkActive="router-link-active"  class="card-wrapper">
+             <a [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active"  class="card-wrapper">
               <div class="image-wrapper">
                 <img src="../../assets/images/kandidati.png" alt="candidates">
                 <p>Kandidati</p>
@@ -44,7 +44,7 @@
              </a>
            </div>
            <div class="col-md-6">
-             <a [routerLink]="['/instruktori']" routerLinkActive="router-link-active"  class="card-wrapper">
+             <a [routerLink]="['/admin-instructor/instructors-list']" routerLinkActive="router-link-active"  class="card-wrapper">
               <div class="image-wrapper">
                 <img src="../../assets/images/instruktori.png" alt="instructors">
                 <p>Instruktori</p>
@@ -54,7 +54,7 @@
          </div>
          <div class="row">
           <div class="col-md-6">
-            <a [routerLink]="['/vozila']" routerLinkActive="router-link-active"  class="card-wrapper">
+            <a [routerLink]="['/admin-vehicle/vehicles-list']" routerLinkActive="router-link-active"  class="card-wrapper">
               <div class="image-wrapper">
                 <img src="../../assets/images/vozila.jpg" alt="vehicles">
                 <p>Vozila</p>
@@ -62,7 +62,7 @@
             </a>
           </div>
           <div class="col-md-6">
-             <a [routerLink]="['/notifikacije']" routerLinkActive="router-link-active"  class="card-wrapper">
+             <a [routerLink]="['/admin-notification/notifications-list']"  routerLinkActive="router-link-active"  class="card-wrapper">
               <div class="image-wrapper">
                 <img src="../../assets/images/notifikacije.jpg" alt="notifications">
                 <p>Notifikacije</p>

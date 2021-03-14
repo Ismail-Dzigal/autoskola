@@ -1,1 +1,96 @@
-<p>vehicles-list works!</p>
+<div class="container vehicles-list">
+    <div style="height: 10px;"></div>
+    <div class="navbar-container d-flex">
+        <div class="logo-wrapper d-flex">
+            <img src="../../assets/images/logo.png" alt="logo" >
+            <h3>e-autoškola</h3>
+        </div>
+        <div class="navbar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/main']" routerLinkActive="router-link-active" >Početna</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active" >Kandidati</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/admin-instructor/instructors-list']" routerLinkActive="router-link-active" >Instruktori</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link active" [routerLink]="['/admin-vehicle/vehicles-list']" routerLinkActive="router-link-active" >Vozila</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/admin-notification/notifications-list']" routerLinkActive="router-link-active" >Notifikacije</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+            <a href="#">Odjavi se</a>
+        </div>
+    </div>
+    <div class="row main-content">
+       <div class="col-md-8">
+           <div class="row search-wrapper">
+               <div class="col-md-10">
+                   <input type="text" class="search-list" placeholder="Search"/>
+               </div>
+               <div class="col-md-2">
+                   <button class="btn btn-secondary">Search</button>
+               </div>
+           </div>
+           <div class="row list-wrapper">
+               <div class="col-md-12 list-container">
+                  <div class="row vehicle">
+                      <div class="col-md-9">
+                          <p>Golf VII E22-0-333</p>
+                      </div>
+                      <div class="col-md-3">
+                          <button>Edit</button>
+                          <button>Delete</button>
+                      </div>
+                  </div>
+                  <div class="row vehicle">
+                    <div class="col-md-9">
+                        <p>Skoda Fabia M69-K-258</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <div class="row vehicle">
+                    <div class="col-md-9">
+                        <p>Audi A3 T78-J-789</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+               </div>
+               <!-- <div class="col-md-12 empty-list">
+                   <p>Nema pronađenih vozila</p>
+               </div> -->
+           </div>
+           <ngb-pagination class="pagination" [collectionSize]="totalCount" 
+           [pageSize]="pageSize"
+           [(page)]="currentPage"
+           [maxSize]="3"
+           [rotate]="true"
+           [boundaryLinks]="true">
+           </ngb-pagination>
+       </div>
+       <div class="col-md-4">
+          <app-side-panels></app-side-panels>
+        </div>
+    </div>
+</div>
+
+
+
+
+

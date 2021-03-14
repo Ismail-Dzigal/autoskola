@@ -8,23 +8,23 @@
         <div class="navbar-wrapper">
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Početna</a>
+                  <a class="nav-link" [routerLink]="['/main']" routerLinkActive="router-link-active" >Početna</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Kandidati</a>
+                  <a class="nav-link" [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active" >Kandidati</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Instruktori</a>
+                  <a class="nav-link active" [routerLink]="['/admin-instructor/instructors-list']" routerLinkActive="router-link-active" >Instruktori</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Vozila</a>
+                  <a class="nav-link" [routerLink]="['/admin-vehicle/vehicles-list']" routerLinkActive="router-link-active" >Vozila</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Notifikacije</a>
+                    <a class="nav-link" [routerLink]="['/admin-notification/notifications-list']" routerLinkActive="router-link-active" >Notifikacije</a>
                 </li>
             </ul>
         </div>
