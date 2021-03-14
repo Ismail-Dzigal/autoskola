@@ -1,1 +1,95 @@
-<p>instructors-list works!</p>
+<div class="container instructors-list">
+    <div style="height: 10px;"></div>
+    <div class="navbar-container d-flex">
+        <div class="logo-wrapper d-flex">
+            <img src="../../assets/images/logo.png" alt="logo" >
+            <h3>e-autoškola</h3>
+        </div>
+        <div class="navbar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Početna</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Kandidati</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Instruktori</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Vozila</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Notifikacije</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+            <a href="#">Odjavi se</a>
+        </div>
+    </div>
+    <div class="row main-content">
+       <div class="col-md-8">
+           <div class="row search-wrapper">
+               <div class="col-md-10">
+                   <input type="text" class="search-list" placeholder="Search"/>
+               </div>
+               <div class="col-md-2">
+                   <button class="btn btn-secondary">Search</button>
+               </div>
+           </div>
+           <div class="row list-wrapper">
+               <div class="col-md-12 list-container">
+                  <div class="row instructor">
+                      <div class="col-md-9">
+                          <p>Ismail Džigal</p>
+                      </div>
+                      <div class="col-md-3">
+                          <button>Edit</button>
+                          <button>Delete</button>
+                      </div>
+                  </div>
+                  <div class="row instructor">
+                    <div class="col-md-9">
+                        <p>Stefan Balaban</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <div class="row instructor">
+                    <div class="col-md-9">
+                        <p>Andrej Marjanović</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+               </div>
+               <!-- <div class="col-md-12 empty-list">
+                   <p>Nema pronađenih instruktora</p>
+               </div> -->
+           </div>
+           <ngb-pagination class="pagination" [collectionSize]="totalCount" 
+           [pageSize]="pageSize"
+           [(page)]="currentPage"
+           [maxSize]="3"
+           [rotate]="true"
+           [boundaryLinks]="true">
+           </ngb-pagination>
+       </div>
+       <div class="col-md-4">
+          <app-side-panels></app-side-panels>
+        </div>
+    </div>
+</div>
+
+
+
+

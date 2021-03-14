@@ -4,6 +4,7 @@ import { AddInstructorComponent } from './add-instructor/add-instructor.componen
 import { InstructorsListComponent } from './instructors-list/instructors-list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AdminInstructorRoutingModule } from './admin-instructor-routing.module';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -11,6 +12,7 @@ import { AdminInstructorRoutingModule } from './admin-instructor-routing.module'
   declarations: [EditInstructorComponent, AddInstructorComponent, InstructorsListComponent],
   imports: [
     SharedModule,
+    NgbPaginationModule,
     AdminInstructorRoutingModule
   ]
 })

@@ -1,0 +1,176 @@
+.instructors-list {
+    &.container {
+        background-color: #D4DAD6;
+        height: 95vh;
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-top: 20px;
+        .navbar-container {
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: #BECFBE;
+            .logo-wrapper {
+                margin-top: 10px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                    margin-left: 10px;
+                }
+                h3 {
+                    margin-right: 40px;
+                    margin-top: 5px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            .navbar-wrapper {
+                .nav {
+                    font-size: 1rem;
+                    .border {
+                        margin-top: 15px;
+                        height: 20px;
+                        width: 4px;
+                        background-color: green;
+                    }
+                    .nav-item {
+                        margin-bottom: 5px;
+                        margin-top: 5px;
+                        .nav-link {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .active {
+                            border-bottom: 3px solid green;
+                        }
+                    }
+                }
+            }
+            .logout {
+               a {
+                   display: inline-block;
+                   color: black;
+                   font-size: 1rem;
+                   font-weight: bold;
+                   margin-top: 15px;
+                   margin-left: 250px;
+               }
+            }
+        }
+        .main-content {
+            margin-top: 25px;
+            .col-md-8 {
+                .search-wrapper {
+                    margin-bottom: 20px;
+                    .col-md-10 {
+                        .search-list {
+                           width: 100%;
+                           height: 37px;
+                           border-radius: 6px;
+                           padding-left: 10px;
+                           background-color: #BECFBE;
+                        }
+                    }
+                    .col-md-2 {
+                        padding-right: 0;
+                        button {
+                            width: 100%;
+                            background-color: green;
+                            color: white;
+                            outline: none;
+                        }
+                    }
+                }
+                .list-wrapper {
+                    margin-left: 0;
+                    background-color: #BECFBE;
+                    .list-container {
+                        border: 1px solid grey;
+                        border-radius: 10px;
+                        .instructor {
+                            &:first-child {
+                                padding-top: 24px;
+                            }
+                            .col-md-9 {
+                                p {
+                                    font-size: 1.1rem;
+                                    font-weight: bold;
+                                    margin-bottom: 24px;
+                                }
+                            }
+                            .col-md-3 {
+                                button {
+                                    width: 70px;
+                                    border-radius: 6px;
+                                    background-color: green;
+                                    color: white;
+                                    &:first-child {
+                                        margin-right: 10px;
+                                    }
+                                    &:nth-child(2) {
+                                        background-color: #C75050;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .empty-list {
+                        border: 1px solid grey;
+                        border-radius: 10px;
+                        p {
+                            padding-top: 14px;
+                            margin-left: 20px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .pagination {
+                    margin-top: 10px;
+                    margin-left: 10px;
+                    .page-item {
+                        &.active {
+                            .page-link {
+                                background-color: green;
+                                color: white;
+                            }
+                        }
+                        .page-link {
+                            background-color: #BECFBE;
+                            color: black;
+                            border: 1px solid grey;
+                        }
+                    }
+                }
+            }
+            .col-md-4 {
+                .content-wrapper {
+                    .notifications-wrapper {
+                        background-color: #BECFBE;
+                    }
+                    .reminders-wrapper {
+                        background-color: #BECFBE;
+                        .input-wrapper {
+                            .reminder-input {
+                                border-radius: 6px;
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                padding-left: 10px;
+                                background-color: #D4DAD6;
+                            }
+                            .fas:nth-of-type(2) {
+                                color: red;
+                                font-size: 1.2rem;
+                            }
+                        }
+                
+                        .add-reminder {
+                            background-color: green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
