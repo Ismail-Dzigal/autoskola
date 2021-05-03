@@ -60,20 +60,26 @@
         .main-content {
             margin-top: 25px;
             .col-md-8 {
-               .col-md-3 {
-                  .image-wrapper {
-                      width: 170px;
-                      height: 170px;
-                      background-color: grey;
-                      margin-left: auto;
-                      margin-right: auto;
-                  }
-               }
-               .col-md-9 {
-                    h5 {
-                        margin-bottom: 20px;
+                form {
+                    .col-md-3 {
+                        .image-wrapper {
+                            width: 170px;
+                            height: 170px;
+                            background-color: grey;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+
+                        .submit-image-button {
+                            margin-top: 10px;
+                            width: 107%;
+                            background-color: rgb(128, 128, 128);
+                        }
                     }
-                    form {
+                    .col-md-9 {
+                        h5 {
+                            margin-bottom: 20px;
+                        }
                         .form-group {
                             display: flex;
                             align-items: center;
@@ -90,8 +96,16 @@
                                 background-color: rgb(252,246,246);
                             }
                         }
+
+                        .submit-button {
+                            margin-top: 30px;
+                            min-width: 150px;
+                            &:first-of-type {
+                                margin-left: 220px;
+                            }
+                        }
                     }
-               }
+                }
             }
             .col-md-4 {
                 .content-wrapper {

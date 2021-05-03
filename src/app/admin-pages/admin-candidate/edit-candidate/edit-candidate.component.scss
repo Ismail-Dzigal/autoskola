@@ -1,0 +1,259 @@
+.add-candidate {
+    &.container {
+        background-color: #F0EEEE;
+        height: 95vh;
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-top: 20px;
+        .navbar-container {
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: #FCF6F6;
+            .logo-wrapper {
+                margin-top: 10px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                    margin-left: 10px;
+                }
+                h3 {
+                    margin-right: 40px;
+                    margin-top: 5px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            .navbar-wrapper {
+                .nav {
+                    font-size: 1rem;
+                    .border {
+                        margin-top: 15px;
+                        height: 20px;
+                        width: 4px;
+                        background-color: brown;
+                    }
+                    .nav-item {
+                        margin-bottom: 5px;
+                        margin-top: 5px;
+                        .nav-link {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .active {
+                            border-bottom: 3px solid brown;
+                        }
+                    }
+                }
+            }
+            .logout {
+               a {
+                   display: inline-block;
+                   color: black;
+                   font-size: 1rem;
+                   font-weight: bold;
+                   margin-top: 15px;
+                   margin-left: 250px;
+               }
+            }
+        }
+        .main-content {
+            margin-top: 25px;
+            .col-md-8 {
+                form {
+                    .col-md-3 {
+                        .image-wrapper {
+                            width: 170px;
+                            height: 170px;
+                            background-color: grey;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        .submit-image-button {
+                            margin-top: 10px;
+                            width: 107%;
+                            background-color: rgb(128, 128, 128);
+                        }
+                    }
+                    .col-md-9 {
+                        h5 {
+                            margin-bottom: 20px;
+                        }
+                        .form-group {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 3px;
+                            label {
+                                width: 140px;
+                                margin-right: 10px;
+                            }
+                            input {
+                                width: 75%;
+                                height: 30px;
+                                font-size: 1rem;
+                                border-radius: 6px;
+                                background-color: rgb(252,246,246);
+                            }
+                        }
+                    } 
+                    .tables {
+                        .panel-headers {
+                            margin-left: 200px;
+                            .panel-button {
+                                min-width: 150px;
+                                background-color: rgb(128, 128, 128);
+                                margin-right: 20px;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .add-section {
+                            width: 270px;
+                            padding-left: 190px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            a {
+                                cursor: pointer;
+                            }
+
+                            .fas {
+                                font-size: 35px;
+                                color: rgb(128, 128, 128);
+                            }
+                        }
+
+                        #uplate {
+                            margin-top: 10px;
+                            margin-left: 15px;
+                            width: 106%;
+                            text-align: center;
+                            border: 2px solid rgb(128,128,128);
+                            th, td {
+                                border: 1px solid rgb(128,128,128);
+                                width: 50%;
+                                font-size: 13px;
+                                padding-top: 4px;
+                                padding-bottom: 4px;
+                            }
+                            th {
+                                background-color: rgb(128,128,128);
+                                color: white;
+                                font-weight: 100;
+                                &:first-of-type {
+                                    border-right: 1px solid white;
+                                }
+                            }
+                            td {
+                                background-color: rgb(252,246,246);
+                            }
+                            tbody {
+                                #ukupno {
+                                    td:first-child {
+                                        border-bottom: 1px solid white;
+                                    }
+                                }
+                                #ukupno, #preostalo {
+                                    td:first-child {
+                                        background-color: rgb(128,128,128);
+                                        color: white;
+                                        font-weight: 100;
+                                    }
+                                    td:nth-child(2) {
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+
+                        #ispiti {
+                            margin-top: 10px;
+                            margin-left: 15px;
+                            width: 106%;
+                            text-align: center;
+                            border: 2px solid rgb(128,128,128);
+                            th, td {
+                                border: 1px solid rgb(128,128,128);
+                                width: 33.33%;
+                                font-size: 13px;
+                                padding-top: 4px;
+                                padding-bottom: 4px;
+                            }
+                            th {
+                                background-color: rgb(128,128,128);
+                                color: white;
+                                font-weight: 100;
+                                &:first-of-type, &:nth-of-type(2) {
+                                    border-right: 1px solid white;
+                                }
+                            }
+                            td {
+                                background-color: rgb(252,246,246);
+                            }
+                        }
+
+                        #dokumenti {
+                            margin-top: 10px;
+                            margin-left: 15px;
+                            width: 106%;
+                            border: 2px solid rgb(128,128,128);
+                            background-color: rgb(252,246,246);
+                            a {
+                                text-decoration: none;
+                                color: black;
+                                display: block;
+                                margin-left: 10px;;
+                                margin-bottom: 10px;
+                                &:first-child {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+
+                    .submit-buttons-section {
+                        width: 100%;
+                        display: flex;
+                        justify-content: end;
+                        .submit-button {
+                            margin-top: 30px;
+                            min-width: 150px;
+                            &:first-of-type {
+                                margin-left: auto;
+                            }
+                        } 
+                    }
+                }
+            }
+            .col-md-4 {
+                .content-wrapper {
+                    .notifications-wrapper {
+                        background-color: #FCF6F6;
+                    }
+                    .reminders-wrapper {
+                        background-color: #FCF6F6;
+                        .input-wrapper {
+                            .reminder-input {
+                                border-radius: 6px;
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                padding-left: 10px;
+                                background-color: #F0EEEE;
+                            }
+                            .fas:nth-of-type(2) {
+                                color: red;
+                                font-size: 1.2rem;
+                            }
+                        }
+                
+                        .add-reminder {
+                            background-color: #C75050;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
