@@ -1,4 +1,4 @@
-<div class="container add-candidate">
+<div class="container edit-candidate">
     <div style="height: 10px;"></div>
     <div class="navbar-container d-flex">
         <div class="logo-wrapper d-flex">
@@ -155,7 +155,7 @@
                     </div>
                     <div class="submit-buttons-section">
                         <button type="submit" class="btn btn-success submit-button">Sačuvaj</button>
-                        <button type="submit" class="btn btn-danger submit-button ml-3">Odustani</button>
+                        <button class="btn btn-danger submit-button ml-3" [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active" >Odustani</button>
                     </div>
                 </div>
             </form>

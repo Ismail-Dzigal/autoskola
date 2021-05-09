@@ -1,1 +1,172 @@
-<p>edit-instructor works!</p>
+<div class="container edit-instructor">
+    <div style="height: 10px;"></div>
+    <div class="navbar-container d-flex">
+        <div class="logo-wrapper d-flex">
+            <img src="../../assets/images/logo.png" alt="logo" >
+            <h3>e-autoškola</h3>
+        </div>
+        <div class="navbar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/main']" routerLinkActive="router-link-active" >Početna</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active" >Kandidati</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link active" [routerLink]="['/admin-instructor/instructors-list']" routerLinkActive="router-link-active" >Instruktori</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/admin-vehicle/vehicles-list']" routerLinkActive="router-link-active" >Vozila</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/admin-notification/notifications-list']" routerLinkActive="router-link-active" >Notifikacije</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+            <a href="#">Odjavi se</a>
+        </div>
+    </div>
+    <div class="row main-content">
+       <div class="col-md-8">
+           <form>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="image-wrapper">
+    
+                        </div>
+                        <button type="submit" class="btn btn-success submit-image-button">Nova slika</button>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>Lični podaci</h5>
+                        <div class="form-group">
+                            <label for="ime">Ime:</label>
+                            <input type="text" class="form-control" id="ime" aria-describedby="ime" placeholder="Ime">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="prezime">Prezime:</label>
+                            <input type="text" class="form-control" id="prezime" placeholder="Prezime">
+                        </div>
+                        <div class="form-group">
+                            <label for="imeOca">Ime oca:</label>
+                            <input type="text" class="form-control" id="imeOca" placeholder="Ime oca">
+                        </div>
+                        <div class="form-group">
+                            <label for="jmbg">JMBG:</label>
+                            <input type="text" class="form-control" id="jmbg" placeholder="JMBG">
+                        </div>
+                        <div class="form-group">
+                            <label for="mjestoRodjenja">Mjesto rođenja:</label>
+                            <input type="text" class="form-control" id="mjestoRodjenja" placeholder="Mjesto rođenja">
+                        </div>
+                        <div class="form-group">
+                            <label for="drzavljanstvo">Državljanstvo:</label>
+                            <input type="text" class="form-control" id="drzavljanstvo" placeholder="Državljanstvo">
+                        </div>
+                        <div class="form-group">
+                            <label for="brojLk">Broj lk:</label>
+                            <input type="text" class="form-control" id="brojLk" placeholder="Broj lk">
+                        </div>
+                        <div class="form-group">
+                            <label for="brojDozvole">Broj dozvole:</label>
+                            <input type="text" class="form-control" id="brojDozvole" placeholder="Broj dozvole">
+                        </div>
+                        <div class="form-group">
+                            <label for="zaduzenoVozilo">Zaduženo vozilo:</label>
+                            <select class="form-control" id="zaduzenoVozilo">
+                                <option>Zaduženo vozilo</option>
+                                <option>Prva</option>
+                                <option>Prva</option>
+                                <option>Prva</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Broj telefona:</label>
+                            <input type="text" class="form-control" id="telefon" placeholder="Broj telefona">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAdresa">Email adresa:</label>
+                            <input type="email" class="form-control" id="emailAdresa" placeholder="Email adresa">
+                        </div>
+                    </div>
+                    <div class="tables">
+                        <div class="panel-headers">
+                            <button type="submit" class="btn btn-success panel-button">Uplate</button>
+                            <button type="submit" class="btn btn-success panel-button">Ispiti</button>
+                            <button type="submit" class="btn btn-success panel-button">Dokumenti</button>
+                        </div>
+                        <div class="add-section kandidati">
+                            <a><i class="fas fa-plus-circle mr-2"></i></a>
+                            <a><i class="fas fa-times-circle"></i></a>
+                        </div>
+                        <!--<div class="add-section uplate seminari">
+                            <a><i class="fas fa-plus-circle mr-2"></i></a>
+                            <a><i class="fas fa-times-circle"></i></a>
+                        </div>
+                        <div class="add-section dokumenta">
+                            <a><i class="fas fa-plus-circle mr-2"></i></a>
+                            <a><i class="fas fa-times-circle"></i></a>
+                        </div> -->
+              
+                        <table id="kandidati">
+                            <tr>
+                                <th>Ime i Prezime</th>
+                                <th>Datum</th>
+                            </tr>
+                            <tr>
+                                <td>Ismail Dzigal</td>
+                                <td>01.01.2020.</td>
+                            </tr>
+                            <tr>
+                                <td>Stefan Balaban</td>
+                                <td>10.08.2020.</td>
+                            </tr>
+                        </table>
+                        <!-- <table id="seminari">
+                            <tr>
+                                <th>Datum pohađanja</th>
+                                <th>Tema</th>
+                                <th>Predavač</th>
+                            </tr>
+                            <tr>
+                                <td>01.12.2020.</td>
+                                <td>Saobraćajne nezgode</td>
+                                <td>Refik Ahmetović</td>
+                            </tr>
+                            <tr>
+                                <td>08.12.2020.</td>
+                                <td>Održavanje vozila</td>
+                                <td>Sead Fijuljanin</td>
+                            </tr>
+                        </table>
+                        <div id="dokumenti">
+                            <a href="#">kopija_lk.pdf</a>
+                            <a href="#">CIPS_prijava.pdf.pdf</a>
+                            <a href="#">ljekarsko_uvjerenje.pdf</a>
+                            <a href="#">kopija_dozvole.pdf</a>
+                        </div> -->
+                    </div>
+                    <div class="submit-buttons-section">
+                        <button type="submit" class="btn btn-success submit-button">Sačuvaj</button>
+                        <button class="btn btn-danger submit-button ml-3" [routerLink]="['/admin-instructor/instructors-list']" routerLinkActive="router-link-active" >Odustani</button>
+                    </div>
+                </div>
+            </form>
+       </div>
+       <div class="col-md-4">
+          <app-side-panels></app-side-panels>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

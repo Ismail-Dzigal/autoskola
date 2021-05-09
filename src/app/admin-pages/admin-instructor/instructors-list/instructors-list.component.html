@@ -39,7 +39,7 @@
                    <input type="text" class="search-list" placeholder="Pretraži listu instruktora"/>
                </div>
                <div class="col-md-2">
-                   <button class="btn btn-secondary">Dodaj</button>
+                   <button class="btn btn-secondary" [routerLink]="['/admin-instructor/add-instructor']" routerLinkActive="router-link-active" >Dodaj</button>
                </div>
            </div>
            <div class="row list-wrapper">
@@ -49,7 +49,7 @@
                           <p>Ismail Džigal</p>
                       </div>
                       <div class="col-md-3">
-                          <button>Uredi</button>
+                          <button [routerLink]="['/admin-instructor/edit-instructor', 'id']" routerLinkActive="router-link-active" >Uredi</button>
                           <button>Obriši</button>
                       </div>
                   </div>
