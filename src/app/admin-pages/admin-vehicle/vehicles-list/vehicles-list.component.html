@@ -39,7 +39,7 @@
                    <input type="text" class="search-list" placeholder="Pretraži listu vozila"/>
                </div>
                <div class="col-md-2">
-                   <button class="btn btn-secondary">Dodaj</button>
+                   <button class="btn btn-secondary" [routerLink]="['/admin-vehicle/add-vehicle']" routerLinkActive="router-link-active" >Dodaj</button>
                </div>
            </div>
            <div class="row list-wrapper">
@@ -49,7 +49,7 @@
                           <p>Golf VII E22-0-333</p>
                       </div>
                       <div class="col-md-3">
-                          <button>Uredi</button>
+                          <button [routerLink]="['/admin-vehicle/edit-vehicle', 'id']" routerLinkActive="router-link-active">Uredi</button>
                           <button>Obriši</button>
                       </div>
                   </div>
