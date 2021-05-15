@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ReportsMainComponent } from './admin-pages/admin-reports/reports-main/reports-main.component';
 import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {
     path: 'main',
     component: MainComponent
+  },
+  {
+    path: 'reports',
+    component: ReportsMainComponent
   },
   {
     path: '',

@@ -8,11 +8,13 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import { ReportsMainComponent } from './admin-pages/admin-reports/reports-main/reports-main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    ReportsMainComponent
   ],
   imports: [
     BrowserModule,
