@@ -1,1 +1,56 @@
-<p>add-notification works!</p>
+<div class="container add-notification">
+    <div style="height: 10px;"></div>
+    <div class="navbar-container d-flex">
+        <div class="logo-wrapper d-flex">
+            <img src="../../assets/images/logo.png" alt="logo" >
+            <h3>e-autoškola</h3>
+        </div>
+        <div class="navbar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/main']" routerLinkActive="router-link-active" >Početna</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active" >Kandidati</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/admin-instructor/instructors-list']" routerLinkActive="router-link-active" >Instruktori</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/admin-vehicle/vehicles-list']" routerLinkActive="router-link-active" >Vozila</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/admin-notification/notifications-list']" routerLinkActive="router-link-active" >Notifikacije</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+            <a href="#">Odjavi se</a>
+        </div>
+    </div>
+    <div class="row main-content">
+       <div class="col-md-8">
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Pošalji notifikaciju</h5>
+                        <div class="form-group">
+                            <label for="naslov">Naslov:</label>
+                            <input type="text" class="form-control" id="naslov" aria-describedby="naslov" placeholder="Naslov">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="notification-body" name="notificationBody" placeholder="Ovdje unesite tekst notifikacije" rows="10" cols="70"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success submit-button">Sačuvaj</button>
+                        <button class="btn btn-danger submit-button ml-3" [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active">Odustani</button>
+                    </div>
+                </div>
+            </form>
+       </div>
+    </div>
+</div>
