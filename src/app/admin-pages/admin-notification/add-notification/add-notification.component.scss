@@ -31,7 +31,7 @@
                         margin-top: 15px;
                         height: 20px;
                         width: 4px;
-                        background-color: brown;
+                        background-color: #324085;
                     }
                     .nav-item {
                         margin-bottom: 5px;
@@ -41,7 +41,7 @@
                             font-weight: bold;
                         }
                         .active {
-                            border-bottom: 3px solid brown;
+                            border-bottom: 3px solid #324085;
                         }
                     }
                 }
@@ -76,6 +76,7 @@
                             label {
                                 width: 80px;
                                 margin-right: 10px;
+                                padding-bottom: 10px;
                             }
                             input {
                                 width: 75%;
@@ -83,11 +84,28 @@
                                 font-size: 1rem;
                                 border-radius: 6px;
                                 background-color: #E4D9E2;
-                                margin-bottom: 20px;;
+                                margin-bottom: 20px;
                             }
                             textarea {
                                 border-radius: 6px;
                                 background-color: #E4D9E2;
+                            }
+                        }
+
+                        .recipient-choice {
+                            margin-top: 20px;
+                            .radio-buttons {
+                                input {
+                                    margin-right: 10px;
+                                }
+                            }
+                            .recipient-selects {
+                                select {
+                                    background-color: #E4D9E2;
+                                    option {
+                                        background-color: #E4D9E2;
+                                    }
+                                }
                             }
                         }
 
