@@ -1,0 +1,80 @@
+.reports {
+    overflow-x: hidden;
+    .buttons-wrapper {
+        .col-md-12 {
+            .btn {
+                width: 100px;
+            }
+        }
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .table-wrapper {
+        margin: 0px 25px;
+        max-height: 75vh;
+        overflow: auto;
+        border: 1px solid black;
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            .fixedHeader {
+                display: table;
+                overflow: auto;
+                width: 100%;
+                tr {
+                    position: relative;
+                    th {
+                        background-color: rgb(150, 150, 150);
+                        border: 1px solid black;
+                        text-align: left;
+                        padding: 8px;
+                        min-width: 154px;
+                    }
+                }
+            }
+            .scrollContent {
+                display: block;
+                height: 70vh;
+                overflow: auto;
+                width: 100%;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                
+                /* Hide scrollbar for IE, Edge and Firefox */
+                & {
+                  -ms-overflow-style: none;  /* IE and Edge */
+                  scrollbar-width: none;  /* Firefox */
+                }
+                td {
+                    border: 1px solid black;
+                    text-align: left;
+                    padding: 8px;
+                    width: 156px;
+                }
+                tr:nth-child(even) {
+                    background-color: rgb(230, 230, 230);
+                }
+            }
+        }
+        &.vehicles {
+            table {
+                .fixedHeader {
+                    tr {
+                        th {
+                            min-width: 154px;
+                        }
+                    }
+                }
+                .scrollContent {
+                    td {
+                        width: 156px;
+                    }
+                }
+            }
+        }
+    }
+}

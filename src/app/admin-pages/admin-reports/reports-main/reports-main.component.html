@@ -1,1 +1,253 @@
-<p>reports-main works!</p>
+<div class="reports">
+    <div class="row buttons-wrapper pl-4 pr-4 pt-4">
+        <div class="col-md-12 d-flex">
+          <button class="btn btn-secondary mr-2">Kandidati</button>
+          <button class="btn btn-secondary mr-2">Instruktori</button>
+          <button class="btn btn-secondary mr-auto">Vozila</button>
+          <button class="btn btn-secondary" [routerLink]="['/main']" routerLinkActive="router-link-active" >Nazad</button>
+        </div>
+    </div>
+    <h3 class="candidates-header">Kandidati</h3>
+    <!-- <h3 class="instructors-header">Instruktori</h3> DYNAMIC TEXT
+    <h3 class="vehicles-header">Vozila</h3> -->
+    <!-- <div class="table-wrapper candidates">
+        <table>
+            <thead class="fixedHeader">
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Ime oca</th>
+                    <th>JMBG</th>
+                    <th>Mjesto rođenja</th>
+                    <th>Državljanstvo</th>
+                    <th>Broj lk</th>
+                    <th>Broj telefona</th>
+                    <th>Email adresa</th>
+                    <th>Posljednja uplata</th>
+                    <th>Preostali dug</th>
+                    <th>Položio</th>
+                  </tr>
+            </thead>
+            <tbody class="scrollContent">
+                <tr>
+                    <td>Alfreds</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>Al</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>A</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>Alfreds</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                  </tr>
+                  <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                  </tr>
+                  <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- <div class="table-wrapper instructors">
+          <table>
+            <thead class="fixedHeader">
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Ime oca</th>
+                    <th>JMBG</th>
+                    <th>Mjesto rođenja</th>
+                    <th>Državljanstvo</th>
+                    <th>Broj lk</th>
+                    <th>Broj dozvole</th>
+                    <th>Zaduženo vozilo</th>
+                    <th>Broj telefona</th>
+                    <th>Email adresa</th>
+                    <th>Potvrde</th>
+                  </tr>
+            </thead>
+            <tbody class="scrollContent">
+                <tr>
+                    <td>Alfreds</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>Al</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>A</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>Alfreds</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                  </tr>
+                  <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                  </tr>
+                  <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <div class="table-wrapper vehicles">
+        <table>
+            <thead class="fixedHeader">
+                <tr>
+                    <th>Vrsta vozila</th>
+                    <th>Marka</th>
+                    <th>Tip</th>
+                    <th>Broj šasije</th>
+                    <th>Broj motora</th>
+                    <th>Gorivo</th>
+                    <th>Reg. oznaka</th>
+                    <th>God. proizvodnje</th>
+                    <th>Datum registr.</th>
+                    <th>Br. saobraćajne</th>
+                    <th>Br. vlasničke</th>
+                    <th>Zaduženo kod</th>
+                </tr>
+            </thead>
+            <tbody class="scrollContent">
+                <tr>
+                    <td>Alfreds</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>Al</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>A</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>Alfreds</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Centro</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                  </tr>
+                  <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                  </tr>
+                  <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row buttons-wrapper p-4">
+        <div class="col-md-12 d-flex justify-content-end">
+          <button class="btn btn-secondary" [routerLink]="['/main']" routerLinkActive="router-link-active" >Printaj</button>
+        </div>
+    </div>
+</div>
