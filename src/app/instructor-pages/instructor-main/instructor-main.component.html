@@ -1,4 +1,4 @@
-<div class="container candidates-list">
+<div class="container instructor-main">
     <div style="height: 10px;"></div>
     <div class="navbar-container d-flex">
         <div class="logo-wrapper d-flex">
@@ -8,23 +8,23 @@
         <div class="navbar-wrapper">
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link active">Profil</a>
+                  <a class="nav-link active" [routerLink]="['/instructor-pages/instructor-main']" routerLinkActive="router-link-active">Profil</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link">Kandidati</a>
+                  <a class="nav-link" [routerLink]="['/instructor-pages/candidates']" routerLinkActive="router-link-active">Kandidati</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link">Vozilo</a>
+                  <a class="nav-link" [routerLink]="['/instructor-pages/vehicle']" routerLinkActive="router-link-active">Vozilo</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                  <a class="nav-link">Termini</a>
+                  <a class="nav-link" [routerLink]="['/instructor-pages/lectures']" routerLinkActive="router-link-active">Termini</a>
                 </li>
                 <div class="border"></div>
                 <li class="nav-item">
-                    <a class="nav-link">Notifikacije</a>
+                    <a class="nav-link" [routerLink]="['/instructor-pages/notifications']" routerLinkActive="router-link-active">Notifikacije</a>
                 </li>
             </ul>
         </div>

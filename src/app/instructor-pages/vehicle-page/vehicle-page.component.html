@@ -1,1 +1,144 @@
-<p>vehicle-page works!</p>
+<div class="container vehicle-page">
+    <div style="height: 10px;"></div>
+    <div class="navbar-container d-flex">
+        <div class="logo-wrapper d-flex">
+            <img src="../../assets/images/logo.png" alt="logo" >
+            <h3>e-autoškola</h3>
+        </div>
+        <div class="navbar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/instructor-pages/instructor-main']" routerLinkActive="router-link-active">Profil</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/instructor-pages/candidates']" routerLinkActive="router-link-active">Kandidati</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link active" [routerLink]="['/instructor-pages/vehicle']" routerLinkActive="router-link-active">Vozilo</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/instructor-pages/lectures']" routerLinkActive="router-link-active">Termini</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/instructor-pages/notifications']" routerLinkActive="router-link-active">Notifikacije</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+            <a href="#">Odjavi se</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="personal-data">
+            <h5>Podaci o vozilu</h5>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="image-wrapper">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="data-group">
+                                <span class="header">Vrsta vozila:</span>
+                                <p id="vrstaVozila"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Marka:</span>
+                                <p id="marka"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Tip:</span>
+                                <p id="tip"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Broj šasije:</span>
+                                <p id="brojSasije"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Broj motora:</span>
+                                <p id="brojMotora">AAAA</p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Gorivo:</span>
+                                <p id="gorivo"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="data-group">
+                                <span class="header">Registarska oznaka:</span>
+                                <p id="registarskaOznaka"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Godina proizvodnje:</span>
+                                <p id="godinaProizvodnje"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Datum registracije:</span>
+                                <p id="datumRegistracije"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Saobraćajna dozvola:</span>
+                                <p id="saobracajna"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Potvrda o vlasništvu:</span>
+                                <p id="vlasnicka"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="intervention-data">
+            <h5>Intervencije</h5>
+            <div class="row">
+                <table id="intervention">
+                    <tr>
+                        <th>Opis</th>
+                        <th>Datum</th>
+                        <th>Trajanje</th>
+                    </tr>
+                    <tr>
+                        <td>Tehnički pregled</td>
+                        <td>01.01.2020.</td>
+                        <td>2h</td>
+                    </tr>
+                    <tr>
+                        <td>Zamjena prednjih guma</td>
+                        <td>10.01.2020.</td>
+                        <td>3h</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="documents-data">
+            <h5>Dokumenti</h5>
+            <div class="row">
+                <div id="documents">
+                    <a href="#">kopija_saobracajne.pdf</a>
+                    <a href="#">kopija_vlasnicke.pdf</a>
+                    <a href="#">atest_komandi.pdf</a>
+                    <a href="#">karton_tehnicki.pdf</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

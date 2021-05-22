@@ -1,0 +1,164 @@
+.vehicle-page {
+    &.container {
+        background-color: #F4DFCA;
+        height: 95vh;
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-top: 20px;
+        .navbar-container {
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: #FFCC99;
+            .logo-wrapper {
+                margin-top: 10px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                    margin-left: 10px;
+                }
+                h3 {
+                    margin-right: 40px;
+                    margin-top: 5px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            .navbar-wrapper {
+                .nav {
+                    font-size: 1rem;
+                    .border {
+                        margin-top: 15px;
+                        height: 20px;
+                        width: 3px;
+                        background-color: grey;
+                        border: 1px solid grey !important;
+                    }
+                    .nav-item {
+                        margin-bottom: 5px;
+                        margin-top: 5px;
+                        .nav-link {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .active {
+                            border-bottom: 3px solid grey;
+                        }
+                    }
+                }
+            }
+            .logout {
+               a {
+                   display: inline-block;
+                   color: black;
+                   font-size: 1rem;
+                   font-weight: bold;
+                   margin-top: 15px;
+                   margin-left: 250px;
+               }
+            }
+        }
+        .main-content {
+            margin-top: 25px;
+            .personal-data {
+                min-height: 200px;
+                h5 {
+                    margin-bottom: 20px;
+                }
+                .row {
+                    .col-md-2 {
+                        .image-wrapper {
+                            width: 160px;
+                            height: 160px;
+                            background-color: grey;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                    .col-md-10 {
+                        .row {
+                            .col-md-6 {
+                                .data-group {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 0px;
+            
+                                    .header {
+                                        width: 180px;
+                                        margin-right: 10px;
+                                        padding-bottom: 5px;
+                                    }
+            
+                                    p {
+                                        width: 75%;
+                                        font-size: 1rem;
+                                        margin-bottom: 5px;
+                                        background-color: #FFCC99;
+                                        border: 1px solid rgb(150,150,150);
+                                        border-radius: 6px;
+                                        padding: 2px 15px 7px;
+                                        height: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .intervention-data {
+                min-height: 200px;
+                h5 {
+                    margin-bottom: 20px;
+                }
+                #intervention {
+                    margin: 10px 15px 0px;
+                    width: 106%;
+                    text-align: center;
+                    border: 2px solid rgb(128,128,128);
+                    th, td {
+                        border: 1px solid grey;
+                        width: 33.33%;
+                        font-size: 1rem;
+                        padding-top: 4px;
+                        padding-bottom: 4px;
+                    }
+                    th {
+                        background-color: orange;
+                        font-weight: bold;
+                        &:first-of-type, &:nth-of-type(2) {
+                            border-right: 1px solid rgb(220,220,220);
+                        }
+                    }
+                    td {
+                        background-color: #FFCC99;
+                    }
+                }
+            }
+            .documents-data {
+                min-height: 200px;
+                h5 {
+                    margin-bottom: 20px;
+                }
+                #documents {
+                    margin: 10px 15px 0px;
+                    width: 106%;
+                    border: 2px solid rgb(128,128,128);
+                    background-color: #FFCC99;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        display: block;
+                        margin-left: 10px;
+                        margin-bottom: 10px;
+                        font-size: 1rem;
+                        &:first-child {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

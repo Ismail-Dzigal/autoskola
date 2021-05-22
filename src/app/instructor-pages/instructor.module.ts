@@ -7,6 +7,7 @@ import { InstructorRoutingModule } from './instructor-routing.module';
 import { CandidatesPageComponent } from './candidates-page/candidates-page.component';
 import { VehiclePageComponent } from './vehicle-page/vehicle-page.component';
 import { LecturesTimesComponent } from './lectures-times/lectures-times.component';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LecturesTimesComponent } from './lectures-times/lectures-times.componen
   ],
   imports: [
     SharedModule,
+    NgbPaginationModule,
     InstructorRoutingModule
   ]
 })
