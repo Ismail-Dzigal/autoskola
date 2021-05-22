@@ -33,6 +33,10 @@ const routes: Routes = [
     loadChildren: () => import('./admin-pages/admin-vehicle/admin-vehicle.module').then(m => m.AdminVehicleModule)
   },
   {
+    path: 'instructor-pages',
+    loadChildren: () => import('./instructor-pages/instructor.module').then(m => m.InstructorModule)
+  },
+  {
     path: '**',
     component: MainComponent
   }
