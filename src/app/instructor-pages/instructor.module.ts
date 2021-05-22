@@ -4,12 +4,18 @@ import { InstructorMainComponent } from './instructor-main/instructor-main.compo
 import { NotificationsPageComponent } from './notifications-page/notifications-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { InstructorRoutingModule } from './instructor-routing.module';
+import { CandidatesPageComponent } from './candidates-page/candidates-page.component';
+import { VehiclePageComponent } from './vehicle-page/vehicle-page.component';
+import { LecturesTimesComponent } from './lectures-times/lectures-times.component';
 
 @NgModule({
   declarations: [
     CandidatePageComponent,
     InstructorMainComponent,
-    NotificationsPageComponent
+    NotificationsPageComponent,
+    CandidatesPageComponent,
+    VehiclePageComponent,
+    LecturesTimesComponent
   ],
   imports: [
     SharedModule,
