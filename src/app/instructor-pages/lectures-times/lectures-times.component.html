@@ -1,1 +1,147 @@
-<p>lectures-times works!</p>
+<div class="container lectures-times">
+    <div style="height: 10px;"></div>
+    <div class="navbar-container d-flex">
+        <div class="logo-wrapper d-flex">
+            <img src="../../assets/images/logo.png" alt="logo" >
+            <h3>e-autoškola</h3>
+        </div>
+        <div class="navbar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/instructor-pages/instructor-main']" routerLinkActive="router-link-active">Profil</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/instructor-pages/candidates']" routerLinkActive="router-link-active">Kandidati</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/instructor-pages/vehicle']" routerLinkActive="router-link-active">Vozilo</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link active" [routerLink]="['/instructor-pages/lectures']" routerLinkActive="router-link-active">Termini</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/instructor-pages/notifications']" routerLinkActive="router-link-active">Notifikacije</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+            <a href="#">Odjavi se</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="personal-data">
+            <h5>Definisanje datuma i termina obuke</h5>
+            <div class="row">
+                <form #timesForm="ngForm">
+                    <div class="col-md-12 d-flex align-items-start">
+                        <div class="datepicker">
+                            <ngb-datepicker name="date" [(ngModel)]="model"></ngb-datepicker>
+                        </div>
+                        <div class="times d-flex align-items-start">
+                            <div class="time">
+                                <p class="time-header">Termin 1</p>
+                                <div class="timepicker">
+                                    <ngb-timepicker name="termin1" [(ngModel)]="time"></ngb-timepicker>
+                                </div>
+                            </div>
+                            <div class="time">
+                                <p class="time-header">Termin 2</p>
+                                <div class="timepicker">
+                                    <ngb-timepicker name="termin2" [(ngModel)]="time"></ngb-timepicker>
+                                </div>
+                            </div>
+                            <div class="time">
+                                <p class="time-header">Termin 3</p>
+                                <div class="timepicker">
+                                    <ngb-timepicker name="termin3" [(ngModel)]="time"></ngb-timepicker>
+                                </div>
+                            </div>
+                            <div class="time">
+                                <p class="time-header">Termin 4</p>
+                                <div class="timepicker">
+                                    <ngb-timepicker name="termin4" [(ngModel)]="time"></ngb-timepicker>
+                                </div>
+                            </div>
+                            <div class="time">
+                                <p class="time-header">Termin 5</p>
+                                <div class="timepicker">
+                                    <ngb-timepicker name="termin5" [(ngModel)]="time"></ngb-timepicker>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn confirm-data-btn">Potvrdi</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="lectures-data">
+            <h5>Rezervisanje termina</h5>
+            <div class="row">
+                <table id="lectures-table">
+                    <tr>
+                        <th>Termin</th>
+                        <th>Kandidat</th>
+                        <th>
+                            <button class="btn edit-btn">Uredi</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>08:00</td>
+                        <td>Ismail Džigal</td>
+                        <td>rezervisan</td>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td>Ismail Džigal</td>
+                        <td>rezervisan</td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>
+                            <select class="form-control" id="kandidat">
+                                <option>Kandidati</option>
+                                <option>Prva</option>
+                                <option>Prva</option>
+                                <option>Prva</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="btn confirm-btn">
+                                Rezerviši
+                            </button>
+                            <button class="btn cancel-btn">
+                                Odustani
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14:00</td>
+                        <td>Ismail Džigal</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td>Ismail Džigal</td>
+                        <td>rezervisan</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

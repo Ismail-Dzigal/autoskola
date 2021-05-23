@@ -1,0 +1,192 @@
+.lectures-times {
+    &.container {
+        background-color: #D4DAD6;
+        height: 95vh;
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-top: 20px;
+        .navbar-container {
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: #BECFBE;
+            .logo-wrapper {
+                margin-top: 10px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                    margin-left: 10px;
+                }
+                h3 {
+                    margin-right: 40px;
+                    margin-top: 5px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            .navbar-wrapper {
+                .nav {
+                    font-size: 1rem;
+                    .border {
+                        margin-top: 15px;
+                        height: 20px;
+                        width: 4px;
+                        background-color: #008000;
+                    }
+                    .nav-item {
+                        margin-bottom: 5px;
+                        margin-top: 5px;
+                        .nav-link {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .active {
+                            border-bottom: 3px solid #008000;
+                        }
+                    }
+                }
+            }
+            .logout {
+               a {
+                   display: inline-block;
+                   color: black;
+                   font-size: 1rem;
+                   font-weight: bold;
+                   margin-top: 15px;
+                   margin-left: 250px;
+               }
+            }
+        }
+        .main-content {
+            margin-top: 25px;
+            .personal-data {
+                min-height: 200px;
+                h5 {
+                    margin-bottom: 20px;
+                }
+                .row {
+                    .col-md-12 {
+                        .datepicker {
+                            border: 1px solid green;
+                            margin-right: 20px;
+                            ngb-datepicker {
+                                background-color: #D4DAD6;
+                                .ngb-dp-header {
+                                    background-color: #BECFBE;
+                                    .ngb-dp-navigation-chevron {
+                                        color: #008000;
+                                    }
+                                    .custom-select {
+                                        background-color: #D4DAD6;
+                                        font-weight: bold;
+                                    }
+                                }
+                                .ngb-dp-weekdays {
+                                    background-color: #BECFBE;
+                                    .ngb-dp-weekday {
+                                        color: black;
+                                        font-weight: bold;
+                                    }
+                                }
+                                .bg-primary {
+                                    background-color: green !important;
+                                }
+                            }
+                        }
+                        .times {
+                            .time {
+                                border: 1px solid green;
+                                border-right: none;
+                                &:last-of-type {
+                                    border-right: 1px solid green;
+                                }
+                                .time-header {
+                                    font-weight: bold;
+                                    font-size: 18px;
+                                    margin-bottom: 0;
+                                    padding-left: 44px;
+                                }
+                                .timepicker {
+                                    font-size: 14px;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    .chevron {
+                                        color: #008000;
+                                    }
+                                    .ngb-tp-input {
+                                        background-color: #BECFBE;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .confirm-data-btn {
+                        background-color:#a7b5a7;
+                        color: black;
+                        font-weight: bold;
+                        border: 2px solid green;
+                        float: right;
+                        position: relative;
+                        top: -30px;
+                        right: 20px;
+                    } 
+                }
+            }
+            .lectures-data {
+                min-height: 200px;
+                h5 {
+                    margin-bottom: 20px;
+                }
+                #lectures-table {
+                    margin: 10px 15px 0px;
+                    width: 106%;
+                    text-align: center;
+                    border: 2px solid rgb(128,128,128);
+                    th, td {
+                        border: 1px solid rgb(0,128,0);
+                        width: 33.33%;
+                        height: 50px;
+                        font-size: 1rem;
+                        padding-top: 4px;
+                        padding-bottom: 4px;
+                    }
+                    th {
+                        background-color: #BECFBE;
+                        font-weight: bold;
+                        &:first-of-type, &:nth-of-type(2) {
+                            border-right: 1px solid rgb(220,220,220);
+                        }
+                        .edit-btn {
+                            background-color:#a7b5a7;
+                            color: black;
+                            font-weight: bold;
+                            border: 2px solid green;
+                        }
+                    }
+                    td {
+                        background-color: #D4DAD6;
+                        font-weight: bold;
+                        select {
+                            margin-left: 20px;
+                            width: 89%;
+                            background-color: #BECFBE;
+                        }
+                        .confirm-btn {
+                            background-color:#a7b5a7;
+                            color: black;
+                            font-weight: bold;
+                            border: 2px solid green;
+                            margin-right: 10px;
+                        }
+                        .cancel-btn {
+                            background-color: #e66774;
+                            color: black;
+                            font-weight: bold;
+                            border: 2px solid green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
