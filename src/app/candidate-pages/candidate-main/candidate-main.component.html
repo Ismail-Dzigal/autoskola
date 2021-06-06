@@ -1,1 +1,162 @@
-<p>candidate-main works!</p>
+<div class="container candidate-main">
+    <div style="height: 10px;"></div>
+    <div class="navbar-container d-flex">
+        <div class="logo-wrapper d-flex">
+            <img src="../../assets/images/logo.png" alt="logo" >
+            <h3>e-autoškola</h3>
+        </div>
+        <div class="navbar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link active" [routerLink]="['/candidate-pages/candidate-main']" routerLinkActive="router-link-active">Profil</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/candidate-pages/lectures-summary']" routerLinkActive="router-link-active">Pregled obuke</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/candidate-pages/lectures-times']" routerLinkActive="router-link-active">Termini</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/candidate-pages/notifications']" routerLinkActive="router-link-active">Notifikacije</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+            <a href="#">Odjavi se</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="personal-data">
+            <h5>Lični podaci</h5>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="image-wrapper">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="data-group">
+                                <span class="header">Ime:</span>
+                                <p id="ime"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Prezime:</span>
+                                <p id="prezime"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Ime oca:</span>
+                                <p id="imeOca"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">JMBG:</span>
+                                <p id="jmbg"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Mjesto rođenja:</span>
+                                <p id="mjestoRodjenja">AAAA</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="data-group">
+                                <span class="header">Državljanstvo:</span>
+                                <p id="drzavljanstvo"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Broj lk:</span>
+                                <p id="brojLk"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Broj telefona:</span>
+                                <p id="telefon"></p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Email adresa:</span>
+                                <p id="emailAdresa"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="other-data">
+            <h5>Ostali podaci</h5>
+            <div class="row">
+                <div class="tables">
+                    <div class="panel-headers">
+                        <button type="submit" class="btn btn-success panel-button">Uplate</button>
+                        <button type="submit" class="btn btn-success panel-button">Ispiti</button>
+                        <button type="submit" class="btn btn-success panel-button">Dokumenti</button>
+                    </div>
+                    <table id="uplate">
+                        <thead>
+                            <tr>
+                                <th>Datum uplate</th>
+                                <th>Iznos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12.10.2020.</td>
+                                <td>300,00KM</td>
+                            </tr>
+                            <tr>
+                                <td>30.11.2020.</td>
+                                <td>120,00KM</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr id="ukupno">
+                                <td>Ukupno uplaćeno</td>
+                                <td>420,00KM</td>
+                            </tr>
+                            <tr id="preostalo">
+                                <td>Preostali dug</td>
+                                <td>600,00KM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- <table id="ispiti">
+                        <tr>
+                            <th>Datum polaganja</th>
+                            <th>Termin</th>
+                            <th>Uspjeh</th>
+                        </tr>
+                        <tr>
+                            <td>01.12.2020.</td>
+                            <td>09:30</td>
+                            <td>pao</td>
+                        </tr>
+                        <tr>
+                            <td>08.12.2020.</td>
+                            <td>12:00</td>
+                            <td>položio</td>
+                        </tr>
+                    </table> -->
+                    <!-- <div id="dokumenti">
+                        <a href="#">kopija_lk.pdf</a>
+                        <a href="#">CIPS_prijava.pdf.pdf</a>
+                        <a href="#">ljekarsko_uvjerenje.pdf</a>
+                        <a href="#">potvrda_CK.pdf</a>
+                        <a href="#">potvrda_propisi.pdf</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
