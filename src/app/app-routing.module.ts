@@ -37,6 +37,10 @@ const routes: Routes = [
     loadChildren: () => import('./instructor-pages/instructor.module').then(m => m.InstructorModule)
   },
   {
+    path: 'candidate-pages',
+    loadChildren: () => import('./candidate-pages/candidate.module').then(m => m.CandidateModule)
+  },
+  {
     path: '**',
     component: MainComponent
   }
