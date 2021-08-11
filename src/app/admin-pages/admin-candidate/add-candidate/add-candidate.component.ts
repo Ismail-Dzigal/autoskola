@@ -12,5 +12,4 @@ export class AddCandidateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
