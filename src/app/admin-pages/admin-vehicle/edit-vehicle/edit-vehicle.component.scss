@@ -187,6 +187,11 @@
                 .content-wrapper {
                     .notifications-wrapper {
                         background-color: rgb(255,204,153);
+                        .notification {
+                            .notification-body {
+                                background-color: rgb(255,204,153);
+                            }
+                        }
                     }
                     .reminders-wrapper {
                         background-color: rgb(255,204,153);

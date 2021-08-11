@@ -83,7 +83,7 @@
                         margin-left: 0;
                         margin-right: 0;
                         .list-container {
-                            height: 315px;
+                            height: 690px;
                             border: 1px solid grey;
                             background-color: #E4D9E2;
                             border-radius: 10px;
@@ -115,44 +115,6 @@
                                 margin-left: 20px;
                                 font-weight: bold;
                             }
-                        }
-                    }
-                }
-            }
-            .send-notification {
-                min-height: 200px;
-                form {
-                    .col-md-12 {
-                        h5 {
-                            margin-bottom: 20px;
-                        }
-                        .form-group {
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 7px;
-                            label {
-                                width: 80px;
-                                margin-right: 10px;
-                                padding-bottom: 10px;
-                            }
-                            input {
-                                width: 75%;
-                                height: 40px;
-                                font-size: 1rem;
-                                border-radius: 6px;
-                                background-color: #E4D9E2;
-                                margin-bottom: 20px;
-                                border: 1px solid grey;
-                            }
-                            textarea {
-                                border-radius: 6px;
-                                background-color: #E4D9E2;
-                                border: 1px solid grey;
-                            }
-                        }
-                        .submit-button {
-                            margin-top: 30px;
-                            min-width: 150px;
                         }
                     }
                 }

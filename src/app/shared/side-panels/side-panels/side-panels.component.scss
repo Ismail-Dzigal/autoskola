@@ -13,9 +13,31 @@
         margin-bottom: 40px;
         .notification {
             display: flex;
+            position: relative;
             p {
                margin: 8px auto 8px 10px;
                font-size: 0.8rem;
+                &:hover {
+                    cursor: help;
+                    + .notification-body {
+                        display: block;
+                    }
+                }
+            }
+            .notification-body {
+                display: none;
+                position: absolute;
+                top: 10px;
+                left: -203px;
+                width: 200px;
+                background-color: rgb(201,229,229);
+                border: 1px solid gray;
+                border-radius: 4px;
+                z-index: 9999;
+                p {
+                    margin: 0;
+                    padding: 10px;
+                }
             }
             .images-wrapper {
                 margin-top: 6px;

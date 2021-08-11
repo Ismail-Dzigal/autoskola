@@ -229,6 +229,11 @@
                 .content-wrapper {
                     .notifications-wrapper {
                         background-color: #FCF6F6;
+                        .notification {
+                            .notification-body {
+                                background-color: #FCF6F6 !important;
+                            }
+                        }
                     }
                     .reminders-wrapper {
                         background-color: #FCF6F6;
