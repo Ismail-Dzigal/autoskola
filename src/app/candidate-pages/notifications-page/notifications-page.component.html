@@ -1,1 +1,73 @@
-<p>notifications-page works!</p>
+<div class="container notifications">
+    <div style="height: 10px;"></div>
+    <div class="navbar-container d-flex">
+        <div class="logo-wrapper d-flex">
+            <img src="../../assets/images/logo.png" alt="logo" >
+            <h3>e-autoškola</h3>
+        </div>
+        <div class="navbar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/candidate-pages/candidate-main']" routerLinkActive="router-link-active">Profil</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/candidate-pages/lectures-summary']" routerLinkActive="router-link-active">Pregled obuke</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/candidate-pages/lectures-times']" routerLinkActive="router-link-active">Termini</a>
+                </li>
+                <div class="border"></div>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/candidate-pages/notifications']" routerLinkActive="router-link-active">Notifikacije</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logout">
+            <a href="#">Odjavi se</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="list-data">
+            <h5>Notifikacije</h5>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row search-wrapper">
+                        <div class="col-md-12">
+                            <input type="text" class="search-list form-control" placeholder="Pretraži listu notifikacija"/>
+                        </div>
+                    </div>
+                    <div class="row list-wrapper">
+                        <div class="col-md-12 list-container">
+                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                        </div>
+                        <!-- <div class="col-md-12 empty-list">
+                            <p>Nema pronađenih notifikacija</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+.candidate-lectures-summary {
+    &.container {
+        background-color: #F0EEEE;
+        height: 95vh;
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-top: 20px;
+        .navbar-container {
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: #FCF6F6;
+            .logo-wrapper {
+                margin-top: 10px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                    margin-left: 10px;
+                }
+                h3 {
+                    margin-right: 40px;
+                    margin-top: 5px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            .navbar-wrapper {
+                .nav {
+                    font-size: 1rem;
+                    .border {
+                        margin-top: 15px;
+                        height: 20px;
+                        width: 4px;
+                        background-color: #808080;
+                    }
+                    .nav-item {
+                        margin-bottom: 5px;
+                        margin-top: 5px;
+                        .nav-link {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        .active {
+                            border-bottom: 3px solid #808080;
+                        }
+                    }
+                }
+            }
+            .logout {
+               a {
+                   display: inline-block;
+                   color: black;
+                   font-size: 1rem;
+                   font-weight: bold;
+                   margin-top: 15px;
+                   margin-left: 250px;
+               }
+            }
+        }
+        .main-content {
+            margin-top: 25px;
+            margin-right: 0px;
+            .col-md-12 {
+                h5 {
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                }
+                .table {
+                    max-height: 600px;
+                    overflow-y: auto;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    
+                    /* Hide scrollbar for IE, Edge and Firefox */
+                    & {
+                      -ms-overflow-style: none;  /* IE and Edge */
+                      scrollbar-width: none;  /* Firefox */
+                    }
+                    .panel-headers {
+                        margin-left: 200px;
+                        .panel-button {
+                            min-width: 150px;
+                            background-color: rgb(128, 128, 128);
+                            margin-right: 20px;
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    #obuka {
+                        margin-top: 10px;
+                        margin-left: 11px;
+                        width: 99%;
+                        text-align: center;
+                        border: 2px solid rgb(128,128,128);
+                        th, td {
+                            border: 1px solid rgb(128,128,128);
+                            width: 10%;
+                            font-size: 13px;
+                            padding-top: 4px;
+                            padding-bottom: 4px;
+                            &:nth-child(3), &:nth-child(5) {
+                                width: 30%;
+                            }
+                        }
+                        th {
+                            background-color: rgb(128,128,128);
+                            color: white;
+                            font-weight: 100;
+                            border-right: 1px solid white;
+                            &:last-of-type {
+                                border-right: none;
+                            }
+                        }
+                        td {
+                            background-color: rgb(252,246,246);
+                            &:nth-child(3), &:nth-child(5) {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
