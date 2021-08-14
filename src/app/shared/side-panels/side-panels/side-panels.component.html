@@ -1,66 +1,22 @@
 <div class="content-wrapper">
     <h5>Notifikacije</h5>
     <div class="notifications-wrapper">
-      <div class="notification">
-        <p>- A23-M-356 kvar</p>
+      <div class="notification" *ngFor="let notification of notificationsForAdmin">
+        <p>- {{notification.title}}</p>
         <div class="notification-body">
-          <p>Danas je došlo do curenja ulja na autu, pa sam morao da otkažem svu obuku</p>
+          <p>{{notification.createdAt | date: 'd/M/yy'}}</p>
+          <p>{{notification.body}}</p>
+          <p>{{notification.sender}}</p>
         </div>
         <div class="images-wrapper">
           <a href="#">
             <i class="fas fa-wrench"></i>
           </a>
-          <ngbd-modal-options></ngbd-modal-options>
-          <!-- <a href="#">
-            <i class="fas fa-times"></i>
-          </a> -->
+          <ngbd-modal-options (deleteItemEvent)="deleteNotificationForAdmin(notification.id)"></ngbd-modal-options>
         </div>
       </div>
-      <div class="notification">
-        <p>- A23-M-356 kvar</p>
-        <div class="notification-body">
-          <p>Danas je došlo do curenja ulja na autu, pa sam morao da otkažem svu obuku</p>
-        </div>
-        <div class="images-wrapper">
-          <a href="#">
-            <i class="fas fa-wrench"></i>
-          </a>
-          <ngbd-modal-options></ngbd-modal-options>
-          <!-- <a href="#">
-            <i class="fas fa-times"></i>
-          </a> -->
-        </div>
-      </div>
-      <div class="notification">
-        <p>- A23-M-356 kvar</p>
-        <div class="notification-body">
-          <p>Danas je došlo do curenja ulja na autu, pa sam morao da otkažem svu obuku</p>
-        </div>
-        <div class="images-wrapper">
-          <a href="#">
-            <i class="fas fa-wrench"></i>
-          </a>
-          <ngbd-modal-options></ngbd-modal-options>
-          <!-- <a href="#">
-            <i class="fas fa-times"></i>
-          </a> -->
-        </div>
-      </div>
-      <div class="notification">
-        <p>- A23-M-356 kvar</p>
-        <div class="notification-body">
-          <p>Danas je došlo do curenja ulja na autu, pa sam morao da otkažem svu obuku</p>
-        </div>
-        <div class="images-wrapper">
-          <a href="#">
-            <i class="fas fa-wrench"></i>
-          </a>
-          <ngbd-modal-options></ngbd-modal-options>
-          <!-- <a href="#">
-            <i class="fas fa-times"></i>
-          </a> -->
-        </div>
-      
+      <div *ngIf="notificationsForAdmin.length === 0" class="blank-list">
+        <p>Trenutno nemate notifikacija</p>
       </div>
     </div>
 

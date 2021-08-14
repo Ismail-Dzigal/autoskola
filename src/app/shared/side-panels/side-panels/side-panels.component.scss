@@ -47,6 +47,7 @@
                         .fas {
                             color: red;
                             font-size: 1.2rem;
+                            cursor: pointer;
                         }
                     }
                     .fas {
@@ -54,6 +55,13 @@
                   
                     }
                 }
+            }
+        }
+        .blank-list {
+            p {
+                color: red;
+                margin: 8px auto 8px 10px;
+                font-size: 0.8rem;
             }
         }
     }

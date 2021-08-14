@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -19,6 +19,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class PopupConfirmComponent implements OnInit {
   closeResult: string;
+  @Output() deleteItemEvent = new EventEmitter<string>();
+
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
@@ -26,5 +28,10 @@ export class PopupConfirmComponent implements OnInit {
 
   openSm(content) {
     this.modalService.open(content, { size: 'sm' });
+  }
+
+  deleteItem(modal) {
+    this.deleteItemEvent.emit('');
+    modal.close('Close click');
   }
 }

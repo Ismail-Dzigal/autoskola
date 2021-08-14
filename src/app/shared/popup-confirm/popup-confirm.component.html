@@ -3,11 +3,10 @@
       <p>Da li ste sigurni?</p>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Da</button>
+      <button type="button" class="btn btn-light" (click)="deleteItem(modal)">Da</button>
       <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Ne</button>
     </div>
   </ng-template>
-  <!-- <button class="btn btn-outline-primary mb-2 mr-2" (click)="openSm(content)">Small modal</button> -->
-    <a class="popup-times" (click)="openSm(content)">
-        <i class="fas fa-times"></i>
-    </a>
+  <a class="popup-times" (click)="openSm(content)">
+    <i class="fas fa-times"></i>
+  </a>

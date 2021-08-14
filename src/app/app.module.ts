@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { ReportsMainComponent } from './admin-pages/admin-reports/reports-main/reports-main.component';
+import { CustomDatePipe } from './custom-date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ReportsMainComponent
+    ReportsMainComponent,
+    CustomDatePipe
   ],
   imports: [
     BrowserModule,
