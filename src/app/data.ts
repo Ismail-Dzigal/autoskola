@@ -59,10 +59,12 @@ export const notificationsFromAdmin = [
 
 export const reminders = [
     {
-        "id": 1
+        "id": 1,
+        "text": "A23-M-356 kvar"
     },
     {
-        "id": 2
+        "id": 2,
+        "text": "Platiti struju"
     }
 ];
 

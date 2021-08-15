@@ -22,43 +22,21 @@
 
     <h5>Podsjetnici</h5>
     <div class="reminders-wrapper">
-      <div class="reminder">
-        <p>- A23-M-356 kvar</p>
+      <div class="reminder" *ngFor="let reminder of reminders">
+        <p>- {{reminder.text}}</p>
         <div class="images-wrapper">
-          <a href="#">
+          <a (click)="deleteReminder(reminder.id)">
             <i class="fas fa-times"></i>
           </a>
         </div>
       </div>
-      <div class="reminder">
-        <p>- A23-M-356 kvar</p>
-        <div class="images-wrapper">
-          <a href="#">
-            <i class="fas fa-times"></i>
-          </a>
-        </div>
+      <div class="input-wrapper" *ngIf="reminderInputVisible">
+        <input class="reminder-input" name="reminderText" type="text" placeholder="Unesite podsjetnik" [(ngModel)]="reminder.text" #reminderInput = ngModel minlength='5'
+        [ngClass]="{'input-invalid':reminderInput.touched && !reminderInput.valid}"/>
+        <i class="fas fa-check" (click)="addReminder()"></i>
+        <i class="fas fa-times ml-2" (click)="cancelReminderAdding()"></i>
+        <p class="text-invalid" *ngIf="reminderInput.touched && !reminderInput.valid">Morate unijeti minimalno 5 karaktera</p>
       </div>
-      <div class="reminder">
-        <p>- A23-M-356 kvar</p>
-        <div class="images-wrapper">
-          <a href="#">
-            <i class="fas fa-times"></i>
-          </a>
-        </div>
-      </div>
-      <div class="reminder">
-        <p>- A23-M-356 kvar</p>
-        <div class="images-wrapper">
-          <a href="#">
-            <i class="fas fa-times"></i>
-          </a>
-        </div>
-      </div>
-      <div class="input-wrapper">
-        <input class="reminder-input" type="text" placeholder="Unesi podsjetnik" />
-        <i class="fas fa-check"></i>
-        <i class="fas fa-times ml-2"></i>
-      </div>
-      <button class="add-reminder">Novi podsjetnik</button>
+      <button class="add-reminder" (click)="showReminderInput()">Novi podsjetnik</button>
     </div>
   </div>

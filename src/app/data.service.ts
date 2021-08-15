@@ -64,5 +64,21 @@ export class DataService {
     }    
   }
 
+  //CRUD REMINDERS
+
+  getReminders() {
+    return [...this.REMINDERS];
+  }
+
+  deleteReminder(id) {
+    for (let i = 0; i < this.REMINDERS.length; i++) {
+      const reminder = this.REMINDERS[i];
+      if(reminder.id === id){
+        this.REMINDERS.splice(i, 1);
+        break;
+      }
+    }    
+  }
+
   constructor() { }
 }

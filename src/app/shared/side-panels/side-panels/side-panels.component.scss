@@ -71,6 +71,14 @@
         border-radius: 6px;
         margin-left: 15px;
         margin-bottom: 40px;
+        .input-invalid {
+            border: 1px solid red;
+        }
+        .text-invalid {
+            color: red;
+            margin: 8px auto 8px 10px;
+            font-size: 0.8rem;
+        }
         .reminder {
             display: flex;
             p {
@@ -85,23 +93,30 @@
                         margin-right: 10px;
                         color: red;
                         font-size: 1.2rem;
+                        cursor: pointer;
                     }
                 }
             }
         }
-        // .input-wrapper {
-        //     .reminder-input {
-        //         border-radius: 6px;
-        //         margin-left: 10px;
-        //         margin-right: 10px;;
-        //         padding-left: 10px;
-        //         background-color: rgb(217,228,237);
-        //     }
-        //     .fas:nth-of-type(2) {
-        //         color: red;
-        //         font-size: 1.2rem;
-        //     }
-        // }
+        .input-wrapper {
+            .reminder-input {
+                border-radius: 6px;
+                margin-left: 10px;
+                margin-right: 10px;;
+                padding-left: 10px;
+                background-color: rgb(217,228,237);
+            }
+            .fas:nth-of-type(1) {
+                color: green;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+            .fas:nth-of-type(2) {
+                color: red;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+        }
 
         .add-reminder {
             background-color: green;
