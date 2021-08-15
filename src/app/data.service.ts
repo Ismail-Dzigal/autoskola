@@ -35,7 +35,32 @@ export class DataService {
   }
 
   getCandidate(id) {
-    return this.CANDIDATES[id];
+    for (let i = 0; i < this.CANDIDATES.length; i++) {
+      const candidate = this.CANDIDATES[i];
+      if(candidate.id === id){
+        return candidate;
+      }
+    }
+    return null;
+  }
+
+  setCandidate(editedCandidate){
+    for (let i = 0; i < this.CANDIDATES.length; i++) {
+      let candidate = this.CANDIDATES[i];
+      if(candidate.id === editedCandidate.id){
+        candidate = Object.assign({}, editedCandidate);
+      }
+    }
+  }
+
+  deleteCandidate(id) {
+    for (let i = 0; i < this.CANDIDATES.length; i++) {
+      const candidate = this.CANDIDATES[i];
+      if(candidate.id === id){
+        this.CANDIDATES.splice(i, 1);
+        break;
+      }
+    }    
   }
 
    //CRUD NOTIFICATIONSFORADMIN

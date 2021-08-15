@@ -1,9 +1,33 @@
 export const candidates = [
     {
-        "id": 1
+        "id": 1,
+        "ime": "Ismail",
+        "prezime": "Džigal",
+        "imeOca": "Selim",
+        "jmbg": "1806991170015",
+        "mjestoRodjenja": "Sarajevo",
+        "drzavljanstvo": "Bosansko",
+        "brojLk": "09GHT4518",
+        "telefon": "+38761487369",
+        "emailAdresa": "ismail.dzigal@edu.fit.ba",
+        "lozinka": "123456",
+        "ponovljenaLozinka": "123456",
+        "slika":""
     },
     {
-        "id": 2
+        "id": 2,
+        "ime": "Sead",
+        "prezime": "Hodžić",
+        "imeOca": "Admir",
+        "jmbg": "1111995170236",
+        "mjestoRodjenja": "Sarajevo",
+        "drzavljanstvo": "Bosansko",
+        "brojLk": "07MKT4736",
+        "telefon": "+38762896652",
+        "emailAdresa": "sead.hodzic@gmail.com",
+        "lozinka": "654321",
+        "ponovljenaLozinka": "654321",
+        "slika":""
     }
 ];
 

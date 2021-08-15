@@ -17,7 +17,7 @@ export class SidePanelsComponent implements OnInit {
   reminderInputVisible = false;
 
   constructor(private dataService: DataService,
-              private toastr: ToastrService,) { }
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.notificationsForAdmin = this.dataService.getNotificationsForAdmin();
