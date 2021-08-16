@@ -12,7 +12,25 @@ export const candidates = [
         "emailAdresa": "ismail.dzigal@edu.fit.ba",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
-        "slika":""
+        "slika":"",
+        "uplate": [
+            {
+               "id": 1,
+               "iznos": 300,
+               "datum": new Date('2021, 07, 15'),
+            },
+            {
+                "id": 2,
+                "iznos": 120,
+                "datum": new Date('2021, 08, 15'),
+            }
+        ],
+        "ispiti": [{
+
+        }],
+        "dokumenti": [{
+
+        }]
     },
     {
         "id": 2,
@@ -27,7 +45,25 @@ export const candidates = [
         "emailAdresa": "sead.hodzic@gmail.com",
         "lozinka": "654321",
         "ponovljenaLozinka": "654321",
-        "slika":""
+        "slika":"",
+        "uplate": [
+            {
+               "id": 1,
+               "iznos": 400,
+               "datum": new Date('2021, 07, 13'),
+            },
+            {
+                "id": 2,
+                "iznos": 100,
+                "datum": new Date('2021, 08, 14'),
+            }
+        ],
+        "ispiti": [{
+
+        }],
+        "dokumenti": [{
+
+        }]
     }
 ];
 

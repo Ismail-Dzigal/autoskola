@@ -129,6 +129,26 @@
                             }
                         }
 
+                        .nova-uplata {
+                            margin-left: 15px;
+                            span {
+                                font-weight: bold;
+                            }
+                            input {
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                background-color: #D9E4ED;
+                                border-radius: 6px;
+                                padding-left: 20px;
+                                width: 100px;
+                            }
+                            .fas {
+                                font-size: 23px;
+                                color: green;
+                                cursor: pointer;
+                            }
+                        }
+
                         #uplate {
                             margin-top: 10px;
                             margin-left: 15px;

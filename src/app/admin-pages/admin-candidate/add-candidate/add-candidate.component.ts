@@ -24,7 +24,10 @@ export class AddCandidateComponent implements OnInit {
         emailAdresa: "",
         lozinka: "",
         ponovljenaLozinka: "",
-        slika: ""
+        slika: "",
+        uplate: [],
+        ispiti: [],
+        dokumenti: [],
   };
   candidates;
 
