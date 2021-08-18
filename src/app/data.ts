@@ -17,20 +17,45 @@ export const candidates = [
             {
                "id": 1,
                "iznos": 300,
-               "datum": new Date('2021, 07, 15'),
+               "datum": new Date('2021, 07, 15')
             },
             {
                 "id": 2,
                 "iznos": 120,
-                "datum": new Date('2021, 08, 15'),
+                "datum": new Date('2021, 08, 15')
             }
         ],
-        "ispiti": [{
+        "ispiti": [
+            {
+                "id": 1,
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 15
+                },
+                "termin": {
+                    "hour": 9,
+                    "minute": 30
+                },
+                "uspjeh": false
+            },
+            {
+                 "id": 2,
+                 "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 15
+                 },
+                 "termin": {
+                    "hour": 12,
+                    "minute": 20
+                 },
+                 "uspjeh": false
+            }
+        ],
+        "dokumenti": [
 
-        }],
-        "dokumenti": [{
-
-        }]
+        ]
     },
     {
         "id": 2,

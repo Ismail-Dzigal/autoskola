@@ -62,6 +62,15 @@ export class DataService {
     }
   }
 
+  addExam(candidateId, newExam){
+    for (let i = 0; i < this.CANDIDATES.length; i++) {
+      let candidate = this.CANDIDATES[i];
+      if(candidate.id === candidateId){
+        candidate.ispiti.push(newExam);
+      }
+    }
+  }
+
   deleteCandidate(id) {
     for (let i = 0; i < this.CANDIDATES.length; i++) {
       const candidate = this.CANDIDATES[i];

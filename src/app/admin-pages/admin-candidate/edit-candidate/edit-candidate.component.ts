@@ -25,6 +25,22 @@ export class EditCandidateComponent implements OnInit {
   paymentsSum = 0;
   wholePayment = 1020;
 
+  exams;
+  newExam = {
+    id: 1,
+    datum: {
+      year: 2021,
+      month: 8,
+      day: 1
+    },
+    termin: {
+      hour: 0,
+      minute: 0
+    },
+    uspjeh: false,
+  }
+  examInputVisible = false;
+
   constructor(private route: ActivatedRoute,
               private dataService: DataService,
               private toastr: ToastrService,
@@ -37,6 +53,7 @@ export class EditCandidateComponent implements OnInit {
       this.candidate = this.dataService.getCandidate(id);
       this.payments = this.candidate.uplate;
       this.findPaymentsSum(this.payments);
+      this.exams = this.candidate.ispiti;
       console.log("kandidat", this.candidate);
     } 
   }
@@ -79,6 +96,8 @@ export class EditCandidateComponent implements OnInit {
     }
   }
 
+  //Nova uplata
+
   showNewPaymentInput(){
     this.paymentsInputVisible = true;
   }
@@ -112,5 +131,53 @@ export class EditCandidateComponent implements OnInit {
   cancelUplata(){
     this.paymentsInputVisible = false;
     this.newPayment.iznos = 0;
+  }
+
+  //Novi ispit
+
+  showNewExamInput(){
+    this.examInputVisible = true;
+  }
+
+  addExam(){
+    if(this.exams.length > 0){
+      this.newExam.id = this.exams[this.exams.length - 1].id + 1;
+    }
+    this.dataService.addExam(this.candidate.id, this.newExam)
+    //set candidate after change
+    this.candidate = this.dataService.getCandidate(this.candidate.id);
+    this.exams = this.candidate.ispiti;
+    this.examInputVisible = false;
+    this.newExam = {
+      id: 1,
+      datum: {
+        year: 2021,
+        month: 8,
+        day: 1
+      },
+      termin: {
+        hour: 0,
+        minute: 0
+      },
+      uspjeh: false
+    }
+    this.toastr.success(`Podaci o polaganju uspješno dodani`);
+  }
+
+  cancelExam(){
+    this.examInputVisible = false;
+    this.newExam = {
+      id: 1,
+      datum: {
+        year: 2021,
+        month: 8,
+        day: 1
+      },
+      termin: {
+        hour: 0,
+        minute: 0
+      },
+      uspjeh: false
+    }
   }
 }

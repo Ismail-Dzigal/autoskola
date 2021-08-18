@@ -12,6 +12,7 @@ import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [CandidatesListComponent, AddCandidateComponent, EditCandidateComponent],
   imports: [
     SharedModule,
+    NgbModule,
     NgbPaginationModule,
     AdminCandidateRoutingModule
   ]

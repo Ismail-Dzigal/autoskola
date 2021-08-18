@@ -137,7 +137,7 @@
                             input {
                                 margin-left: 10px;
                                 margin-right: 10px;
-                                background-color: #D9E4ED;
+                                background-color: white;
                                 border-radius: 6px;
                                 padding-left: 20px;
                                 width: 100px;
@@ -146,6 +146,46 @@
                                 font-size: 23px;
                                 color: green;
                                 cursor: pointer;
+                            }
+                        }
+
+                        .novi-ispit {
+                            margin-left: 15px;
+                            span {
+                                margin-left: 10px;
+                                margin-right: 5px;
+                                padding-top: 45px;
+                            }
+
+                            .datepicker {
+                                margin-top: 40px;
+                            }
+                            .timepicker {
+                              font-size: 14px;
+                              padding-left: 10px;
+                              padding-right: 10px;
+
+                              .chevron {
+                                color: grey;
+                              }
+
+                              .ngb-tp-input {
+                                background-color: white;
+                              }
+                            }
+                            .uspjeh-checkbox {
+                                input {
+                                    margin-top: 52px;
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            .fas {
+                                margin-top: 52px;
+                                margin-left: 15px;
+                                cursor: pointer;
+                                font-size: 21px;
+                                color: green;
                             }
                         }
 

@@ -171,7 +171,7 @@
                         <div *ngIf="showUplate">
                             <div class="add-section uplate">
                                 <a (click)="showNewPaymentInput()" title="Dodaj novu uplatu"><i class="fas fa-plus-circle mr-2"></i></a>
-                                <a (click)="cancelUplata()" title="Odustani od nove uplate"><i class="fas fa-times-circle"></i></a>
+                                <a (click)="cancelExam()" title="Odustani od nove uplate"><i class="fas fa-times-circle"></i></a>
                             </div>
                             <div class="d-flex nova-uplata" *ngIf="paymentsInputVisible">
                                 <span>Iznos:</span>
@@ -179,10 +179,37 @@
                                 <i class="fas fa-check" (click)="addUplata()" title="Potvrdite unos"></i>
                             </div>
                         </div>
-                        <div class="add-section ispiti" *ngIf="showIspiti">
-                            <a><i class="fas fa-plus-circle mr-2"></i></a>
-                            <a><i class="fas fa-times-circle"></i></a>
+                        <div *ngIf="showIspiti">
+                            <div class="add-section ispiti" >
+                                <a (click)="showNewExamInput()" title="Dodaj novo polaganje"><i class="fas fa-plus-circle mr-2"></i></a>
+                                <a (click)="cancelExam()" title="Odustani od dodavanja novog ispita"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="d-flex novi-ispit" *ngIf="examInputVisible">
+                                <span>Položio?:</span>
+                                <div class="uspjeh-checkbox">
+                                    <input type="checkbox" name="uspjeh" [(ngModel)]="newExam.uspjeh">
+                                </div>
+                                <span>|</span>
+                                <span>Datum:</span>
+                                <div class="form-group datepicker">
+                                    <div class="input-group">
+                                      <input class="form-control" placeholder="dd-mm-yyyy"
+                                             name="dp" [(ngModel)]="newExam.datum" ngbDatepicker #d="ngbDatepicker">
+                                      <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                                      </div>
+                                    </div>
+                                </div>
+                                <span>|</span>
+                                <span>Termin:</span>
+                                <div class="timepicker">
+                                    <ngb-timepicker name="termin" [(ngModel)]="newExam.termin"></ngb-timepicker>
+                                </div>
+                                
+                                <i class="fas fa-check" (click)="addExam()" title="Potvrdite unos"></i>
+                            </div>
                         </div>
+                      
                         <div class="add-section uplate dokumenti" *ngIf="showDokumenti">
                             <a><i class="fas fa-plus-circle mr-2"></i></a>
                             <a><i class="fas fa-times-circle"></i></a>
@@ -217,15 +244,10 @@
                                 <th>Termin</th>
                                 <th>Uspjeh</th>
                             </tr>
-                            <tr>
-                                <td>01.12.2020.</td>
-                                <td>09:30</td>
-                                <td>pao</td>
-                            </tr>
-                            <tr>
-                                <td>08.12.2020.</td>
-                                <td>12:00</td>
-                                <td>položio</td>
+                            <tr *ngFor="let exam of exams">
+                                <td>{{exam.datum.day}}/{{exam.datum.month}}/{{exam.datum.year}}</td>
+                                <td>{{exam.termin.hour}}:{{exam.termin.minute}}</td>
+                                <td [ngClass]="{'success':exam.uspjeh, 'failure':!exam.uspjeh}">{{exam.uspjeh ? "Položio" : "Pao"}}</td>
                             </tr>
                         </table>
                         <div id="dokumenti" *ngIf="showDokumenti">
