@@ -54,7 +54,11 @@ export const candidates = [
             }
         ],
         "dokumenti": [
-
+            "kopija_lk.pdf",
+            "CIPS_prijava.pdf",
+            "ljekarsko_uvjerenje.pdf",
+            "potvrda_CK.pdf",
+            "potvrda_propisi.pdf"
         ]
     },
     {
@@ -83,12 +87,41 @@ export const candidates = [
                 "datum": new Date('2021, 08, 14'),
             }
         ],
-        "ispiti": [{
-
-        }],
-        "dokumenti": [{
-
-        }]
+        "ispiti": [
+                {
+                    "id": 1,
+                    "datum": {
+                        "year": 2021,
+                        "month": 6,
+                        "day": 12
+                    },
+                    "termin": {
+                        "hour": 10,
+                        "minute": 30
+                    },
+                    "uspjeh": false
+                },
+                {
+                     "id": 2,
+                     "datum": {
+                        "year": 2021,
+                        "month": 7,
+                        "day": 11
+                     },
+                     "termin": {
+                        "hour": 10,
+                        "minute": 50
+                     },
+                     "uspjeh": false
+                }
+        ],
+        "dokumenti": [
+            "kopija_lk.pdf",
+            "CIPS_prijava.pdf",
+            "ljekarsko_uvjerenje.pdf",
+            "potvrda_CK.pdf",
+            "potvrda_propisi.pdf"
+        ]
     }
 ];
 

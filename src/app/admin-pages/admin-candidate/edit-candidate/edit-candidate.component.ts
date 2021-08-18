@@ -2,6 +2,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { DataService } from 'src/app/data.service';
+import { FileUploader } from 'ng2-file-upload';
+
+// const URL = '/api/';
+const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
 
 @Component({
   selector: 'app-edit-candidate',
@@ -10,6 +14,11 @@ import { DataService } from 'src/app/data.service';
   encapsulation: ViewEncapsulation.None
 })
 export class EditCandidateComponent implements OnInit {
+  uploader: FileUploader;
+  hasBaseDropZoneOver: boolean = false;
+  hasAnotherDropZoneOver: boolean = false;
+  response:string;
+
   candidate;
   showUplate = true;
   showIspiti = false;
@@ -41,10 +50,43 @@ export class EditCandidateComponent implements OnInit {
   }
   examInputVisible = false;
 
+  documents;
+  documentInputVisible = false;
+
   constructor(private route: ActivatedRoute,
               private dataService: DataService,
               private toastr: ToastrService,
-              private router:Router) { }
+              private router:Router) {
+                this.uploader = new FileUploader({
+                  url: URL,
+                  disableMultipart: true, // 'DisableMultipart' must be 'true' for formatDataFunction to be called.
+                  formatDataFunctionIsAsync: true,
+                  formatDataFunction: async (item) => {
+                    return new Promise( (resolve, reject) => {
+                      resolve({
+                        name: item._file.name,
+                        length: item._file.size,
+                        contentType: item._file.type,
+                        date: new Date()
+                      });
+                    });
+                  }
+                });
+
+                this.hasBaseDropZoneOver = false;
+                this.hasAnotherDropZoneOver = false;
+             
+                this.response = '';
+             
+                this.uploader.response.subscribe( res => this.response = res );
+              }
+  public fileOverBase(e:any):void {
+    this.hasBaseDropZoneOver = e;
+  }
+             
+  public fileOverAnother(e:any):void {
+    this.hasAnotherDropZoneOver = e;
+  }
 
   ngOnInit(): void {
     const param = this.route.snapshot.paramMap.get('id');
@@ -54,7 +96,7 @@ export class EditCandidateComponent implements OnInit {
       this.payments = this.candidate.uplate;
       this.findPaymentsSum(this.payments);
       this.exams = this.candidate.ispiti;
-      console.log("kandidat", this.candidate);
+      this.documents = this.candidate.dokumenti;
     } 
   }
 
@@ -180,4 +222,22 @@ export class EditCandidateComponent implements OnInit {
       uspjeh: false
     }
   }
+
+  showNewDocumentInput() {
+    this.documentInputVisible = true;
+  }
+
+  cancelDokument() {
+    this.documentInputVisible = false;
+  }
+
+  addDocument(){
+    this.dataService.addDocument(this.candidate.id, "opravdanje_za_kasnjenje")
+    //set candidate after change
+    this.candidate = this.dataService.getCandidate(this.candidate.id);
+    this.documents = this.candidate.dokumenti;
+    this.documentInputVisible = false;
+    this.toastr.success(`Novi dokument uspješno dodan`);
+  }
+
 }

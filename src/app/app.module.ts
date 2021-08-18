@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// File upload modules
+import { FileUploadModule } from 'ng2-file-upload';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -22,6 +25,7 @@ import { CustomDatePipe } from './custom-date.pipe';
     BrowserModule,
     SharedModule,
     AppRoutingModule,
+    FileUploadModule,
     NgbModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({

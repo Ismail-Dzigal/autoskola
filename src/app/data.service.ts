@@ -71,6 +71,15 @@ export class DataService {
     }
   }
 
+  addDocument(candidateId, newDocument){
+    for (let i = 0; i < this.CANDIDATES.length; i++) {
+      let candidate = this.CANDIDATES[i];
+      if(candidate.id === candidateId){
+        candidate.dokumenti.push(newDocument);
+      }
+    }
+  }
+
   deleteCandidate(id) {
     for (let i = 0; i < this.CANDIDATES.length; i++) {
       const candidate = this.CANDIDATES[i];

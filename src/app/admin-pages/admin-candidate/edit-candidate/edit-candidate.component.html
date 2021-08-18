@@ -209,11 +209,19 @@
                                 <i class="fas fa-check" (click)="addExam()" title="Potvrdite unos"></i>
                             </div>
                         </div>
-                      
-                        <div class="add-section uplate dokumenti" *ngIf="showDokumenti">
-                            <a><i class="fas fa-plus-circle mr-2"></i></a>
-                            <a><i class="fas fa-times-circle"></i></a>
+
+                        <div *ngIf="showDokumenti">
+                            <div class="add-section dokumenti" >
+                                <a (click)="showNewDocumentInput()" title="Dodaj novi dokument"><i class="fas fa-plus-circle mr-2"></i></a>
+                                <a (click)="cancelDokument()" title="Odustani od dodavanja novog dokumenta"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="novi-dokument" *ngIf="documentInputVisible">
+                                <input type="file" ng2FileSelect [uploader]="uploader" />
+                                <i class="fas fa-check" (click)="addDocument()" title="Upload dokument"></i>
+                            </div>
                         </div>
+                      
+                      
                         <table id="uplate" *ngIf="showUplate">
                             <thead>
                                 <tr>
@@ -251,11 +259,7 @@
                             </tr>
                         </table>
                         <div id="dokumenti" *ngIf="showDokumenti">
-                            <a href="#">kopija_lk.pdf</a>
-                            <a href="#">CIPS_prijava.pdf.pdf</a>
-                            <a href="#">ljekarsko_uvjerenje.pdf</a>
-                            <a href="#">potvrda_CK.pdf</a>
-                            <a href="#">potvrda_propisi.pdf</a>
+                            <a href="#" *ngFor="let document of documents">{{document}}</a>
                         </div>
                     </div>
                     <div class="submit-buttons-section">
