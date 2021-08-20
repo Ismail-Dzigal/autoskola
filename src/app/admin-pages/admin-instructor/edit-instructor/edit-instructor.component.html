@@ -45,76 +45,187 @@
                     <div class="col-md-9">
                         <h5>Lični podaci</h5>
                         <div class="form-group">
-                            <label for="ime">Ime:</label>
-                            <input type="text" class="form-control" id="ime" aria-describedby="ime" placeholder="Ime">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            <label for="ime">Ime:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="ime" aria-describedby="ime" placeholder="Ime"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "instructor.ime"
+                            name="ime"
+                            #imeVar = "ngModel"
+                            [ngClass]="{'input-invalid':imeVar.touched && !imeVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="imeVar.touched && imeVar.errors?.required">Unesite ime</span>
+                        <span class="text-invalid" *ngIf="imeVar.touched && imeVar.errors?.minlength">Ime mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="prezime">Prezime:</label>
-                            <input type="text" class="form-control" id="prezime" placeholder="Prezime">
+                            <label for="prezime">Prezime:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="prezime" 
+                            placeholder="Prezime"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "instructor.prezime"
+                            name="prezime"
+                            #prezimeVar = "ngModel"
+                            [ngClass]="{'input-invalid':prezimeVar.touched && !prezimeVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="prezimeVar.touched && prezimeVar.errors?.required">Unesite prezime</span>
+                        <span class="text-invalid" *ngIf="prezimeVar.touched && prezimeVar.errors?.minlength">Prezime mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="imeOca">Ime oca:</label>
-                            <input type="text" class="form-control" id="imeOca" placeholder="Ime oca">
+                            <label for="imeOca">Ime oca:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="imeOca" 
+                            placeholder="Ime oca"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "instructor.imeOca"
+                            name="imeOca"
+                            #imeOcaVar = "ngModel"
+                            [ngClass]="{'input-invalid':imeOcaVar.touched && !imeOcaVar.valid}"/>
                         </div>
+                        <span class="text-invalid" *ngIf="imeOcaVar.touched && imeOcaVar.errors?.required">Unesite ime oca</span>
+                        <span class="text-invalid" *ngIf="imeOcaVar.touched && imeOcaVar.errors?.minlength">Ime oca mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="jmbg">JMBG:</label>
-                            <input type="text" class="form-control" id="jmbg" placeholder="JMBG">
+                            <label for="jmbg">JMBG:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="jmbg" 
+                            placeholder="JMBG"
+                            required
+                            minlength="13"
+                            maxlength="13"
+                            [(ngModel)] = "instructor.jmbg"
+                            name="jmbg"
+                            #jmbgVar = "ngModel"
+                            [ngClass]="{'input-invalid':jmbgVar.touched && !jmbgVar.valid}"/>
                         </div>
+                        <span class="text-invalid" *ngIf="jmbgVar.touched && jmbgVar.errors?.required">Unesite JMBG</span>
+                        <span class="text-invalid" *ngIf="jmbgVar.touched && jmbgVar.errors?.minlength || jmbgVar.errors?.maxlength">JMBG mora imati tačno 13 karaktera</span>
                         <div class="form-group">
                             <label for="mjestoRodjenja">Mjesto rođenja:</label>
-                            <input type="text" class="form-control" id="mjestoRodjenja" placeholder="Mjesto rođenja">
+                            <input type="text" class="form-control" id="mjestoRodjenja" 
+                            placeholder="Mjesto rođenja"
+                            minlength="2"
+                            [(ngModel)] = "instructor.mjestoRodjenja"
+                            name="mjestoRodjenja"
+                            #mjestoRodjenjaVar = "ngModel"
+                            [ngClass]="{'input-invalid':mjestoRodjenjaVar.touched && !mjestoRodjenjaVar.valid}"/>
                         </div>
+                        <span class="text-invalid" *ngIf="mjestoRodjenjaVar.touched && mjestoRodjenjaVar.errors?.minlength">Mjesto rođenja mora imati minimalno 2 karaktera</span>
                         <div class="form-group">
                             <label for="drzavljanstvo">Državljanstvo:</label>
-                            <input type="text" class="form-control" id="drzavljanstvo" placeholder="Državljanstvo">
+                            <input type="text" class="form-control" id="drzavljanstvo" placeholder="Državljanstvo"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "instructor.drzavljanstvo"
+                            name="drzavljanstvo"
+                            #drzavljanstvoVar = "ngModel"
+                            [ngClass]="{'input-invalid':drzavljanstvoVar.touched && !drzavljanstvoVar.valid}"/>
                         </div>
+                        <span class="text-invalid" *ngIf="drzavljanstvoVar.touched && drzavljanstvoVar.errors?.minlength">Državljanstvo mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="brojLk">Broj lk:</label>
-                            <input type="text" class="form-control" id="brojLk" placeholder="Broj lk">
+                            <label for="brojLk">Broj lk/pasoša:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="brojLk" 
+                            placeholder="Broj lk/pasoša"
+                            required
+                            minlength="7"
+                            [(ngModel)] = "instructor.brojLk"
+                            name="brojLk"
+                            #brojLkVar = "ngModel"
+                            [ngClass]="{'input-invalid':brojLkVar.touched && !brojLkVar.valid}"/>
                         </div>
+                        <span class="text-invalid" *ngIf="brojLkVar.touched && brojLkVar.errors?.required">Unesite broj lk/pasoša</span>
+                        <span class="text-invalid" *ngIf="brojLkVar.touched && brojLkVar.errors?.minlength">Broj lk/pasoša mora imati minimalno 7 karaktera</span>
                         <div class="form-group">
-                            <label for="brojDozvole">Broj dozvole:</label>
-                            <input type="text" class="form-control" id="brojDozvole" placeholder="Broj dozvole">
+                            <label for="brojDozvole">Broj dozvole:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" 
+                            id="brojDozvole" 
+                            placeholder="Broj dozvole"
+                            required
+                            minlength="7"
+                            [(ngModel)] = "instructor.brojDozvole"
+                            name="brojDozvole"
+                            #brojDozvoleVar = "ngModel"
+                            [ngClass]="{'input-invalid':brojDozvoleVar.touched && !brojDozvoleVar.valid}"/>
                         </div>
+                        <span class="text-invalid" *ngIf="brojDozvoleVar.touched && brojDozvoleVar.errors?.required">Unesite broj instruktorske dozvole</span>
+                        <span class="text-invalid" *ngIf="brojDozvoleVar.touched && brojDozvoleVar.errors?.minlength">Broj instruktorske dozvole mora imati minimalno 7 karaktera</span>
                         <div class="form-group">
                             <label for="zaduzenoVozilo">Zaduženo vozilo:</label>
                             <select class="form-control" id="zaduzenoVozilo">
                                 <option>Zaduženo vozilo</option>
-                                <option>Prva</option>
-                                <option>Prva</option>
-                                <option>Prva</option>
+                                <option>E52-J-466</option>
+                                <option>E52-J-414</option>
+                                <option>A23-K-223</option>
+                                <option>K59-O-453</option>
+                                <option>T74-K-273</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="telefon">Broj telefona:</label>
-                            <input type="text" class="form-control" id="telefon" placeholder="Broj telefona">
+                            <label for="telefon">Broj telefona:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" 
+                            id="telefon" 
+                            placeholder="Broj telefona"
+                            required
+                            minlength="9"
+                            [(ngModel)] = "instructor.telefon"
+                            name="telefon"
+                            #telefonVar = "ngModel"
+                            [ngClass]="{'input-invalid':telefonVar.touched && !telefonVar.valid}"/>
                         </div>
+                        <span class="text-invalid" *ngIf="telefonVar.touched && telefonVar.errors?.required">Unesite broj telefona</span>
+                        <span class="text-invalid" *ngIf="telefonVar.touched && telefonVar.errors?.minlength">Broj telefona mora imati minimalno 9 cifara</span>
                         <div class="form-group">
-                            <label for="emailAdresa">Email adresa:</label>
-                            <input type="email" class="form-control" id="emailAdresa" placeholder="Email adresa">
+                            <label for="emailAdresa">Email adresa:<span class="required-flag">*</span></label>
+                            <input type="email" class="form-control" 
+                            id="emailAdresa" 
+                            placeholder="Email adresa"
+                            required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            minlength="6"
+                            [(ngModel)] = "instructor.emailAdresa"
+                            name="emailAdresa"
+                            #emailAdresaVar = "ngModel"
+                            [ngClass]="{'input-invalid':emailAdresaVar.touched && !emailAdresaVar.valid}"/>
                         </div>
+                        <span class="text-invalid" *ngIf="emailAdresaVar.touched && (emailAdresaVar.errors?.required || emailAdresaVar.errors?.pattern)">Unesite validnu email adresu</span>
+                        <span class="text-invalid" *ngIf="emailAdresaVar.touched && emailAdresaVar.errors?.minlength">Email adresa mora imati minimalno 6 karaktera</span>
                     </div>
                     <div class="tables">
                         <div class="panel-headers">
-                            <button type="submit" class="btn btn-success panel-button">Kandidati</button>
-                            <button type="submit" class="btn btn-success panel-button">Seminari</button>
-                            <button type="submit" class="btn btn-success panel-button">Dokumenti</button>
+                            <button type="submit" class="btn btn-success panel-button" (click)="showTable('kandidati')">Kandidati</button>
+                            <button type="submit" class="btn btn-success panel-button" (click)="showTable('seminari')">Seminari</button>
+                            <button type="submit" class="btn btn-success panel-button" (click)="showTable('dokumenti')">Dokumenti</button>
                         </div>
-                        <div class="add-section kandidati">
-                            <a><i class="fas fa-plus-circle mr-2"></i></a>
-                            <a><i class="fas fa-times-circle"></i></a>
+                        <div *ngIf="showKandidati">
+                            <div class="add-section kandidati">
+                                <a (click)="showNewCandidateInput()" title="Dodaj novog kandidata"><i class="fas fa-plus-circle mr-2"></i></a>
+                                <a (click)="cancelKandidat()" title="Odustani od dodavanja novog kandidata"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="d-flex nova-uplata" *ngIf="candidatesInputVisible">
+                                <span>Iznos:</span>
+                                <input type="text" name="newPayment" [(ngModel)]="newPayment.iznos" #novaUplataVar = ngModel/>
+                                <i class="fas fa-check" (click)="addCandidate()" title="Potvrdite unos"></i>
+                            </div>
                         </div>
-                        <!--<div class="add-section uplate seminari">
-                            <a><i class="fas fa-plus-circle mr-2"></i></a>
-                            <a><i class="fas fa-times-circle"></i></a>
+                        <div *ngIf="showSeminari">
+                            <div class="add-section seminari" >
+                                <a (click)="showNewSeminarInput()" title="Dodaj novi seminar"><i class="fas fa-plus-circle mr-2"></i></a>
+                                <a (click)="cancelSeminar()" title="Odustani od dodavanja novog seminara"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="d-flex nova-uplata" *ngIf="seminarInputVisible">
+                                <span>Iznos:</span>
+                                <input type="text" name="newPayment" [(ngModel)]="newPayment.iznos" #novaUplataVar = ngModel/>
+                                <i class="fas fa-check" (click)="addSeminar()" title="Potvrdite unos"></i>
+                            </div>
                         </div>
-                        <div class="add-section dokumenta">
-                            <a><i class="fas fa-plus-circle mr-2"></i></a>
-                            <a><i class="fas fa-times-circle"></i></a>
-                        </div> -->
+                        <div *ngIf="showDokumenti">
+                            <div class="add-section dokumenta" >
+                                <a (click)="showNewDocumentInput()" title="Dodaj novi dokument"><i class="fas fa-plus-circle mr-2"></i></a>
+                                <a (click)="cancelDokument()" title="Odustani od dodavanja novog dokumenta"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="novi-dokument" *ngIf="documentInputVisible">
+                                <input type="file" ng2FileSelect [uploader]="uploader" />
+                                <i class="fas fa-check" (click)="addDocument()" title="Upload dokument"></i>
+                            </div>
+                        </div>
               
-                        <table id="kandidati">
+                        <table id="kandidati" *ngIf="showKandidati">
                             <tr>
                                 <th>Ime i Prezime</th>
                                 <th>Datum</th>
@@ -128,7 +239,7 @@
                                 <td>10.08.2020.</td>
                             </tr>
                         </table>
-                        <!-- <table id="seminari">
+                        <table id="seminari" *ngIf="showSeminari">
                             <tr>
                                 <th>Datum pohađanja</th>
                                 <th>Tema</th>
@@ -145,12 +256,12 @@
                                 <td>Sead Fijuljanin</td>
                             </tr>
                         </table>
-                        <div id="dokumenti">
+                        <div id="dokumenti" *ngIf="showDokumenti">
                             <a href="#">kopija_lk.pdf</a>
                             <a href="#">CIPS_prijava.pdf.pdf</a>
                             <a href="#">ljekarsko_uvjerenje.pdf</a>
                             <a href="#">kopija_dozvole.pdf</a>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="submit-buttons-section">
                         <button type="submit" class="btn btn-success submit-button">Sačuvaj</button>

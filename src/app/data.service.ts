@@ -132,5 +132,67 @@ export class DataService {
     }    
   }
 
+   //CRUD INSTRUCTOR
+
+  getInstructors() {
+    return [...this.INSTRUCTORS];
+  }
+
+  getInstructor(id) {
+    for (let i = 0; i < this.INSTRUCTORS.length; i++) {
+      const instructor = this.INSTRUCTORS[i];
+      if(instructor.id === id){
+        return instructor;
+      }
+    }
+    return null;
+  }
+
+  setInstructor(editedInstructor){
+    for (let i = 0; i < this.INSTRUCTORS.length; i++) {
+      let instructor = this.INSTRUCTORS[i];
+      if(instructor.id === editedInstructor.id){
+        instructor = Object.assign({}, editedInstructor);
+      }
+    }
+  }
+
+  addCandidate(instructorId, newCandidate){
+    for (let i = 0; i < this.INSTRUCTORS.length; i++) {
+      let instructor = this.INSTRUCTORS[i];
+      if(instructor.id === instructorId){
+        instructor.kandidati.push(newCandidate);
+      }
+    }
+  }
+
+  addSeminar(instructorId, newSeminar){
+    for (let i = 0; i < this.INSTRUCTORS.length; i++) {
+      let instructor = this.INSTRUCTORS[i];
+      if(instructor.id === instructorId){
+        instructor.seminari.push(newSeminar);
+      }
+    }
+  }
+
+  addDocumentInstructor(instructorId, newDocument){
+    for (let i = 0; i < this.INSTRUCTORS.length; i++) {
+      let instructor = this.INSTRUCTORS[i];
+      if(instructor.id === instructorId){
+        instructor.dokumenti.push(newDocument);
+      }
+    }
+  }
+
+  deleteInstructor(id) {
+    for (let i = 0; i < this.INSTRUCTORS.length; i++) {
+      const instructor = this.INSTRUCTORS[i];
+      if(instructor.id === id){
+        this.INSTRUCTORS.splice(i, 1);
+        break;
+      }
+    }    
+  }
+
   constructor() { }
 }

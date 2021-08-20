@@ -223,6 +223,8 @@ export class EditCandidateComponent implements OnInit {
     }
   }
 
+  //Novi dokument
+
   showNewDocumentInput() {
     this.documentInputVisible = true;
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-instructors-list',
@@ -13,10 +15,38 @@ export class InstructorsListComponent implements OnInit {
   previousPage: number;
   totalCount: number = 3;
   totalPages: number = 1;
+  instructors;
+  filteredInstructors;
 
-  constructor() { }
+  _listFilter = '';
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredInstructors = this.listFilter ? this.performFilter(this.listFilter) : this.instructors;
+  }
+
+  constructor(private dataService: DataService,
+    private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.instructors = this.dataService.getInstructors();
+    this.filteredInstructors = this.instructors;
+  }
+
+  deleteInstructor(id){
+    this.dataService.deleteInstructor(id);
+    this.instructors = this.dataService.getInstructors();
+    this.filteredInstructors = this.instructors;
+    this.toastr.success(`Instruktor uspješno obrisan`);
+  }
+
+  performFilter(filterBy: string) {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.instructors.filter((instructor) =>
+      instructor.ime.toLocaleLowerCase().indexOf(filterBy) !== -1 
+      || instructor.prezime.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
 
 }

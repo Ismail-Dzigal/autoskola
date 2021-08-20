@@ -128,13 +128,55 @@ export const candidates = [
 export const instructors = [
     {
         "id": 1,
-        "firstName": "Hasib",
-        "lastName": "Fijuljanin"
+        "ime": "Hasib",
+        "prezime": "Fijuljanin",
+        "imeOca": "Mujo",
+        "jmbg": "1502968784525",
+        "mjestoRodjenja": "Sjenica",
+        "drzavljanstvo": "Bosansko",
+        "brojLk": "48TZU6975",
+        "brojDozvole": "08KTR8978",
+        "zaduzenoVozilo": "E52-J-466",
+        "telefon": "+38761158990",
+        "emailAdresa": "hasib.fijuljanin@gmail.com",
+        "lozinka": "123456",
+        "ponovljenaLozinka": "123456",
+        "slika": "",
+        "kandidati": [],
+        "seminari": [],
+        "dokumenti": [
+            "kopija_lk.pdf",
+            "CIPS_prijava.pdf",
+            "ljekarsko_uvjerenje.pdf",
+            "potvrda_CK.pdf",
+            "potvrda_propisi.pdf"
+        ]
     },
     {
         "id": 2,
-        "firstName": "Miodrag",
-        "lastName": "Mandić"
+        "ime": "Miodrag",
+        "prezime": "Mandić",
+        "imeOca": "Dragan",
+        "jmbg": "1806990170018",
+        "mjestoRodjenja": "Sarajevo",
+        "drzavljanstvo": "Bosansko",
+        "brojLk": "03CFT9653",
+        "brojDozvole": "07PRI4455",
+        "zaduzenoVozilo": "E52-J-414",
+        "telefon": "+3762893695",
+        "emailAdresa": "miodrag.mandic@gmail.com",
+        "lozinka": "123456",
+        "ponovljenaLozinka": "123456",
+        "slika": "",
+        "kandidati": [],
+        "seminari": [],
+        "dokumenti": [
+            "kopija_lk.pdf",
+            "CIPS_prijava.pdf",
+            "ljekarsko_uvjerenje.pdf",
+            "potvrda_CK.pdf",
+            "potvrda_propisi.pdf"
+        ]
     }
 ];
 
@@ -152,7 +194,7 @@ export const notificationsForAdmin = [
         "id": 1,
         "title": "Kvar na vozilu",
         "body":"Danas je doslo do curenja ulja na vozilu. Morao sam da otkazem svu obuku",
-        "sender": `${instructors[0].firstName} ${instructors[0].lastName}`,
+        "sender": `${instructors[0].ime} ${instructors[0].prezime}`,
         "createdAt": new Date('2021, 08, 15'),
         "removed": false
     },
@@ -160,7 +202,7 @@ export const notificationsForAdmin = [
         "id": 2,
         "title": "Inspekcija",
         "body":"Zaustavila me je inspekcija. Sva dokumentacija je bila uredna",
-        "sender": `${instructors[1].firstName} ${instructors[1].lastName}`,
+        "sender": `${instructors[1].ime} ${instructors[1].prezime}`,
         "createdAt": new Date('2021, 08, 12'),
         "removed": false
     }

@@ -54,9 +54,9 @@
                       </div>
                   </div>
                </div>
-               <!-- <div class="col-md-12 empty-list">
+               <div class="col-md-12 empty-list" *ngIf="filteredCandidates.length === 0">
                    <p>Nema pronađenih kandidata</p>
-               </div> -->
+               </div>
            </div>
            <ngb-pagination class="pagination" [collectionSize]="totalCount" 
            [pageSize]="pageSize"
