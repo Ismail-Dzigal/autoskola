@@ -133,6 +133,64 @@
                             }
                         }
 
+                        .novi-kandidat {
+                            margin-left: 15px;
+                            .noCandidates {
+                                color: red;
+                            }
+                            span {
+                                font-weight: bold;
+                            }
+                            select {
+                                margin-left: 10px;
+                                margin-right: 10px;
+                            }
+                            .fas {
+                                font-size: 23px;
+                                color: green;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .novi-seminar {
+                            margin-top: 10px;
+                            margin-left: 15px;
+                            span {
+                                margin-left: 10px;
+                                margin-right: 5px;
+                            }
+
+                            .datepicker {
+                                display: inline-block;
+                                margin-top: 0;
+                            }
+
+                            .title {
+                                padding-top: 7px;
+                            }
+
+                            .body {
+                                height: 40px;
+                            }
+
+                            .fas {
+                                padding-top: 7px;
+                                margin-left: 15px;
+                                cursor: pointer;
+                                font-size: 21px;
+                                color: green;
+                            }
+                        }
+
+                        .novi-dokument {
+                            margin-left: 15px;
+                            .fas {
+                                cursor: pointer;
+                                font-size: 21px;
+                                color: green;
+                            }
+                        }
+
                         #kandidati {
                             margin-top: 10px;
                             margin-left: 15px;
@@ -162,9 +220,12 @@
                         #seminari {
                             margin-top: 10px;
                             margin-left: 15px;
-                            width: 106%;
+                            width: 100%;
                             text-align: center;
                             border: 2px solid rgb(128,128,128);
+                            &.wide-table {
+                                width: 106%;
+                            }
                             th, td {
                                 border: 1px solid rgb(0,128,0);
                                 width: 33.33%;

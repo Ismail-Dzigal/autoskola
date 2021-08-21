@@ -24,12 +24,28 @@ export class EditInstructorComponent implements OnInit {
   showSeminari = false; 
   showDokumenti = false;
 
+  allUnsetCandidates;
+  selectedCandidateId;
   candidates;
-  newCandidate = '';
+  newCandidate = {
+    id: 1,
+    imePrezime: '',
+    datum: new Date(),
+    candidateId: 0
+  };
   candidatesInputVisible = false;
 
   seminari;
-  newSeminar = {};
+  newSeminar = {
+    id: 1,
+    datum: {
+      year: 2021,
+      month: 8,
+      day: 1
+    },
+    tema: '',
+    predavac: ''
+  };
   seminarInputVisible = false;
 
   documents;
@@ -72,12 +88,13 @@ export class EditInstructorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.allUnsetCandidates = this.dataService.getCandidates().filter(x=>x.instructorId === 0);
     const param = this.route.snapshot.paramMap.get('id');
     if (param) {
       const id = +param;
       this.instructor = this.dataService.getInstructor(id);
-      // this.payments = this.candidate.uplate;
-      // this.exams = this.candidate.ispiti;
+      this.candidates = this.instructor.kandidati;
+      this.seminari = this.instructor.seminari;
       this.documents = this.instructor.dokumenti;
     } 
   }
@@ -120,6 +137,25 @@ export class EditInstructorComponent implements OnInit {
   }
 
   addCandidate(){
+    if(this.candidates.length > 0){
+      this.newCandidate.id = this.candidates[this.candidates.length - 1].id + 1;
+    }
+    for (let i = 0; i < this.allUnsetCandidates.length; i++) {
+      if(this.selectedCandidateId == this.allUnsetCandidates[i].id){
+        this.newCandidate.imePrezime = `${this.allUnsetCandidates[i].ime} ${this.allUnsetCandidates[i].prezime}`;
+        this.newCandidate.candidateId = this.selectedCandidateId;
+      }
+    }
+    this.dataService.addInstructorCandidate(this.instructor.id, this.newCandidate);
+    //set instructor after change
+    this.allUnsetCandidates = this.dataService.getCandidates().filter(x => x.instructorId === 0);
+    this.instructor = this.dataService.getInstructor(this.instructor.id);
+    this.newCandidate = {
+        id: 1,
+        imePrezime: '',
+        datum: new Date(),
+        candidateId: 0
+    };
     this.candidatesInputVisible = false;
     this.toastr.success(`Kandidat uspješno dodan`);
   }
@@ -135,7 +171,24 @@ export class EditInstructorComponent implements OnInit {
   }
 
   addSeminar(){
+    if(this.seminari.length > 0){
+      this.newSeminar.id = this.seminari[this.seminari.length - 1].id + 1;
+    }
+    this.dataService.addSeminar(this.instructor.id, this.newSeminar)
+    //set candidate after change
+    this.instructor = this.dataService.getInstructor(this.instructor.id);
+    this.seminari = this.instructor.seminari;
     this.seminarInputVisible = false;
+    this. newSeminar = {
+      id: 1,
+      datum: {
+        year: 2021,
+        month: 8,
+        day: 1
+      },
+      tema: '',
+      predavac: ''
+    };
     this.toastr.success(`Podaci o seminaru uspješno dodani`);
   }
 
@@ -154,9 +207,9 @@ export class EditInstructorComponent implements OnInit {
   }
 
   addDocument(){
-    this.dataService.addDocument(this.instructor.id, "potvrda_usavrsavanje_25082021.pdf")
-    //set candidate after change
-    this.instructor = this.dataService.getCandidate(this.instructor.id);
+    this.dataService.addDocumentInstructor(this.instructor.id, "potvrda_usavrsavanje_25082021.pdf")
+    //set instructor after change
+    this.instructor = this.dataService.getInstructor(this.instructor.id);
     this.documents = this.instructor.dokumenti;
     this.documentInputVisible = false;
     this.toastr.success(`Novi dokument uspješno dodan`);

@@ -157,11 +157,21 @@ export class DataService {
     }
   }
 
-  addCandidate(instructorId, newCandidate){
+  setCandidateInstructorId(candidateId, instructorId){
+    for (let i = 0; i < this.CANDIDATES.length; i++) {
+      const candidate = this.CANDIDATES[i];
+      if(candidate.id === candidateId){
+        candidate.instructorId = instructorId;
+      }
+    }
+  }
+
+  addInstructorCandidate(instructorId, newCandidate){
     for (let i = 0; i < this.INSTRUCTORS.length; i++) {
       let instructor = this.INSTRUCTORS[i];
       if(instructor.id === instructorId){
         instructor.kandidati.push(newCandidate);
+        this.setCandidateInstructorId(+newCandidate.candidateId, instructorId)
       }
     }
   }

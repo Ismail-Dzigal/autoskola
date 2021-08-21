@@ -197,20 +197,38 @@
                                 <a (click)="showNewCandidateInput()" title="Dodaj novog kandidata"><i class="fas fa-plus-circle mr-2"></i></a>
                                 <a (click)="cancelKandidat()" title="Odustani od dodavanja novog kandidata"><i class="fas fa-times-circle"></i></a>
                             </div>
-                            <div class="d-flex nova-uplata" *ngIf="candidatesInputVisible">
-                                <span>Iznos:</span>
-                                <input type="text" name="newPayment" [(ngModel)]="newPayment.iznos" #novaUplataVar = ngModel/>
-                                <i class="fas fa-check" (click)="addCandidate()" title="Potvrdite unos"></i>
+                            <div class="d-flex novi-kandidat" *ngIf="candidatesInputVisible">
+                                <span *ngIf="allUnsetCandidates.length === 0" class="noCandidates">Trenutno nema kandidata kojima nije dodijeljen instruktor</span>
+                                <div *ngIf="allUnsetCandidates.length > 0">
+                                    <span>Odaberi kandidata iz liste:</span>
+                                    <select [(ngModel)]="selectedCandidateId" name="selectedCandidateId">
+                                        <option *ngFor="let candidate of allUnsetCandidates" value ="{{candidate.id}}" >{{candidate.ime}} {{candidate.prezime}}</option>
+                                    </select>
+                                    <i class="fas fa-check" (click)="addCandidate()" title="Potvrdite unos"></i>
+                                </div>
                             </div>
                         </div>
                         <div *ngIf="showSeminari">
-                            <div class="add-section seminari" >
+                            <div class="add-section seminari">
                                 <a (click)="showNewSeminarInput()" title="Dodaj novi seminar"><i class="fas fa-plus-circle mr-2"></i></a>
                                 <a (click)="cancelSeminar()" title="Odustani od dodavanja novog seminara"><i class="fas fa-times-circle"></i></a>
                             </div>
-                            <div class="d-flex nova-uplata" *ngIf="seminarInputVisible">
-                                <span>Iznos:</span>
-                                <input type="text" name="newPayment" [(ngModel)]="newPayment.iznos" #novaUplataVar = ngModel/>
+                            <div class="d-flex novi-seminar align-items-start" *ngIf="seminarInputVisible">
+                                <span class="title">Datum:</span>
+                                <div class="form-group datepicker">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy"
+                                            name="dp" [(ngModel)]="newSeminar.datum" ngbDatepicker #d="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Tema:</span>
+                                <input type="text" name="newSeminarTema" [(ngModel)]="newSeminar.tema" class="body"/>
+                                <span class="title">Predavač:</span>
+                                <input type="text" name="newSeminarPredavac" [(ngModel)]="newSeminar.predavac" class="body"/>
+                                
                                 <i class="fas fa-check" (click)="addSeminar()" title="Potvrdite unos"></i>
                             </div>
                         </div>
@@ -230,37 +248,25 @@
                                 <th>Ime i Prezime</th>
                                 <th>Datum</th>
                             </tr>
-                            <tr>
-                                <td>Ismail Dzigal</td>
-                                <td>01.01.2020.</td>
-                            </tr>
-                            <tr>
-                                <td>Stefan Balaban</td>
-                                <td>10.08.2020.</td>
+                            <tr *ngFor="let candidate of candidates">
+                                <td>{{candidate.imePrezime}}</td>
+                                <td>{{candidate.datum | date: 'd/M/yy'}}</td>
                             </tr>
                         </table>
-                        <table id="seminari" *ngIf="showSeminari">
+                        <table id="seminari" *ngIf="showSeminari" [ngClass]="{'wide-table': !seminarInputVisible}">
                             <tr>
                                 <th>Datum pohađanja</th>
                                 <th>Tema</th>
                                 <th>Predavač</th>
                             </tr>
-                            <tr>
-                                <td>01.12.2020.</td>
-                                <td>Saobraćajne nezgode</td>
-                                <td>Refik Ahmetović</td>
-                            </tr>
-                            <tr>
-                                <td>08.12.2020.</td>
-                                <td>Održavanje vozila</td>
-                                <td>Sead Fijuljanin</td>
+                            <tr *ngFor="let seminar of seminari">
+                                <td>{{seminar.datum.day}}/{{seminar.datum.month}}/{{seminar.datum.year}}</td>
+                                <td>{{seminar.tema}}</td>
+                                <td>{{seminar.predavac}}</td>
                             </tr>
                         </table>
                         <div id="dokumenti" *ngIf="showDokumenti">
-                            <a href="#">kopija_lk.pdf</a>
-                            <a href="#">CIPS_prijava.pdf.pdf</a>
-                            <a href="#">ljekarsko_uvjerenje.pdf</a>
-                            <a href="#">kopija_dozvole.pdf</a>
+                            <a href="#" *ngFor="let document of documents">{{document}}</a>
                         </div>
                     </div>
                     <div class="submit-buttons-section">

@@ -59,7 +59,8 @@ export const candidates = [
             "ljekarsko_uvjerenje.pdf",
             "potvrda_CK.pdf",
             "potvrda_propisi.pdf"
-        ]
+        ],
+        "instructorId": 1
     },
     {
         "id": 2,
@@ -121,7 +122,134 @@ export const candidates = [
             "ljekarsko_uvjerenje.pdf",
             "potvrda_CK.pdf",
             "potvrda_propisi.pdf"
-        ]
+        ],
+        "instructorId": 1
+    },
+    {
+        "id": 3,
+        "ime": "Jasmina",
+        "prezime": "Selmanović",
+        "imeOca": "Midhat",
+        "jmbg": "1707000175023",
+        "mjestoRodjenja": "Sarajevo",
+        "drzavljanstvo": "Bosansko",
+        "brojLk": "25KLO5324",
+        "telefon": "+38761457567",
+        "emailAdresa": "jasmina.selanovic@gmail.com",
+        "lozinka": "123456",
+        "ponovljenaLozinka": "123456",
+        "slika":"",
+        "uplate": [
+            {
+               "id": 1,
+               "iznos": 400,
+               "datum": new Date('2021, 06, 18')
+            },
+            {
+                "id": 2,
+                "iznos": 200,
+                "datum": new Date('2021, 07, 22')
+            }
+        ],
+        "ispiti": [
+            {
+                "id": 1,
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 15
+                },
+                "termin": {
+                    "hour": 9,
+                    "minute": 30
+                },
+                "uspjeh": false
+            },
+            {
+                 "id": 2,
+                 "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 15
+                 },
+                 "termin": {
+                    "hour": 12,
+                    "minute": 20
+                 },
+                 "uspjeh": false
+            }
+        ],
+        "dokumenti": [
+            "kopija_lk.pdf",
+            "CIPS_prijava.pdf",
+            "ljekarsko_uvjerenje.pdf",
+            "potvrda_CK.pdf",
+            "potvrda_propisi.pdf"
+        ],
+        "instructorId": 2
+    },
+    {
+        "id": 4,
+        "ime": "Adisa",
+        "prezime": "Palić",
+        "imeOca": "Šefik",
+        "jmbg": "0606002175123",
+        "mjestoRodjenja": "Sarajevo",
+        "drzavljanstvo": "Bosansko",
+        "brojLk": "89ZFT6596",
+        "telefon": "+38762367851",
+        "emailAdresa": "adisa.palic@gmail.com",
+        "lozinka": "654321",
+        "ponovljenaLozinka": "654321",
+        "slika":"",
+        "uplate": [
+            {
+               "id": 1,
+               "iznos": 200,
+               "datum": new Date('2021, 05, 10'),
+            },
+            {
+                "id": 2,
+                "iznos": 200,
+                "datum": new Date('2021, 06, 14'),
+            }
+        ],
+        "ispiti": [
+                {
+                    "id": 1,
+                    "datum": {
+                        "year": 2021,
+                        "month": 7,
+                        "day": 15
+                    },
+                    "termin": {
+                        "hour": 11,
+                        "minute": 45
+                    },
+                    "uspjeh": false
+                },
+                {
+                     "id": 2,
+                     "datum": {
+                        "year": 2021,
+                        "month": 8,
+                        "day": 11
+                     },
+                     "termin": {
+                        "hour": 11,
+                        "minute": 45
+                     },
+                     "uspjeh": false
+                }
+        ],
+        "dokumenti": [
+            "kopija_lk.pdf",
+            "CIPS_prijava.pdf",
+            "ljekarsko_uvjerenje.pdf",
+            "potvrda_CK.pdf",
+            "potvrda_propisi.pdf"
+        ],
+        "instructorId": 2
     }
 ];
 
@@ -142,14 +270,47 @@ export const instructors = [
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
         "slika": "",
-        "kandidati": [],
-        "seminari": [],
+        "kandidati": [
+            {
+                "id": 1,
+                "imePrezime": "Ismail Džigal",
+                "datum": new Date('2021, 08, 13'),
+                "candidateId": 1
+            },
+            {
+                "id": 2,
+                "imePrezime": "Sead Hodžić",
+                "datum": new Date('2021, 08, 14'),
+                "candidateId": 2
+            }
+        ],
+        "seminari": [
+            {
+                "id": 1,
+                "datum": {
+                  "year": 2020,
+                  "month": 12,
+                  "day": 1
+                },
+                "tema": 'Saobraćajne nezgode',
+                "predavac": 'Refik Ahmetović'
+            },
+            {
+                "id": 2,
+                "datum": {
+                  "year": 2021,
+                  "month": 6,
+                  "day": 11
+                },
+                "tema": 'Održavanje vozila',
+                "predavac": 'Sead Fijuljanin'
+            }
+        ],
         "dokumenti": [
             "kopija_lk.pdf",
             "CIPS_prijava.pdf",
             "ljekarsko_uvjerenje.pdf",
-            "potvrda_CK.pdf",
-            "potvrda_propisi.pdf"
+            "kopija_dozvole.pdf"
         ]
     },
     {
@@ -168,14 +329,47 @@ export const instructors = [
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
         "slika": "",
-        "kandidati": [],
-        "seminari": [],
+        "kandidati": [
+            {
+                "id": 1,
+                "imePrezime": "Jasmina Selmanović",
+                "datum": new Date('2021, 08, 14'),
+                "candidateId": 3
+            },
+            {
+                "id": 2,
+                "imePrezime": "Adisa Palić",
+                "datum": new Date('2021, 08, 15'),
+                "candidateId": 4
+            }
+        ],
+        "seminari": [
+            {
+                "id": 1,
+                "datum": {
+                  "year": 2020,
+                  "month": 12,
+                  "day": 1
+                },
+                "tema": 'Saobraćajne nezgode',
+                "predavac": 'Refik Ahmetović'
+            },
+            {
+                "id": 2,
+                "datum": {
+                  "year": 2021,
+                  "month": 6,
+                  "day": 11
+                },
+                "tema": 'Održavanje vozila',
+                "predavac": 'Sead Fijuljanin'
+            }
+        ],
         "dokumenti": [
             "kopija_lk.pdf",
             "CIPS_prijava.pdf",
             "ljekarsko_uvjerenje.pdf",
-            "potvrda_CK.pdf",
-            "potvrda_propisi.pdf"
+            "kopija_dozvole.pdf"
         ]
     }
 ];
