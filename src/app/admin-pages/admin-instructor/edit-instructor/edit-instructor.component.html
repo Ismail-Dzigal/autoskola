@@ -34,7 +34,8 @@
     </div>
     <div class="row main-content">
        <div class="col-md-8">
-           <form>
+           <form (ngSubmit)="submitEditInstructorForm(editInstructorForm)"
+           #editInstructorForm="ngForm">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="image-wrapper">
@@ -188,9 +189,9 @@
                     </div>
                     <div class="tables">
                         <div class="panel-headers">
-                            <button type="submit" class="btn btn-success panel-button" (click)="showTable('kandidati')">Kandidati</button>
-                            <button type="submit" class="btn btn-success panel-button" (click)="showTable('seminari')">Seminari</button>
-                            <button type="submit" class="btn btn-success panel-button" (click)="showTable('dokumenti')">Dokumenti</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('kandidati')">Kandidati</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('seminari')">Seminari</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('dokumenti')">Dokumenti</button>
                         </div>
                         <div *ngIf="showKandidati">
                             <div class="add-section kandidati">
