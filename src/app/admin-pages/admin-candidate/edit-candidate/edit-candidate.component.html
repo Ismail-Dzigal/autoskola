@@ -161,6 +161,14 @@
                         </div>
                         <span class="text-invalid" *ngIf="emailAdresaVar.touched && (emailAdresaVar.errors?.required || emailAdresaVar.errors?.pattern)">Unesite validnu email adresu</span>
                         <span class="text-invalid" *ngIf="emailAdresaVar.touched && emailAdresaVar.errors?.minlength">Email adresa mora imati minimalno 6 karaktera</span>
+                        <div class="form-group">
+                            <label for="instructorImePrezime">Instruktor:</label>
+                            <input type="text" class="form-control" 
+                            id="instructorImePrezime" 
+                            placeholder="Odaberi instruktora preko Instruktori taba"
+                            [(ngModel)] = "candidate.instructorImePrezime"
+                            name="zaduzenoVozilo" disabled/>
+                        </div>
                     </div>
                     <div class="tables">
                         <div class="panel-headers">

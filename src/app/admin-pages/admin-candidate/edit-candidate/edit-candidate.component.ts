@@ -38,9 +38,9 @@ export class EditCandidateComponent implements OnInit {
   newExam = {
     id: 1,
     datum: {
-      year: 2021,
-      month: 8,
-      day: 1
+      year: new Date().getFullYear(),
+      month: new Date().getMonth() + 1,
+      day: new Date().getDate(),
     },
     termin: {
       hour: 0,
@@ -193,9 +193,9 @@ export class EditCandidateComponent implements OnInit {
     this.newExam = {
       id: 1,
       datum: {
-        year: 2021,
-        month: 8,
-        day: 1
+        year: new Date().getFullYear(),
+        month: new Date().getMonth() + 1,
+        day: new Date().getDate(),
       },
       termin: {
         hour: 0,

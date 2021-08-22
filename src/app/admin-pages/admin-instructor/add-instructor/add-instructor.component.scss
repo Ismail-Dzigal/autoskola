@@ -77,6 +77,12 @@
                         }
                     }
                     .col-md-9 {
+                        .text-invalid {
+                            display: inline-block;
+                            color: red;
+                            margin: 0 auto 8px 160px;
+                            font-size: 0.8rem;
+                        }
                         h5 {
                             margin-bottom: 20px;
                         }

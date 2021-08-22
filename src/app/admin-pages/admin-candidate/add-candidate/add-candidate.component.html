@@ -194,6 +194,14 @@
                             [ngClass]="{'input-invalid':ponovljenaLozinkaVar.touched && !ponovljenaLozinkaVar.valid}"/>
                         </div>
                         <span class="text-invalid" *ngIf="ponovljenaLozinkaVar.touched && !ponovljenaLozinkaVar.valid">Lozinka nije identična prethodno unesenoj</span>
+                        <div class="form-group">
+                            <label for="instructorImePrezime">Instruktor:</label>
+                            <input type="text" class="form-control" 
+                            id="instructorImePrezime" 
+                            placeholder="Odaberi instruktora preko Instruktori taba"
+                            [(ngModel)] = "candidate.instructorImePrezime"
+                            name="zaduzenoVozilo" disabled/>
+                        </div>
             
                         <button type="submit" class="btn btn-success submit-button">Sačuvaj</button>
                         <button class="btn btn-danger submit-button ml-3" [routerLink]="['/admin-candidate/candidates-list']" routerLinkActive="router-link-active">Odustani</button>

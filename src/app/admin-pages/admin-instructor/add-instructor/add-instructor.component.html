@@ -41,7 +41,7 @@
                         <div class="image-wrapper">
             
                         </div>
-                        <button type="submit" class="btn btn-success submit-image-button">Nova slika</button>
+                        <button type="button" class="btn btn-success submit-image-button">Nova slika</button>
                     </div>
                     <div class="col-md-9">
                         <h5>Lični podaci</h5>
@@ -150,14 +150,11 @@
                         <span class="text-invalid" *ngIf="brojDozvoleVar.touched && brojDozvoleVar.errors?.minlength">Broj instruktorske dozvole mora imati minimalno 7 karaktera</span>
                         <div class="form-group">
                             <label for="zaduzenoVozilo">Zaduženo vozilo:</label>
-                            <select class="form-control" id="zaduzenoVozilo">
-                                <option>Zaduženo vozilo</option>
-                                <option>E52-J-466</option>
-                                <option>E52-J-414</option>
-                                <option>A23-K-223</option>
-                                <option>K59-O-453</option>
-                                <option>T74-K-273</option>
-                            </select>
+                            <input type="text" class="form-control" 
+                            id="zaduzenoVozilo" 
+                            placeholder="Zaduži vozilo preko Vozila taba"
+                            [(ngModel)] = "instructor.zaduzenoVozilo"
+                            name="zaduzenoVozilo" disabled/>
                         </div>
                         <div class="form-group">
                             <label for="telefon">Broj telefona:<span class="required-flag">*</span></label>

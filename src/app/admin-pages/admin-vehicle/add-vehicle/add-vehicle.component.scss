@@ -78,6 +78,12 @@
                         }
                     }
                     .col-md-9 {
+                        .text-invalid {
+                            display: inline-block;
+                            color: red;
+                            margin: 0 auto 8px 200px;
+                            font-size: 0.8rem;
+                        }
                         h5 {
                             margin-bottom: 20px;
                         }
@@ -95,6 +101,9 @@
                                 font-size: 1rem;
                                 border-radius: 6px;
                                 background-color: rgb(255,204,153);
+                            }
+                            &.datepicker {
+                                width: 350px;
                             }
                         }
 

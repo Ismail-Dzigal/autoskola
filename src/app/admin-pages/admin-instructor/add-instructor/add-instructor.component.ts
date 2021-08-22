@@ -29,7 +29,8 @@ export class AddInstructorComponent implements OnInit {
     slika: "",
     kandidati: [],
     seminari: [],
-    dokumenti: []
+    dokumenti: [],
+    vehicleId: 0 
   };
   instructors;
 

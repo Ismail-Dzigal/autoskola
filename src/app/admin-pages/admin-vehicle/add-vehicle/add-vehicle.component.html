@@ -34,61 +34,161 @@
     </div>
     <div class="row main-content">
        <div class="col-md-8">
-            <form>
+            <form (ngSubmit)="submitAddVehicleForm(addVehicleForm)"
+            #addVehicleForm="ngForm">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="image-wrapper">
             
                         </div>
-                        <button type="submit" class="btn btn-success submit-image-button">Nova slika</button>
+                        <button type="button" class="btn btn-success submit-image-button">Nova slika</button>
                     </div>
                     <div class="col-md-9">
                         <h5>Podaci o vozilu</h5>
                         <div class="form-group">
-                            <label for="vrstaVozila">Vrsta vozila:</label>
-                            <input type="text" class="form-control" id="vrstaVozila" aria-describedby="vrstaVozila" placeholder="Vrsta vozila">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            <label for="vrstaVozila">Vrsta vozila:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="vrstaVozila" aria-describedby="vrstaVozila"
+                            placeholder="Vrsta vozila"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.vrstaVozila"
+                            name="vrstaVozila"
+                            #vrstaVozilaVar = "ngModel"
+                            [ngClass]="{'input-invalid':vrstaVozilaVar.touched && !vrstaVozilaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="vrstaVozilaVar.touched && vrstaVozilaVar.errors?.required">Unesite vrstu vozila</span>
+                        <span class="text-invalid" *ngIf="vrstaVozilaVar.touched && vrstaVozilaVar.errors?.minlength">Vrsta vozila mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="marka">Marka:</label>
-                            <input type="text" class="form-control" id="marka" placeholder="Marka">
+                            <label for="marka">Marka:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="marka" placeholder="Marka"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.marka"
+                            name="marka"
+                            #markaVar = "ngModel"
+                            [ngClass]="{'input-invalid':markaVar.touched && !markaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="markaVar.touched && markaVar.errors?.required">Unesite marku vozila</span>
+                        <span class="text-invalid" *ngIf="markaVar.touched && markaVar.errors?.minlength">Marka vozila mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="tip">Tip:</label>
-                            <input type="text" class="form-control" id="tip" placeholder="Tip">
+                            <label for="tip">Tip:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="tip" placeholder="Tip"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.tip"
+                            name="tip"
+                            #tipVar = "ngModel"
+                            [ngClass]="{'input-invalid':tipVar.touched && !tipVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="tipVar.touched && tipVar.errors?.required">Unesite tip vozila</span>
+                        <span class="text-invalid" *ngIf="tipVar.touched && tipVar.errors?.minlength">Tip vozila mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="brojSasije">Broj šasije:</label>
-                            <input type="text" class="form-control" id="brojSasije" placeholder="Broj šasije">
+                            <label for="brojSasije">Broj šasije:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="brojSasije" placeholder="Broj šasije"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.brojSasije"
+                            name="brojSasije"
+                            #brojSasijeVar = "ngModel"
+                            [ngClass]="{'input-invalid':brojSasijeVar.touched && !brojSasijeVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="brojSasijeVar.touched && brojSasijeVar.errors?.required">Unesite broj šasije</span>
+                        <span class="text-invalid" *ngIf="brojSasijeVar.touched && brojSasijeVar.errors?.minlength">Broj šasije mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="brojMotora">Broj motora:</label>
-                            <input type="text" class="form-control" id="brojMotora" placeholder="Broj motora">
+                            <label for="brojMotora">Broj motora:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="brojMotora" placeholder="Broj motora"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.brojMotora"
+                            name="brojMotora"
+                            #brojMotoraVar = "ngModel"
+                            [ngClass]="{'input-invalid':brojMotoraVar.touched && !brojMotoraVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="brojMotoraVar.touched && brojMotoraVar.errors?.required">Unesite broj motora</span>
+                        <span class="text-invalid" *ngIf="brojMotoraVar.touched && brojMotoraVar.errors?.minlength">Broj motora mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="gorivo">Gorivo:</label>
-                            <input type="text" class="form-control" id="gorivo" placeholder="Gorivo">
+                            <label for="gorivo">Gorivo:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="gorivo" placeholder="Gorivo"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.gorivo"
+                            name="gorivo"
+                            #gorivoVar = "ngModel"
+                            [ngClass]="{'input-invalid':gorivoVar.touched && !gorivoVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="gorivoVar.touched && gorivoVar.errors?.required">Unesite vrstu goriva</span>
+                        <span class="text-invalid" *ngIf="gorivoVar.touched && gorivoVar.errors?.minlength">Vrsta goriva mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="registarskaOznaka">Registarska oznaka:</label>
-                            <input type="text" class="form-control" id="registarskaOznaka" placeholder="Registarska oznaka">
+                            <label for="registarskaOznaka">Registarska oznaka:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="registarskaOznaka" placeholder="Registarska oznaka"
+                            required
+                            minlength="5"
+                            [(ngModel)] = "vehicle.registarskaOznaka"
+                            name="registarskaOznaka"
+                            #registarskaOznakaVar = "ngModel"
+                            [ngClass]="{'input-invalid':registarskaOznakaVar.touched && !registarskaOznakaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="registarskaOznakaVar.touched && registarskaOznakaVar.errors?.required">Unesite registarsku oznaku</span>
+                        <span class="text-invalid" *ngIf="registarskaOznakaVar.touched && registarskaOznakaVar.errors?.minlength">Registarska oznaka mora imati minimalno 5 karaktera</span>
                         <div class="form-group">
-                            <label for="godinaProizvodnje">Godina proizvodnje:</label>
-                            <input type="text" class="form-control" id="godinaProizvodnje" placeholder="Godina proizvodnje">
+                            <label for="godinaProizvodnje">Godina proizvodnje:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="godinaProizvodnje" placeholder="Godina proizvodnje"
+                            required
+                            minlength="4"
+                            maxlength="4"
+                            [(ngModel)] = "vehicle.godinaProizvodnje"
+                            name="godinaProizvodnje"
+                            #godinaProizvodnjeVar = "ngModel"
+                            [ngClass]="{'input-invalid':godinaProizvodnjeVar.touched && !godinaProizvodnjeVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="godinaProizvodnjeVar.touched && godinaProizvodnjeVar.errors?.required">Unesite godinu proizvodnje</span>
+                        <span class="text-invalid" *ngIf="godinaProizvodnjeVar.touched && godinaProizvodnjeVar.errors?.minlength || godinaProizvodnjeVar.errors?.maxlength">Godina proizvodnje mora imati tačno 4 karaktera</span>
                         <div class="form-group">
-                            <label for="datumRegistracije">Datum registracije:</label>
-                            <input type="text" class="form-control" id="datumRegistracije" placeholder="Datum registracije">
+                            <label for="datumRegistracije">Datum registracije:<span class="required-flag">*</span></label>
+                            <div class="form-group datepicker">
+                                <div class="input-group">
+                                    <input class="form-control"       
+                                        id="datumRegistracije"         
+                                        placeholder="dd-mm-yyyy"
+                                        name="dp" 
+                                        required
+                                        [(ngModel)]="vehicle.datumRegistracije" ngbDatepicker #d="ngbDatepicker"  #datumRegistracijeVar = "ngModel"
+                                        [ngClass]="{'input-invalid':datumRegistracijeVar.touched && !datumRegistracijeVar.valid}" autocomplete="off"
+                                        [minDate]="{year: currentYear - 1, month: currentMonth, day: currentDay}"
+                                        [maxDate]="{year: currentYear + 1, month: currentMonth, day: currentDay}">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <span class="text-invalid" *ngIf="datumRegistracijeVar.touched && datumRegistracijeVar.errors?.required">Unesite datum registracije</span>
                         <div class="form-group">
-                            <label for="saobracajnaDozvola">Saobraćajna dozvola:</label>
-                            <input type="text" class="form-control" id="saobracajnaDozvola" placeholder="Saobraćajna dozvola">
+                            <label for="saobracajnaDozvola">Saobraćajna dozvola:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="saobracajnaDozvola" placeholder="Saobraćajna dozvola"
+                            required
+                            minlength="9"
+                            maxlength="9"
+                            [(ngModel)] = "vehicle.saobracajnaDozvola"
+                            name="saobracajnaDozvola"
+                            #saobracajnaDozvolaVar = "ngModel"
+                            [ngClass]="{'input-invalid':saobracajnaDozvolaVar.touched && !saobracajnaDozvolaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="saobracajnaDozvolaVar.touched && saobracajnaDozvolaVar.errors?.required">Unesite broj saobraćajne dozvole</span>
+                        <span class="text-invalid" *ngIf="saobracajnaDozvolaVar.touched && saobracajnaDozvolaVar.errors?.minlength || saobracajnaDozvolaVar.errors?.maxlength">Broj saobraćajne dozvole mora imati tačno 9 karaktera</span>
                         <div class="form-group">
-                            <label for="vlasnicka">Potvrda o vlasništvu</label>
-                            <input type="text" class="form-control" id="vlasnicka" placeholder="Potvrda o vlasništvu">
+                            <label for="vlasnicka">Potvrda o vlasništvu:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="vlasnicka" placeholder="Potvrda o vlasništvu"
+                            required
+                            minlength="9"
+                            maxlength="9"
+                            [(ngModel)] = "vehicle.vlasnicka"
+                            name="vlasnicka"
+                            #vlasnickaVar = "ngModel"
+                            [ngClass]="{'input-invalid':vlasnickaVar.touched && !vlasnickaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="vlasnickaVar.touched && vlasnickaVar.errors?.required">Unesite broj potvrde o vlasništvu</span>
+                        <span class="text-invalid" *ngIf="vlasnickaVar.touched && vlasnickaVar.errors?.minlength || vlasnickaVar.errors?.maxlength">Broj potvrde o vlasništvu mora imati tačno 9 karaktera</span>
             
                         <button type="submit" class="btn btn-success submit-button">Sačuvaj</button>
                         <button class="btn btn-danger submit-button ml-3" [routerLink]="['/admin-vehicle/vehicles-list']" routerLinkActive="router-link-active">Odustani</button>

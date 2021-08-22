@@ -39,9 +39,9 @@ export class EditInstructorComponent implements OnInit {
   newSeminar = {
     id: 1,
     datum: {
-      year: 2021,
-      month: 8,
-      day: 1
+      year: new Date().getFullYear(),
+      month: new Date().getMonth() + 1,
+      day: new Date().getDate(),
     },
     tema: '',
     predavac: ''
@@ -182,9 +182,9 @@ export class EditInstructorComponent implements OnInit {
     this. newSeminar = {
       id: 1,
       datum: {
-        year: 2021,
-        month: 8,
-        day: 1
+        year: new Date().getFullYear(),
+        month: new Date().getMonth() + 1,
+        day: new Date().getDate(),
       },
       tema: '',
       predavac: ''

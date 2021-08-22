@@ -36,7 +36,7 @@
        <div class="col-md-8">
            <div class="row search-wrapper">
                <div class="col-md-10">
-                   <input type="text" class="search-list" placeholder="Pretraži listu vozila"/>
+                   <input type="text" class="search-list" placeholder="Pretraži listu vozila" [(ngModel)]='listFilter'/>
                </div>
                <div class="col-md-2">
                    <button class="btn btn-secondary" [routerLink]="['/admin-vehicle/add-vehicle']" routerLinkActive="router-link-active" >Dodaj</button>
@@ -44,37 +44,19 @@
            </div>
            <div class="row list-wrapper">
                <div class="col-md-12 list-container">
-                  <div class="row vehicle">
+                  <div class="row vehicle" *ngFor="let vehicle of filteredVehicles">
                       <div class="col-md-9">
-                          <p>Golf VII E22-0-333</p>
+                          <p>{{vehicle.marka}} {{vehicle.registarskaOznaka}}</p>
                       </div>
                       <div class="col-md-3">
-                          <button [routerLink]="['/admin-vehicle/edit-vehicle', 'id']" routerLinkActive="router-link-active">Uredi</button>
-                          <button>Obriši</button>
+                          <button [routerLink]="['/admin-vehicle/edit-vehicle', vehicle.id]" routerLinkActive="router-link-active">Uredi</button>
+                          <button (click)="deleteVehicle(vehicle.id)">Obriši</button>
                       </div>
                   </div>
-                  <div class="row vehicle">
-                    <div class="col-md-9">
-                        <p>Skoda Fabia M69-K-258</p>
-                    </div>
-                    <div class="col-md-3">
-                        <button>Uredi</button>
-                        <button>Obriši</button>
-                    </div>
-                </div>
-                <div class="row vehicle">
-                    <div class="col-md-9">
-                        <p>Audi A3 T78-J-789</p>
-                    </div>
-                    <div class="col-md-3">
-                        <button>Uredi</button>
-                        <button>Obriši</button>
-                    </div>
-                </div>
                </div>
-               <!-- <div class="col-md-12 empty-list">
+               <div class="col-md-12 empty-list" *ngIf="filteredVehicles.length === 0">
                    <p>Nema pronađenih vozila</p>
-               </div> -->
+               </div>
            </div>
            <ngb-pagination class="pagination" [collectionSize]="totalCount" 
            [pageSize]="pageSize"

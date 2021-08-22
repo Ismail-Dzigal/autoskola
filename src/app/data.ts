@@ -60,7 +60,8 @@ export const candidates = [
             "potvrda_CK.pdf",
             "potvrda_propisi.pdf"
         ],
-        "instructorId": 1
+        "instructorId": 1,
+        "instructorImePrezime": "Hasib Fijuljanin"
     },
     {
         "id": 2,
@@ -123,7 +124,8 @@ export const candidates = [
             "potvrda_CK.pdf",
             "potvrda_propisi.pdf"
         ],
-        "instructorId": 1
+        "instructorId": 1,
+        "instructorImePrezime": "Hasib Fijuljanin"
     },
     {
         "id": 3,
@@ -186,7 +188,8 @@ export const candidates = [
             "potvrda_CK.pdf",
             "potvrda_propisi.pdf"
         ],
-        "instructorId": 2
+        "instructorId": 2,
+        "instructorImePrezime": "Miodrag Mandić"
     },
     {
         "id": 4,
@@ -249,7 +252,8 @@ export const candidates = [
             "potvrda_CK.pdf",
             "potvrda_propisi.pdf"
         ],
-        "instructorId": 2
+        "instructorId": 2,
+        "instructorImePrezime": "Miodrag Mandić"
     }
 ];
 
@@ -264,7 +268,7 @@ export const instructors = [
         "drzavljanstvo": "Bosansko",
         "brojLk": "48TZU6975",
         "brojDozvole": "08KTR8978",
-        "zaduzenoVozilo": "E52-J-466",
+        "zaduzenoVozilo": "E52-J-414",
         "telefon": "+38761158990",
         "emailAdresa": "hasib.fijuljanin@gmail.com",
         "lozinka": "123456",
@@ -311,7 +315,8 @@ export const instructors = [
             "CIPS_prijava.pdf",
             "ljekarsko_uvjerenje.pdf",
             "kopija_dozvole.pdf"
-        ]
+        ],
+        "vehicleId": 1
     },
     {
         "id": 2,
@@ -323,7 +328,7 @@ export const instructors = [
         "drzavljanstvo": "Bosansko",
         "brojLk": "03CFT9653",
         "brojDozvole": "07PRI4455",
-        "zaduzenoVozilo": "E52-J-414",
+        "zaduzenoVozilo": "E52-J-466",
         "telefon": "+3762893695",
         "emailAdresa": "miodrag.mandic@gmail.com",
         "lozinka": "123456",
@@ -370,16 +375,172 @@ export const instructors = [
             "CIPS_prijava.pdf",
             "ljekarsko_uvjerenje.pdf",
             "kopija_dozvole.pdf"
-        ]
+        ],
+        "vehicleId": 2
     }
 ];
 
 export const vehicles = [
     {
-        "id": 1
+        "id": 1,
+        "vrstaVozila": 'M1-putnički automobil',
+        "marka": 'Golf 7',
+        "tip": '1.6TDI',
+        "brojSasije": 'VWWWF0NXGCLKN5645',
+        "brojMotora": '3K78256',
+        "gorivo": 'dizel',
+        "registarskaOznaka": 'E52-J-414',
+        "godinaProizvodnje": '2018',
+        "datumRegistracije": {
+            "year": 2021,
+            "month": 7,
+            "day": 15,
+        },
+        "saobracajnaDozvola": 'AA5809887',
+        "vlasnicka": 'BA1257584',
+        "instruktori": [
+            {
+                "id": 1,
+                "imePrezime": "Hasib Fijuljanin",
+                "datumZaduzenja": new Date('2021, 01, 17'),
+                "instructorId": 1
+            }
+        ],
+        "intervencije":[
+            {
+                "id": 1,
+                "datum": {
+                    "year": 2021,
+                    "month": 1,
+                    "day": 15,
+                },
+                "opis": 'Tehnički pregled',
+                "trajanje": '2h'
+            },
+            {
+                "id": 2,
+                "datum": {
+                    "year": 2021,
+                    "month": 4,
+                    "day": 16,
+                },
+                "opis": 'Zamjena prednjih guma',
+                "trajanje": '3h'
+            }
+        ],
+        "dokumenti": [
+            'kopija_saobracajne.pdf',
+            'kopija_vlasnicke.pdf',
+            'atest_komandi.pdf',
+            'karton_tehnicki.pdf'
+        ]
     },
     {
-        "id": 2
+        "id": 2,
+        "vrstaVozila": 'M1-putnički automobil',
+        "marka": 'Golf 7',
+        "tip": '1.6TDI',
+        "brojSasije": 'VWWWFITXGCLKN5645',
+        "brojMotora": '3K77145',
+        "gorivo": 'dizel',
+        "registarskaOznaka": 'E52-J-466',
+        "godinaProizvodnje": '2018',
+        "datumRegistracije": {
+            "year": 2021,
+            "month": 7,
+            "day": 25,
+        },
+        "saobracajnaDozvola": 'AA4757787',
+        "vlasnicka": 'BA1367713',
+        "instruktori": [
+            {
+                "id": 1,
+                "imePrezime": "Miodrag Mandić",
+                "datumZaduzenja": new Date('2021, 02, 25'),
+                "instructorId": 2
+            }
+        ],
+        "intervencije":[
+            {
+                "id": 1,
+                "datum": {
+                    "year": 2021,
+                    "month": 1,
+                    "day": 25,
+                },
+                "opis": 'Tehnički pregled',
+                "trajanje": '2h'
+            }
+        ],
+        "dokumenti": [
+            'kopija_saobracajne.pdf',
+            'kopija_vlasnicke.pdf',
+            'atest_komandi.pdf',
+            'karton_tehnicki.pdf'
+        ]
+    },
+    {
+        "id": 3,
+        "vrstaVozila": 'M1-putnički automobil',
+        "marka": 'Golf 7',
+        "tip": '1.6TDI',
+        "brojSasije": 'VWWWRKLXGCPLN7845',
+        "brojMotora": '3K71234',
+        "gorivo": 'dizel',
+        "registarskaOznaka": 'A23-K-223',
+        "godinaProizvodnje": '2017',
+        "datumRegistracije": {
+            "year": 2021,
+            "month": 2,
+            "day": 19,
+        },
+        "saobracajnaDozvola": 'AA8649756',
+        "vlasnicka": 'BA1367825',
+        "instruktori": [],
+        "intervencije":[],
+        "dokumenti": []
+    },
+    {
+        "id": 4,
+        "vrstaVozila": 'M1-putnički automobil',
+        "marka": 'Golf 7',
+        "tip": '1.6TDI',
+        "brojSasije": 'VWWWFRTLSCLKN4461',
+        "brojMotora": '4H75656',
+        "gorivo": 'dizel',
+        "registarskaOznaka": 'K59-O-453',
+        "godinaProizvodnje": '2017',
+        "datumRegistracije": {
+            "year": 2021,
+            "month": 3,
+            "day": 15,
+        },
+        "saobracajnaDozvola": 'AA5987235',
+        "vlasnicka": 'BA1958614',
+        "instruktori": [],
+        "intervencije":[],
+        "dokumenti": []
+    },
+    {
+        "id": 5,
+        "vrstaVozila": 'M1-putnički automobil',
+        "marka": 'Golf 7',
+        "tip": '1.6TDI',
+        "brojSasije": 'VWWWZZZIZCLKN1258',
+        "brojMotora": '3K78654',
+        "gorivo": 'dizel',
+        "registarskaOznaka": 'T74-K-273',
+        "godinaProizvodnje": '2016',
+        "datumRegistracije": {
+            "year": 2021,
+            "month": 5,
+            "day": 18,
+        },
+        "saobracajnaDozvola": 'AA1568945',
+        "vlasnicka": 'BA2653478',
+        "instruktori": [],
+        "intervencije":[],
+        "dokumenti": []
     }
 ];
 
@@ -414,38 +575,11 @@ export const notificationsFromAdmin = [
 export const reminders = [
     {
         "id": 1,
-        "text": "A23-M-356 kvar"
+        "text": "E52-J-414 kvar"
     },
     {
         "id": 2,
         "text": "Platiti struju"
-    }
-];
-
-export const payments = [
-    {
-        "id": 1
-    },
-    {
-        "id": 2
-    }
-];
-
-export const exams = [
-    {
-        "id": 1
-    },
-    {
-        "id": 2
-    }
-];
-
-export const documents = [
-    {
-        "id": 1
-    },
-    {
-        "id": 2
     }
 ];
 

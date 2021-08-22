@@ -77,6 +77,12 @@
                         }
                     }
                     .col-md-9 {
+                        .text-invalid {
+                            display: inline-block;
+                            color: red;
+                            margin: 0 auto 8px 200px;
+                            font-size: 0.8rem;
+                        }
                         h5 {
                             margin-bottom: 20px;
                         }
@@ -94,6 +100,9 @@
                                 font-size: 1rem;
                                 border-radius: 6px;
                                 background-color: rgb(255,204,153);
+                            }
+                            &.datepicker {
+                                width: 350px;
                             }
                         }
                     } 
@@ -124,12 +133,100 @@
                             }
                         }
 
-                        #instruktori, #intervencije {
+                        .novi-instruktor {
+                            margin-left: 15px;
+                            .noInstructors {
+                                color: red;
+                            }
+                            span {
+                                font-weight: bold;
+                            }
+                            select {
+                                margin-left: 10px;
+                                margin-right: 10px;
+                            }
+                            .fas {
+                                font-size: 23px;
+                                color: green;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .nova-intervencija {
+                            margin-top: 10px;
+                            margin-left: 15px;
+                            span {
+                                margin-left: 10px;
+                                margin-right: 5px;
+                            }
+
+                            .datepicker {
+                                display: inline-block;
+                                margin-top: 0;
+                            }
+
+                            .title {
+                                padding-top: 7px;
+                            }
+
+                            .body {
+                                height: 40px;
+                                padding-left: 10px;
+                            }
+
+                            .fas {
+                                padding-top: 7px;
+                                margin-left: 15px;
+                                cursor: pointer;
+                                font-size: 21px;
+                                color: green;
+                            }
+                        }
+
+                        .novi-dokument {
+                            margin-left: 15px;
+                            .fas {
+                                cursor: pointer;
+                                font-size: 21px;
+                                color: green;
+                            }
+                        }
+
+                        #instruktori {
                             margin-top: 10px;
                             margin-left: 15px;
                             width: 106%;
                             text-align: center;
                             border: 2px solid rgb(128,128,128);
+                            th, td {
+                                border: 1px solid rgb(128,128,128);
+                                width: 50%;
+                                font-size: 13px;
+                                padding-top: 4px;
+                                padding-bottom: 4px;
+                            }
+                            th {
+                                background-color: rgb(128,128,128);
+                                color: white;
+                                font-weight: 100;
+                                &:first-of-type, &:nth-of-type(2) {
+                                    border-right: 1px solid white;
+                                }
+                            }
+                            td {
+                                background-color: rgb(255,204,153);
+                            }
+                        }
+
+                        #intervencije {
+                            margin-top: 10px;
+                            margin-left: 15px;
+                            max-width: 750px;
+                            text-align: center;
+                            border: 2px solid rgb(128,128,128);
+                            &.wide-table-intervencija {
+                                width: 106%;
+                            }
                             th, td {
                                 border: 1px solid rgb(128,128,128);
                                 width: 33.33%;

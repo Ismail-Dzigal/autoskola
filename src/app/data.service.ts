@@ -5,9 +5,6 @@ import { vehicles } from './data';
 import { notificationsForAdmin } from './data';
 import { notificationsFromAdmin } from './data';
 import { reminders } from './data';
-import { payments } from './data';
-import { exams } from './data';
-import { documents } from './data';
 import { lectureTimes } from './data';
 import { trainings } from './data';
 
@@ -22,9 +19,6 @@ export class DataService {
   NOTIFICATIONSFORADMIN = notificationsForAdmin;
   NOTIFICATIONSFROMADMIN = notificationsFromAdmin;
   REMINDERS = reminders;
-  PAYMENTS = payments;
-  EXAMS = exams;
-  DOCUMENTS = documents;
   LECTURETIMES = lectureTimes;
   TRAININGS = trainings;
 
@@ -157,11 +151,12 @@ export class DataService {
     }
   }
 
-  setCandidateInstructorId(candidateId, instructorId){
+  setCandidateInstructorId(candidateId, instructor){
     for (let i = 0; i < this.CANDIDATES.length; i++) {
       const candidate = this.CANDIDATES[i];
       if(candidate.id === candidateId){
-        candidate.instructorId = instructorId;
+        candidate.instructorId = instructor.id;
+        candidate.instructorImePrezime = instructor.ime + ' ' + instructor.prezime;
       }
     }
   }
@@ -171,7 +166,7 @@ export class DataService {
       let instructor = this.INSTRUCTORS[i];
       if(instructor.id === instructorId){
         instructor.kandidati.push(newCandidate);
-        this.setCandidateInstructorId(+newCandidate.candidateId, instructorId)
+        this.setCandidateInstructorId(+newCandidate.candidateId, instructor)
       }
     }
   }
@@ -199,6 +194,79 @@ export class DataService {
       const instructor = this.INSTRUCTORS[i];
       if(instructor.id === id){
         this.INSTRUCTORS.splice(i, 1);
+        break;
+      }
+    }    
+  }
+
+  //CRUD VEHICLE
+
+  getVehicles() {
+    return [...this.VEHICLES];
+  }
+
+  getVehicle(id) {
+    for (let i = 0; i < this.VEHICLES.length; i++) {
+      const vehicle = this.VEHICLES[i];
+      if(vehicle.id === id){
+        return vehicle;
+      }
+    }
+    return null;
+  }
+
+  setVehicle(editedVehicle){
+    for (let i = 0; i < this.VEHICLES.length; i++) {
+      let vehicle = this.VEHICLES[i];
+      if(vehicle.id === editedVehicle.id){
+        vehicle = Object.assign({}, editedVehicle);
+      }
+    }
+  }
+
+  setInstructorVehicleId(instructorId, vehicle){
+    for (let i = 0; i < this.INSTRUCTORS.length; i++) {
+      const instructor = this.INSTRUCTORS[i];
+      if(instructor.id === instructorId){
+        instructor.vehicleId = vehicle.id;
+        instructor.zaduzenoVozilo = vehicle.registarskaOznaka;
+      }
+    }
+  }
+
+  addVehicleInstructor(vehicleId, newInstruktor){
+    for (let i = 0; i < this.VEHICLES.length; i++) {
+      let vehicle = this.VEHICLES[i];
+      if(vehicle.id === vehicleId){
+        vehicle.instruktori.push(newInstruktor);
+        this.setInstructorVehicleId(+newInstruktor.instructorId, vehicle)
+      }
+    }
+  }
+
+  addIntervencija(vehicleId, newIntervencija){
+    for (let i = 0; i < this.VEHICLES.length; i++) {
+      let vehicle = this.VEHICLES[i];
+      if(vehicle.id === vehicleId){
+        vehicle.intervencije.push(newIntervencija);
+      }
+    }
+  }
+
+  addDocumentVehicle(vehicleId, newDocument){
+    for (let i = 0; i < this.VEHICLES.length; i++) {
+      let vehicle = this.VEHICLES[i];
+      if(vehicle.id === vehicleId){
+        vehicle.dokumenti.push(newDocument);
+      }
+    }
+  }
+
+  deleteVehicle(id) {
+    for (let i = 0; i < this.VEHICLES.length; i++) {
+      const vehicle = this.VEHICLES[i];
+      if(vehicle.id === id){
+        this.VEHICLES.splice(i, 1);
         break;
       }
     }    

@@ -34,120 +34,243 @@
     </div>
     <div class="row main-content">
        <div class="col-md-8">
-           <form>
+           <form (ngSubmit)="submitEditVehicleForm(editVehicleForm)"
+           #editVehicleForm="ngForm">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="image-wrapper">
     
                         </div>
-                        <button type="submit" class="btn btn-success submit-image-button">Nova slika</button>
+                        <button type="button" class="btn btn-success submit-image-button">Nova slika</button>
                     </div>
                     <div class="col-md-9">
                         <h5>Podaci o vozilu</h5>
                         <div class="form-group">
-                            <label for="vrstaVozila">Vrsta vozila:</label>
-                            <input type="text" class="form-control" id="vrstaVozila" aria-describedby="vrstaVozila" placeholder="Vrsta vozila">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            <label for="vrstaVozila">Vrsta vozila:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="vrstaVozila" aria-describedby="vrstaVozila"
+                            placeholder="Vrsta vozila"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.vrstaVozila"
+                            name="vrstaVozila"
+                            #vrstaVozilaVar = "ngModel"
+                            [ngClass]="{'input-invalid':vrstaVozilaVar.touched && !vrstaVozilaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="vrstaVozilaVar.touched && vrstaVozilaVar.errors?.required">Unesite vrstu vozila</span>
+                        <span class="text-invalid" *ngIf="vrstaVozilaVar.touched && vrstaVozilaVar.errors?.minlength">Vrsta vozila mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="marka">Marka:</label>
-                            <input type="text" class="form-control" id="marka" placeholder="Marka">
+                            <label for="marka">Marka:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="marka" placeholder="Marka"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.marka"
+                            name="marka"
+                            #markaVar = "ngModel"
+                            [ngClass]="{'input-invalid':markaVar.touched && !markaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="markaVar.touched && markaVar.errors?.required">Unesite marku vozila</span>
+                        <span class="text-invalid" *ngIf="markaVar.touched && markaVar.errors?.minlength">Marka vozila mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="tip">Tip:</label>
-                            <input type="text" class="form-control" id="tip" placeholder="Tip">
+                            <label for="tip">Tip:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="tip" placeholder="Tip"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.tip"
+                            name="tip"
+                            #tipVar = "ngModel"
+                            [ngClass]="{'input-invalid':tipVar.touched && !tipVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="tipVar.touched && tipVar.errors?.required">Unesite tip vozila</span>
+                        <span class="text-invalid" *ngIf="tipVar.touched && tipVar.errors?.minlength">Tip vozila mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="brojSasije">Broj šasije:</label>
-                            <input type="text" class="form-control" id="brojSasije" placeholder="Broj šasije">
+                            <label for="brojSasije">Broj šasije:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="brojSasije" placeholder="Broj šasije"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.brojSasije"
+                            name="brojSasije"
+                            #brojSasijeVar = "ngModel"
+                            [ngClass]="{'input-invalid':brojSasijeVar.touched && !brojSasijeVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="brojSasijeVar.touched && brojSasijeVar.errors?.required">Unesite broj šasije</span>
+                        <span class="text-invalid" *ngIf="brojSasijeVar.touched && brojSasijeVar.errors?.minlength">Broj šasije mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="brojMotora">Broj motora:</label>
-                            <input type="text" class="form-control" id="brojMotora" placeholder="Broj motora">
+                            <label for="brojMotora">Broj motora:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="brojMotora" placeholder="Broj motora"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.brojMotora"
+                            name="brojMotora"
+                            #brojMotoraVar = "ngModel"
+                            [ngClass]="{'input-invalid':brojMotoraVar.touched && !brojMotoraVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="brojMotoraVar.touched && brojMotoraVar.errors?.required">Unesite broj motora</span>
+                        <span class="text-invalid" *ngIf="brojMotoraVar.touched && brojMotoraVar.errors?.minlength">Broj motora mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="gorivo">Gorivo:</label>
-                            <input type="text" class="form-control" id="gorivo" placeholder="Gorivo">
+                            <label for="gorivo">Gorivo:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="gorivo" placeholder="Gorivo"
+                            required
+                            minlength="3"
+                            [(ngModel)] = "vehicle.gorivo"
+                            name="gorivo"
+                            #gorivoVar = "ngModel"
+                            [ngClass]="{'input-invalid':gorivoVar.touched && !gorivoVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="gorivoVar.touched && gorivoVar.errors?.required">Unesite vrstu goriva</span>
+                        <span class="text-invalid" *ngIf="gorivoVar.touched && gorivoVar.errors?.minlength">Vrsta goriva mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
-                            <label for="registarskaOznaka">Registarska oznaka:</label>
-                            <input type="text" class="form-control" id="registarskaOznaka" placeholder="Registarska oznaka">
+                            <label for="registarskaOznaka">Registarska oznaka:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="registarskaOznaka" placeholder="Registarska oznaka"
+                            required
+                            minlength="5"
+                            [(ngModel)] = "vehicle.registarskaOznaka"
+                            name="registarskaOznaka"
+                            #registarskaOznakaVar = "ngModel"
+                            [ngClass]="{'input-invalid':registarskaOznakaVar.touched && !registarskaOznakaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="registarskaOznakaVar.touched && registarskaOznakaVar.errors?.required">Unesite registarsku oznaku</span>
+                        <span class="text-invalid" *ngIf="registarskaOznakaVar.touched && registarskaOznakaVar.errors?.minlength">Registarska oznaka mora imati minimalno 5 karaktera</span>
                         <div class="form-group">
-                            <label for="godinaProizvodnje">Godina proizvodnje:</label>
-                            <input type="text" class="form-control" id="godinaProizvodnje" placeholder="Godina proizvodnje">
+                            <label for="godinaProizvodnje">Godina proizvodnje:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="godinaProizvodnje" placeholder="Godina proizvodnje"
+                            required
+                            minlength="4"
+                            maxlength="4"
+                            [(ngModel)] = "vehicle.godinaProizvodnje"
+                            name="godinaProizvodnje"
+                            #godinaProizvodnjeVar = "ngModel"
+                            [ngClass]="{'input-invalid':godinaProizvodnjeVar.touched && !godinaProizvodnjeVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="godinaProizvodnjeVar.touched && godinaProizvodnjeVar.errors?.required">Unesite godinu proizvodnje</span>
+                        <span class="text-invalid" *ngIf="godinaProizvodnjeVar.touched && godinaProizvodnjeVar.errors?.minlength || godinaProizvodnjeVar.errors?.maxlength">Godina proizvodnje mora imati tačno 4 karaktera</span>
                         <div class="form-group">
-                            <label for="datumRegistracije">Datum registracije:</label>
-                            <input type="text" class="form-control" id="datumRegistracije" placeholder="Datum registracije">
+                            <label for="datumRegistracije">Datum registracije:<span class="required-flag">*</span></label>
+                            <div class="form-group datepicker">
+                                <div class="input-group">
+                                    <input class="form-control"       
+                                        id="datumRegistracije"         
+                                        placeholder="dd-mm-yyyy"
+                                        name="dp" 
+                                        required
+                                        [(ngModel)]="vehicle.datumRegistracije" ngbDatepicker #d="ngbDatepicker"  #datumRegistracijeVar = "ngModel"
+                                        [ngClass]="{'input-invalid':datumRegistracijeVar.touched && !datumRegistracijeVar.valid}" autocomplete="off"
+                                        [minDate]="{year: currentYear - 1, month: currentMonth, day: currentDay}"
+                                        [maxDate]="{year: currentYear + 1, month: currentMonth, day: currentDay}">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <span class="text-invalid" *ngIf="datumRegistracijeVar.touched && datumRegistracijeVar.errors?.required">Unesite datum registracije</span>
                         <div class="form-group">
-                            <label for="saobracajnaDozvola">Saobraćajna dozvola:</label>
-                            <input type="text" class="form-control" id="saobracajnaDozvola" placeholder="Saobraćajna dozvola">
+                            <label for="saobracajnaDozvola">Saobraćajna dozvola:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="saobracajnaDozvola" placeholder="Saobraćajna dozvola"
+                            required
+                            minlength="9"
+                            maxlength="9"
+                            [(ngModel)] = "vehicle.saobracajnaDozvola"
+                            name="saobracajnaDozvola"
+                            #saobracajnaDozvolaVar = "ngModel"
+                            [ngClass]="{'input-invalid':saobracajnaDozvolaVar.touched && !saobracajnaDozvolaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="saobracajnaDozvolaVar.touched && saobracajnaDozvolaVar.errors?.required">Unesite broj saobraćajne dozvole</span>
+                        <span class="text-invalid" *ngIf="saobracajnaDozvolaVar.touched && saobracajnaDozvolaVar.errors?.minlength || saobracajnaDozvolaVar.errors?.maxlength">Broj saobraćajne dozvole mora imati tačno 9 karaktera</span>
                         <div class="form-group">
-                            <label for="vlasnicka">Potvrda o vlasništvu</label>
-                            <input type="text" class="form-control" id="vlasnicka" placeholder="Potvrda o vlasništvu">
+                            <label for="vlasnicka">Potvrda o vlasništvu:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="vlasnicka" placeholder="Potvrda o vlasništvu"
+                            required
+                            minlength="9"
+                            maxlength="9"
+                            [(ngModel)] = "vehicle.vlasnicka"
+                            name="vlasnicka"
+                            #vlasnickaVar = "ngModel"
+                            [ngClass]="{'input-invalid':vlasnickaVar.touched && !vlasnickaVar.valid}" autocomplete="off"/>
                         </div>
+                        <span class="text-invalid" *ngIf="vlasnickaVar.touched && vlasnickaVar.errors?.required">Unesite broj potvrde o vlasništvu</span>
+                        <span class="text-invalid" *ngIf="vlasnickaVar.touched && vlasnickaVar.errors?.minlength || vlasnickaVar.errors?.maxlength">Broj potvrde o vlasništvu mora imati tačno 9 karaktera</span>
                     </div>
                     <div class="tables">
                         <div class="panel-headers">
-                            <button type="submit" class="btn btn-success panel-button">Instruktori</button>
-                            <button type="submit" class="btn btn-success panel-button">Intervencije</button>
-                            <button type="submit" class="btn btn-success panel-button">Dokumenti</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('instruktori')">Instruktori</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('intervencije')">Intervencije</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('dokumenti')">Dokumenti</button>
                         </div>
-                        <div class="add-section instruktori">
-                            <a><i class="fas fa-plus-circle mr-2"></i></a>
-                            <a><i class="fas fa-times-circle"></i></a>
+                        <div *ngIf="showInstruktori">
+                            <div class="add-section instruktori">
+                                <a (click)="showNewInstructorInput()" title="Dodaj novog instruktora"><i class="fas fa-plus-circle mr-2"></i></a>
+                                <a (click)="cancelInstructor()" title="Odustani od dodavanja novog instruktora"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="d-flex novi-instruktor" *ngIf="instructorsInputVisible">
+                                <span *ngIf="allInstructorsWithoutVehicle.length === 0" class="noInstructors">Trenutno nema instruktora kojima nije dodijeljeno vozilo</span>
+                                <div *ngIf="allInstructorsWithoutVehicle.length > 0">
+                                    <span>Odaberi instruktora iz liste:</span>
+                                    <select [(ngModel)]="selectedInstructorId" name="selectedInstructorId">
+                                        <option *ngFor="let instructor of allInstructorsWithoutVehicle" value ="{{instructor.id}}" >{{instructor.ime}} {{instructor.prezime}}</option>
+                                    </select>
+                                    <i class="fas fa-check" (click)="addInstructor()" title="Potvrdite unos"></i>
+                                </div>
+                            </div>
                         </div>
-                        <!-- <div class="add-section intervencije">
-                            <a><i class="fas fa-plus-circle mr-2"></i></a>
-                            <a><i class="fas fa-times-circle"></i></a>
+                        <div *ngIf="showIntervencije">
+                            <div class="add-section intervencije">
+                                <a (click)="showNewIntervencijaInput()" title="Dodaj novu intervenciju"><i class="fas fa-plus-circle mr-2"></i></a>
+                                <a (click)="cancelIntervencija()" title="Odustani od dodavanja nove intervencije"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="d-flex nova-intervencija align-items-start" *ngIf="intervencijeInputVisible">
+                                <span class="title">Datum:</span>
+                                <div class="form-group datepicker">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy"
+                                            name="dp" [(ngModel)]="newIntervencija.datum" ngbDatepicker #d="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Opis:</span>
+                                <input type="text" name="newSeminarTema" [(ngModel)]="newSeminar.tema" class="body"/>
+                                <span class="title">Trajanje:</span>
+                                <input type="text" name="newSeminarPredavac" [(ngModel)]="newSeminar.predavac" class="body"/>
+                                
+                                <i class="fas fa-check" (click)="addIntervencija()" title="Potvrdite unos"></i>
+                            </div>
                         </div>
-                        <div class="add-section dokumenti">
-                            <a><i class="fas fa-plus-circle mr-2"></i></a>
-                            <a><i class="fas fa-times-circle"></i></a>
-                        </div> -->
-                        <table id="instruktori">
+                        <div *ngIf="showDokumenti">
+                            <div class="add-section dokumenti" >
+                                <a (click)="showNewDocumentInput()" title="Dodaj novi dokument"><i class="fas fa-plus-circle mr-2"></i></a>
+                                <a (click)="cancelDokument()" title="Odustani od dodavanja novog dokumenta"><i class="fas fa-times-circle"></i></a>
+                            </div>
+                            <div class="novi-dokument" *ngIf="documentInputVisible">
+                                <input type="file" ng2FileSelect [uploader]="uploader" />
+                                <i class="fas fa-check" (click)="addDocument()" title="Upload dokument"></i>
+                            </div>
+                        </div>
+                        <table id="instruktori" *ngIf="showInstruktori">
                             <tr>
                                 <th>Ime i Prezime</th>
                                 <th>Datum zaduženja</th>
-                                <th>Datum razduženja</th>
                             </tr>
-                            <tr>
-                                <td>Ismail Džigal</td>
-                                <td>01.01.2020.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Stefan Balaban</td>
-                                <td>10.01.2020.</td>
-                                <td>10.04.2021.</td>
+                            <tr *ngFor="let instructor of instruktori">
+                                <td>{{instructor.imePrezime}}</td>
+                                <td>{{instructor.datumZaduzenja | date: 'd/M/yy'}}</td>
                             </tr>
                         </table>
-                        <!-- <table id="intervencije">
+                        <table id="intervencije" *ngIf="showIntervencije" [ngClass]="{'wide-table-intervencija': !intervencijeInputVisible}">
                             <tr>
-                                <th>Opis</th>
                                 <th>Datum</th>
+                                <th>Opis</th>
                                 <th>Trajanje</th>
                             </tr>
-                            <tr>
-                                <td>Tehnički pregled</td>
-                                <td>01.01.2020.</td>
-                                <td>2h</td>
-                            </tr>
-                            <tr>
-                                <td>Zamjena prednjih guma</td>
-                                <td>10.01.2020.</td>
-                                <td>3h</td>
+                            <tr *ngFor="let intervencija of intervencije">
+                                <td>{{intervencija.datum.day}}/{{intervencija.datum.month}}/{{intervencija.datum.year}}</td>
+                                <td>{{intervencija.opis}}</td>
+                                <td>{{intervencija.trajanje}}</td>
                             </tr>
                         </table>
-                        <div id="dokumenti">
-                            <a href="#">kopija_saobracajne.pdf</a>
-                            <a href="#">kopija_vlasnicke.pdf</a>
-                            <a href="#">atest_komandi.pdf</a>
-                            <a href="#">karton_tehnicki.pdf</a>
-                        </div> -->
+                        <div id="dokumenti" *ngIf="showDokumenti">
+                            <a href="#" *ngFor="let document of documents">{{document}}</a>
+                        </div>
                     </div>
                     <div class="submit-buttons-section">
                         <button type="submit" class="btn btn-success submit-button">Sačuvaj</button>
