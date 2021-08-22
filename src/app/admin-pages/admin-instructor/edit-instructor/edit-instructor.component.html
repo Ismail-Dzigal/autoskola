@@ -248,7 +248,7 @@
                             </tr>
                             <tr *ngFor="let candidate of candidates">
                                 <td>{{candidate.imePrezime}}</td>
-                                <td>{{candidate.datum | date: 'd/M/yy'}}</td>
+                                <td>{{candidate.datum | date: 'd/M/yyyy'}}</td>
                             </tr>
                         </table>
                         <table id="seminari" *ngIf="showSeminari" [ngClass]="{'wide-table': !seminarInputVisible}">

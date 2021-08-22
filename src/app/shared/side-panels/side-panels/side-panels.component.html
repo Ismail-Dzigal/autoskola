@@ -4,7 +4,7 @@
       <div class="notification" *ngFor="let notification of notificationsForAdmin">
         <p>- {{notification.title}}</p>
         <div class="notification-body">
-          <p>{{notification.createdAt | date: 'd/M/yy'}}</p>
+          <p>{{notification.createdAt | date: 'd/M/yyyy'}}</p>
           <p>{{notification.body}}</p>
           <p>{{notification.sender}}</p>
         </div>

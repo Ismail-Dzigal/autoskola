@@ -239,7 +239,7 @@
                             </thead>
                             <tbody>
                                 <tr *ngFor="let payment of payments">
-                                    <td>{{payment.datum | date: 'd/M/yy'}}</td>
+                                    <td>{{payment.datum | date: 'd/M/yyyy'}}</td>
                                     <td>{{payment.iznos | number:'1.2-2'}}KM</td>
                                 </tr>
                             </tbody>

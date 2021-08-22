@@ -126,6 +126,54 @@ export class DataService {
     }    
   }
 
+   //CRUD NOTIFICATIONSFROMADMIN
+
+   getNotificationsFromAdmin() {
+    return [...this.NOTIFICATIONSFROMADMIN];
+  }
+
+  getNotificationFromAdmin(id) {
+    for (let i = 0; i < this.NOTIFICATIONSFROMADMIN.length; i++) {
+      const notification = this.NOTIFICATIONSFROMADMIN[i];
+      if(notification.id === id){
+        return notification;
+      }
+    }
+    return null;
+  }
+
+  deleteNotificationFromAdmin(id) {
+    for (let i = 0; i < this.NOTIFICATIONSFROMADMIN.length; i++) {
+      const notification = this.NOTIFICATIONSFROMADMIN[i];
+      if(notification.id === id){
+        this.NOTIFICATIONSFROMADMIN.splice(i, 1);
+        break;
+      }
+    }    
+  }
+
+  addNotificationFromAdmin(newNotification){
+    this.NOTIFICATIONSFROMADMIN.push(newNotification);
+  }
+
+  addNotificationFromAdminInstructor(selectedRecipientId, newNotification){
+    for (let i = 0; i < this.INSTRUCTORS.length; i++) {
+      let instructor = this.INSTRUCTORS[i];
+      if(instructor.id === selectedRecipientId){
+        instructor.primljeneNotifikacije.push(newNotification);
+      }
+    }
+  }
+
+  addNotificationFromAdminCandidate(selectedRecipientId, newNotification){
+    for (let i = 0; i < this.CANDIDATES.length; i++) {
+      let candidate = this.CANDIDATES[i];
+      if(candidate.id === selectedRecipientId){
+        candidate.primljeneNotifikacije.push(newNotification);
+      }
+    }
+  }
+
    //CRUD INSTRUCTOR
 
   getInstructors() {

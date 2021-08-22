@@ -61,7 +61,17 @@ export const candidates = [
             "potvrda_propisi.pdf"
         ],
         "instructorId": 1,
-        "instructorImePrezime": "Hasib Fijuljanin"
+        "instructorImePrezime": "Hasib Fijuljanin",
+        "primljeneNotifikacije": [
+            {
+                "id": 1,
+                "naslov": 'Lična karta',
+                "notificationTekst": 'Vaša lična karta ističe za 10 dana',
+                "vrijemeSlanja": '11: 00',
+                "datumSlanja": new Date('2021, 08, 15'),
+                "recipientImePrezime": 'Ismail Džigal' 
+            }
+        ]
     },
     {
         "id": 2,
@@ -125,7 +135,17 @@ export const candidates = [
             "potvrda_propisi.pdf"
         ],
         "instructorId": 1,
-        "instructorImePrezime": "Hasib Fijuljanin"
+        "instructorImePrezime": "Hasib Fijuljanin",
+        "primljeneNotifikacije": [
+            {
+                "id": 2,
+                "naslov": 'Polaganje ispita',
+                "notificationTekst": 'Polažete ispit u utorak 24.08. u 14:00h',
+                "vrijemeSlanja": '13: 00',
+                "datumSlanja": new Date('2021, 08, 17'),
+                "recipientImePrezime": 'Sead Hodžić' 
+            }
+        ]
     },
     {
         "id": 3,
@@ -189,7 +209,8 @@ export const candidates = [
             "potvrda_propisi.pdf"
         ],
         "instructorId": 2,
-        "instructorImePrezime": "Miodrag Mandić"
+        "instructorImePrezime": "Miodrag Mandić",
+        "primljeneNotifikacije": []
     },
     {
         "id": 4,
@@ -253,7 +274,8 @@ export const candidates = [
             "potvrda_propisi.pdf"
         ],
         "instructorId": 2,
-        "instructorImePrezime": "Miodrag Mandić"
+        "instructorImePrezime": "Miodrag Mandić",
+        "primljeneNotifikacije": []
     }
 ];
 
@@ -316,7 +338,18 @@ export const instructors = [
             "ljekarsko_uvjerenje.pdf",
             "kopija_dozvole.pdf"
         ],
-        "vehicleId": 1
+        "vehicleId": 1,
+        "primljeneNotifikacije": [
+            {
+                "id": 3,
+                "naslov": 'Ugovor',
+                "notificationTekst": 'Potrebno je da dođete u kancelariju radi potpisivanja novog ugovora',
+                "vrijemeSlanja": '11: 15',
+                "datumSlanja": new Date('2021, 08, 10'),
+                "recipientImePrezime": 'Hasib Fijuljanin' 
+            }
+        ],
+        "poslaneNotifikacije": []
     },
     {
         "id": 2,
@@ -376,7 +409,18 @@ export const instructors = [
             "ljekarsko_uvjerenje.pdf",
             "kopija_dozvole.pdf"
         ],
-        "vehicleId": 2
+        "vehicleId": 2,
+        "primljeneNotifikacije": [
+            {
+                "id": 4,
+                "naslov": 'Ugovor',
+                "notificationTekst": 'Potrebno je da dođete u kancelariju i ponesete ličnu kartu sa sobom',
+                "vrijemeSlanja": '11: 16',
+                "datumSlanja": new Date('2021, 08, 11'),
+                "recipientImePrezime": 'Miodrag Mandić' 
+            }
+        ],
+        "poslaneNotifikacije": []
     }
 ];
 
@@ -565,10 +609,36 @@ export const notificationsForAdmin = [
 
 export const notificationsFromAdmin = [
     {
-        "id": 1
+        "id": 1,
+        "naslov": 'Lična karta',
+        "notificationTekst": 'Vaša lična karta ističe za 10 dana',
+        "vrijemeSlanja": '11: 00',
+        "datumSlanja": new Date('2021, 08, 15'),
+        "recipientImePrezime": 'Ismail Džigal' 
     },
     {
-        "id": 2
+        "id": 2,
+        "naslov": 'Dokumenta',
+        "notificationTekst": 'Potrebno je da dođete u kancelariju i ponesete ličnu kartu sa sobom',
+        "vrijemeSlanja": '13: 00',
+        "datumSlanja": new Date('2021, 08, 17'),
+        "recipientImePrezime": 'Sead Hodžić' 
+    },
+    {
+        "id": 3,
+        "naslov": 'Ugovor',
+        "notificationTekst": 'Potrebno je da dođete u kancelariju radi potpisivanja novog ugovora',
+        "vrijemeSlanja": '11: 15',
+        "datumSlanja": new Date('2021, 08, 10'),
+        "recipientImePrezime": 'Hasib Fijuljanin' 
+    },
+    {
+        "id": 4,
+        "naslov": 'Ugovor',
+        "notificationTekst": 'Potrebno je da dođete u kancelariju radi potpisivanja novog ugovora',
+        "vrijemeSlanja": '11: 16',
+        "datumSlanja": new Date('2021, 08, 11'),
+        "recipientImePrezime": 'Miodrag Mandić' 
     }
 ];
 

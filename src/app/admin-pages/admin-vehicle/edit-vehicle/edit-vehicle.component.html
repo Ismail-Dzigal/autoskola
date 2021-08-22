@@ -253,7 +253,7 @@
                             </tr>
                             <tr *ngFor="let instructor of instruktori">
                                 <td>{{instructor.imePrezime}}</td>
-                                <td>{{instructor.datumZaduzenja | date: 'd/M/yy'}}</td>
+                                <td>{{instructor.datumZaduzenja | date: 'd/M/yyyy'}}</td>
                             </tr>
                         </table>
                         <table id="intervencije" *ngIf="showIntervencije" [ngClass]="{'wide-table-intervencija': !intervencijeInputVisible}">

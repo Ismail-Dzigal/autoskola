@@ -39,23 +39,23 @@
                     <h5>Detalji notifikacije</h5>
                     <div class="data-group">
                         <span class="header">Primalac:</span>
-                        <p id="naslov">Ismail Džigal</p>
+                        <p id="primalac">{{notification.recipientImePrezime}}</p>
                     </div>
                     <div class="data-group">
                         <span class="header">Naslov:</span>
-                        <p id="naslov">Termin polaganja ispita</p>
+                        <p id="naslov">{{notification.naslov}}</p>
                     </div>
                     <div class="data-group">
                         <span class="header">Sadržaj:</span>
-                        <p id="naslov">Termin polaganja ispita za vas je 20.05.2021. u 10:00h</p>
+                        <p id="sadrzaj">{{notification.notificationTekst}}</p>
                     </div>
                     <div class="data-group">
                         <span class="header">Vrijeme slanja:</span>
-                        <p id="naslov">13:15</p>
+                        <p id="vrijeme">{{notification.vrijemeSlanja}}</p>
                     </div>
                     <div class="data-group">
                         <span class="header">Datum slanja:</span>
-                        <p id="naslov">16.05.2021.</p>
+                        <p id="datum">{{notification.datumSlanja | date: 'd/M/yyyy'}}</p>
                     </div>
                 
                     <button class="btn btn-danger submit-button" [routerLink]="['/admin-notification/notifications-list']"

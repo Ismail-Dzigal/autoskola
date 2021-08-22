@@ -29,7 +29,8 @@ export class AddCandidateComponent implements OnInit {
         ispiti: [],
         dokumenti: [],
         instructorId: 0,
-        instructorImePrezime: ''
+        instructorImePrezime: '',
+        primljeneNotifikacije: []
   };
   candidates;
 

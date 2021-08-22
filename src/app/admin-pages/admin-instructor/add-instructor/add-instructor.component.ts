@@ -30,7 +30,9 @@ export class AddInstructorComponent implements OnInit {
     kandidati: [],
     seminari: [],
     dokumenti: [],
-    vehicleId: 0 
+    vehicleId: 0,
+    primljeneNotifikacije: [],
+    poslaneNotifikacije: []
   };
   instructors;
 

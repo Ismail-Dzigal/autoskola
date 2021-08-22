@@ -34,40 +34,54 @@
     </div>
     <div class="row main-content">
        <div class="col-md-8">
-            <form>
+            <form (ngSubmit)="submitAddNotificationForm(addNotificationForm)"
+            #addNotificationForm="ngForm">
                 <div class="row">
                     <div class="col-md-12">
                         <h5>Pošalji notifikaciju</h5>
                         <div class="form-group">
-                            <label for="naslov">Naslov:</label>
-                            <input type="text" class="form-control" id="naslov" aria-describedby="naslov" placeholder="Naslov">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            <label for="naslov">Naslov:<span class="required-flag">*</span></label>
+                            <input type="text" class="form-control" id="naslov" aria-describedby="naslov" placeholder="Naslov"
+                            required
+                            minlength="5"
+                            [(ngModel)] = "newNotification.naslov"
+                            name="naslov"
+                            #naslovVar = "ngModel"
+                            [ngClass]="{'input-invalid':naslovVar.touched && !naslovVar.valid}" autocomplete="off">
                         </div>
+                        <span class="text-invalid" *ngIf="naslovVar.touched && naslovVar.errors?.required">Unesite naslov</span>
+                        <span class="text-invalid" *ngIf="naslovVar.touched && naslovVar.errors?.minlength">Naslov mora imati minimalno 5 karaktera</span>
                         <div class="form-group">
-                            <textarea class="form-control" id="notification-body" name="notificationBody" placeholder="Ovdje unesite sadržaj notifikacije" rows="10" cols="70"></textarea>
+                            <textarea class="form-control" id="notification-body" 
+                            placeholder="Ovdje unesite sadržaj notifikacije" rows="10" cols="70"
+                            required
+                            minlength="5"
+                            [(ngModel)] = "newNotification.notificationTekst"
+                            name="notificationTekst"
+                            #notificationTekstVar = "ngModel"
+                            [ngClass]="{'input-invalid':notificationTekstVar.touched && !notificationTekstVar.valid}" autocomplete="off"></textarea>
                         </div>
+                        <span class="text-invalid-textarea" *ngIf="notificationTekstVar.touched && notificationTekstVar.errors?.required">Unesite sadržaj notifikacije</span>
+                        <span class="text-invalid-textarea" *ngIf="notificationTekstVar.touched && notificationTekstVar.errors?.minlength">Sadržaj notifikacije mora imati minimalno 5 karaktera</span>
                         <div class="recipient-choice row">
                             <div class="radio-buttons col-md-6">
-                                <input type="radio" id="instruktor" name="recipient" value="instructor">
-                                <label for="instruktor">Pošalji instruktoru</label><br>
-                                <input type="radio" id="kandidat" name="recipient" value="candidate">
-                                <label for="kandidat">Pošalji kandidatu</label>
+                                <input type="radio" id="instructor" name="recipient" value="instructor" [(ngModel)]='recipient'>
+                                <label for="instruktor">Pošalji notifikaciju instruktoru</label><br>
+                                <input type="radio" id="candidate" name="recipient" value="candidate" [(ngModel)]='recipient'>
+                                <label for="kandidat">Pošalji notifikaciju kandidatu</label>
                             </div>
                             <div class="recipient-selects col-md-6">
                                 <div class="form-group">
-                                    <select class="form-control" id="izbor-instruktora">
-                                        <option>Instruktor</option>
-                                        <option>Prva</option>
-                                        <option>Prva</option>
-                                        <option>Prva</option>
+                                    <select class="form-control" [(ngModel)]="selectedRecipientId" name="selectedRecipientId"
+                                    required
+                                    [disabled]="recipientType !== 'candidate' && recipientType !== 'instructor'" title="Izaberite tip primaoca sa lijeve strane, a zatim izaberite i ime i prezime primaoca iz izabrane liste"
+                                    #selectedRecipientIdVar = "ngModel"
+                                    [ngClass]="{'input-invalid':selectedRecipientIdVar.touched && !selectedRecipientIdVar.valid}">
+                                        <option value="" disabled>Odaberite primaoca</option>
+                                        <option *ngFor="let recipient of recipientsList" value ="{{recipient.id}}" >{{recipient.ime}} {{recipient.prezime}}</option>
                                     </select>
-                                    <!-- <select class="form-control" id="izbor-kandidata">
-                                        <option>Kandidat</option>
-                                        <option>Prva</option>
-                                        <option>Prva</option>
-                                        <option>Prva</option>
-                                    </select> -->
                                 </div>
+                                <span class="text-invalid" *ngIf="selectedRecipientIdVar.touched && selectedRecipientIdVar.errors?.required">Izaberite primaoca</span>
                             </div>
                         </div>
                 
