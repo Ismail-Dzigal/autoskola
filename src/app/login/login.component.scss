@@ -24,14 +24,25 @@
         .form-group {
             margin-bottom: 30px;
             label {
-                width: 160px;
+                width: 170px;
             }
             input {
-                width: 400px;
+                width: 390px;
                 font-size: 1.3rem;
                 border-radius: 6px;
                 background-color: rgb(230,240,250);
             }
+        }
+        .validation-wrapper {
+            position: relative;
+        }
+        .text-invalid {
+            position: absolute;
+            top: -30px;
+            display: inline-block;
+            color: red;
+            margin: 0px auto 8px 200px;
+            font-size: 0.8rem;
         }
  
         button {

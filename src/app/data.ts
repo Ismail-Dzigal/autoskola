@@ -670,3 +670,21 @@ export const trainings = [
         "id": 2
     }
 ];
+
+export const users = [
+    {
+        "id": 1,
+        "username": "admin",
+        "password": "123456"
+    },
+    {
+        "id": 2,
+        "username": "instr",
+        "password": "123456"
+    },
+    {
+        "id": 3,
+        "username": "candid",
+        "password": "123456"
+    }
+];

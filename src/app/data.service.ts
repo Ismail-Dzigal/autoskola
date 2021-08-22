@@ -7,6 +7,7 @@ import { notificationsFromAdmin } from './data';
 import { reminders } from './data';
 import { lectureTimes } from './data';
 import { trainings } from './data';
+import { users } from './data';
 
 
 @Injectable({
@@ -21,6 +22,7 @@ export class DataService {
   REMINDERS = reminders;
   LECTURETIMES = lectureTimes;
   TRAININGS = trainings;
+  USERS = users;
 
   //CRUD CANDIDATE
 
@@ -318,6 +320,10 @@ export class DataService {
         break;
       }
     }    
+  }
+
+  getUsers(){
+    return [...this.USERS];
   }
 
   constructor() { }
