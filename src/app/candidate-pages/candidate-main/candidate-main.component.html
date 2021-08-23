@@ -41,41 +41,45 @@
                         <div class="col-md-6">
                             <div class="data-group">
                                 <span class="header">Ime:</span>
-                                <p id="ime"></p>
+                                <p id="ime">{{candidate.ime}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Prezime:</span>
-                                <p id="prezime"></p>
+                                <p id="prezime">{{candidate.prezime}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Ime oca:</span>
-                                <p id="imeOca"></p>
+                                <p id="imeOca">{{candidate.imeOca}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">JMBG:</span>
-                                <p id="jmbg"></p>
+                                <p id="jmbg">{{candidate.jmbg}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Mjesto rođenja:</span>
-                                <p id="mjestoRodjenja">AAAA</p>
+                                <p id="mjestoRodjenja">{{candidate.mjestoRodjenja}}</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="data-group">
                                 <span class="header">Državljanstvo:</span>
-                                <p id="drzavljanstvo"></p>
+                                <p id="drzavljanstvo">{{candidate.drzavljanstvo}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Broj lk:</span>
-                                <p id="brojLk"></p>
+                                <p id="brojLk">{{candidate.brojLk}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Broj telefona:</span>
-                                <p id="telefon"></p>
+                                <p id="telefon">{{candidate.telefon}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Email adresa:</span>
-                                <p id="emailAdresa"></p>
+                                <p id="emailAdresa">{{candidate.emailAdresa}}</p>
+                            </div>
+                            <div class="data-group">
+                                <span class="header">Instruktor:</span>
+                                <p id="instruktor">{{candidate.instructorImePrezime}}</p>
                             </div>
                         </div>
                     </div>
@@ -88,11 +92,11 @@
             <div class="row">
                 <div class="tables">
                     <div class="panel-headers">
-                        <button type="submit" class="btn btn-success panel-button">Uplate</button>
-                        <button type="submit" class="btn btn-success panel-button">Ispiti</button>
-                        <button type="submit" class="btn btn-success panel-button">Dokumenti</button>
+                        <button type="button" class="btn btn-success panel-button" (click)="showTable('uplate')">Uplate</button>
+                        <button type="button" class="btn btn-success panel-button" (click)="showTable('ispiti')">Ispiti</button>
+                        <button type="button" class="btn btn-success panel-button" (click)="showTable('dokumenti')">Dokumenti</button>
                     </div>
-                    <table id="uplate">
+                    <table id="uplate"  *ngIf="showUplate">
                         <thead>
                             <tr>
                                 <th>Datum uplate</th>
@@ -100,50 +104,37 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>12.10.2020.</td>
-                                <td>300,00KM</td>
-                            </tr>
-                            <tr>
-                                <td>30.11.2020.</td>
-                                <td>120,00KM</td>
+                            <tr *ngFor="let payment of payments">
+                                <td>{{payment.datum | date: 'd/M/yyyy'}}</td>
+                                <td>{{payment.iznos | number:'1.2-2'}}KM</td>
                             </tr>
                         </tbody>
                         <tbody>
                             <tr id="ukupno">
                                 <td>Ukupno uplaćeno</td>
-                                <td>420,00KM</td>
+                                <td>{{paymentsSum | number:'1.2-2'}}KM</td>
                             </tr>
                             <tr id="preostalo">
                                 <td>Preostali dug</td>
-                                <td>600,00KM</td>
+                                <td>{{(1020 - paymentsSum) | number:'1.2-2'}}KM</td>
                             </tr>
                         </tbody>
                     </table>
-                    <!-- <table id="ispiti">
+                    <table id="ispiti" *ngIf="showIspiti">
                         <tr>
                             <th>Datum polaganja</th>
                             <th>Termin</th>
                             <th>Uspjeh</th>
                         </tr>
-                        <tr>
-                            <td>01.12.2020.</td>
-                            <td>09:30</td>
-                            <td>pao</td>
+                        <tr *ngFor="let exam of exams">
+                            <td>{{exam.datum.day}}/{{exam.datum.month}}/{{exam.datum.year}}</td>
+                            <td>{{exam.termin.hour}}:{{exam.termin.minute}}</td>
+                            <td [ngClass]="{'success':exam.uspjeh, 'failure':!exam.uspjeh}">{{exam.uspjeh ? "Položio" : "Pao"}}</td>
                         </tr>
-                        <tr>
-                            <td>08.12.2020.</td>
-                            <td>12:00</td>
-                            <td>položio</td>
-                        </tr>
-                    </table> -->
-                    <!-- <div id="dokumenti">
-                        <a href="#">kopija_lk.pdf</a>
-                        <a href="#">CIPS_prijava.pdf.pdf</a>
-                        <a href="#">ljekarsko_uvjerenje.pdf</a>
-                        <a href="#">potvrda_CK.pdf</a>
-                        <a href="#">potvrda_propisi.pdf</a>
-                    </div> -->
+                    </table>
+                    <div id="dokumenti" *ngIf="showDokumenti">
+                        <a href="#" *ngFor="let document of documents">{{document}}</a>
+                    </div>
                 </div>
             </div>
         </div>

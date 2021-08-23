@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-lectures-summary',
@@ -7,16 +8,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class LecturesSummaryComponent implements OnInit {
-  paginationInfo: any;
-  currentPage: number = 1;
-  pageSize: number = 10;
-  previousPage: number;
-  totalCount: number = 3;
-  totalPages: number = 1;
+  candidate;
+  lectures;
+  preostaloCasova;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.candidate = this.dataService.getCandidate(1);
+    this.lectures = this.candidate.obuka;
+    this.preostaloCasova = 35 - this.candidate.obuka[this.candidate.obuka.length - 1].zavrseniCasovi;
   }
 
 }

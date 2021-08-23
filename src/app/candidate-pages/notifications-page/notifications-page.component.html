@@ -35,23 +35,16 @@
                 <div class="col-md-12">
                     <div class="row search-wrapper">
                         <div class="col-md-12">
-                            <input type="text" class="search-list form-control" placeholder="Pretraži listu notifikacija"/>
+                            <input type="text" class="search-list form-control" placeholder="Pretraži listu notifikacija" [(ngModel)]='listFilter'/>
                         </div>
                     </div>
                     <div class="row list-wrapper">
                         <div class="col-md-12 list-container">
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
+                            <p *ngFor="let notification of filteredNotifications">{{notification.datumSlanja | date: 'd/M/yyyy'}} - {{notification.naslov}} - {{notification.notificationTekst}}</p>
+                            <div class="col-md-12 empty-list" *ngIf="filteredNotifications.length === 0">
+                                <p>Nema pronađenih notifikacija</p>
+                            </div>
                         </div>
-                        <!-- <div class="col-md-12 empty-list">
-                            <p>Nema pronađenih notifikacija</p>
-                        </div> -->
                     </div>
                 </div>
             </div>

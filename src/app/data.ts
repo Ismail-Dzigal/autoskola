@@ -26,34 +26,7 @@ export const candidates = [
             }
         ],
         "preostaliDug": 600,
-        "ispiti": [
-            {
-                "id": 1,
-                "datum": {
-                    "year": 2021,
-                    "month": 7,
-                    "day": 15
-                },
-                "termin": {
-                    "hour": 9,
-                    "minute": 30
-                },
-                "uspjeh": false
-            },
-            {
-                 "id": 2,
-                 "datum": {
-                    "year": 2021,
-                    "month": 8,
-                    "day": 15
-                 },
-                 "termin": {
-                    "hour": 12,
-                    "minute": 20
-                 },
-                 "uspjeh": false
-            }
-        ],
+        "ispiti": [],
         "dokumenti": [
             "kopija_lk.pdf",
             "CIPS_prijava.pdf",
@@ -71,6 +44,98 @@ export const candidates = [
                 "vrijemeSlanja": '11: 00',
                 "datumSlanja": new Date('2021, 08, 15'),
                 "recipientImePrezime": 'Ismail Džigal' 
+            }
+        ],
+        "obuka": [
+            {
+                "id": 1,
+                "datum": new Date('2021, 08, 02'),
+                "zavrseniCasovi": 2,
+                "tema": "Dnevni pregled vozila i upoznavanje vozila",
+                "ruta": "poligon",
+                "komentar": "Dobro shvatanje",
+                "ocjena": 5
+            },
+            {
+                "id": 2,
+                "datum": new Date('2021, 08, 03'),
+                "zavrseniCasovi": 4,
+                "tema": "Kretanje i zaustavljanje.Mijenjanje brzina(1 i 2)",
+                "ruta": "poligon",
+                "komentar": "Dobro shvatanje",
+                "ocjena": 5
+            },
+            {
+                "id": 3,
+                "datum": new Date('2021, 08, 04'),
+                "zavrseniCasovi": 6,
+                "tema": "Uključivanje u saobraćaj. Vertikalna signalizacija",
+                "ruta": "ruta 1",
+                "komentar": "Dobar osjećaj za kvačilo. Ne gledati u mjenjač",
+                "ocjena": 4
+            },
+            {
+                "id": 4,
+                "datum": new Date('2021, 08, 05'),
+                "zavrseniCasovi": 8,
+                "tema": "Vožnja ulicama sa malom gustinom saobraćaja. Vožnja u trećem stepenu prijenosa",
+                "ruta": "ruta 1",
+                "komentar": "Opustiti ruke na upravljaču. Ne gledati u mjenjač",
+                "ocjena": 3
+            },
+            {
+                "id": 5,
+                "datum": new Date('2021, 08, 06'),
+                "zavrseniCasovi": 10,
+                "tema": "Prestrojavanje. Svjetlosna signalizacija.",
+                "ruta": "ruta 2",
+                "komentar": "Često zaboravljanje da se provjeri mrtvi ugao. Treba raditi na tome",
+                "ocjena": 3
+            },
+            {
+                "id": 6,
+                "datum": new Date('2021, 08, 07'),
+                "zavrseniCasovi": 12,
+                "tema": "Vožnja ulicama sa većom gustinom saobraćaja. Vožnja u četvrtom stepenu prijenosa",
+                "ruta": "ruta 3",
+                "komentar": "Truditi se da se pogled ne zadržava na instrument tabli zbog gubitka pravca",
+                "ocjena": 4
+            },
+            {
+                "id": 7,
+                "datum": new Date('2021, 08, 09'),
+                "zavrseniCasovi": 14,
+                "tema": "Polukružno okretanje. Vožnja unazad. Bočno parkiranje",
+                "ruta": "ruta 3, poligon",
+                "komentar": "Polukružno okretanje je dobro. Vožnju unazad i parkiranje moramo još puno vježbati",
+                "ocjena": 2
+            },
+            {
+                "id": 8,
+                "datum": new Date('2021, 08, 10'),
+                "zavrseniCasovi": 16,
+                "tema": "Vožnja unazad. Bočno parkiranje",
+                "ruta": "poligon",
+                "komentar": "Tehnika savladana na mnogo većem nivou. Veliki napredak",
+                "ocjena": 4
+            },
+            {
+                "id": 9,
+                "datum": new Date('2021, 08, 11'),
+                "zavrseniCasovi": 18,
+                "tema": "Bočno parkiranje. Vožnja u saobraćaju sa velikom gustinom",
+                "ruta": "ruta 4",
+                "komentar": "Odlično odrađeno",
+                "ocjena": 5
+            },
+            {
+                "id": 10,
+                "datum": new Date('2021, 08, 12'),
+                "zavrseniCasovi": 20,
+                "tema": "Vožnja van naselja",
+                "ruta": "ruta 5",
+                "komentar": "Dobro održavanje pravca. Mijenjanje stepena prijenosa bez gledanja u mjenjač. Odlično.",
+                "ocjena": 5
             }
         ]
     },
@@ -106,7 +171,7 @@ export const candidates = [
                     "id": 1,
                     "datum": {
                         "year": 2021,
-                        "month": 6,
+                        "month": 8,
                         "day": 12
                     },
                     "termin": {
@@ -119,12 +184,12 @@ export const candidates = [
                      "id": 2,
                      "datum": {
                         "year": 2021,
-                        "month": 7,
-                        "day": 11
+                        "month": 8,
+                        "day": 25
                      },
                      "termin": {
-                        "hour": 10,
-                        "minute": 50
+                        "hour": 14,
+                        "minute": 10
                      },
                      "uspjeh": false
                 }
@@ -142,10 +207,174 @@ export const candidates = [
             {
                 "id": 2,
                 "naslov": 'Polaganje ispita',
-                "notificationTekst": 'Polažete ispit u utorak 24.08. u 14:00h',
+                "notificationTekst": 'Polažete ispit u srijedu 25.08. u 14:10h',
                 "vrijemeSlanja": '13: 00',
                 "datumSlanja": new Date('2021, 08, 17'),
                 "recipientImePrezime": 'Sead Hodžić' 
+            }
+        ],
+        "obuka": [
+            {
+                "id": 1,
+                "datum": new Date('2021, 07, 12'),
+                "zavrseniCasovi": 2,
+                "tema": "Dnevni pregled vozila i upoznavanje vozila",
+                "ruta": "poligon",
+                "komentar": "Dobro shvatanje",
+                "ocjena": 5
+            },
+            {
+                "id": 2,
+                "datum": new Date('2021, 07, 13'),
+                "zavrseniCasovi": 4,
+                "tema": "Kretanje i zaustavljanje. Mijenjanje brzina(1 i 2)",
+                "ruta": "poligon",
+                "komentar": "Dobro shvatanje",
+                "ocjena": 5
+            },
+            {
+                "id": 3,
+                "datum": new Date('2021, 07, 14'),
+                "zavrseniCasovi": 6,
+                "tema": "Uključivanje u saobraćaj. Vertikalna signalizacija",
+                "ruta": "ruta 1",
+                "komentar": "Dobar osjećaj za kvačilo. Ne gledati u mjenjač",
+                "ocjena": 4
+            },
+            {
+                "id": 4,
+                "datum": new Date('2021, 07, 15'),
+                "zavrseniCasovi": 8,
+                "tema": "Vožnja ulicama sa malom gustinom saobraćaja. Vožnja u trećem stepenu prijenosa",
+                "ruta": "ruta 1",
+                "komentar": "Opustiti ruke na upravljaču. Ne gledati u mjenjač",
+                "ocjena": 4
+            },
+            {
+                "id": 5,
+                "datum": new Date('2021, 07, 16'),
+                "zavrseniCasovi": 10,
+                "tema": "Prestrojavanje. Svjetlosna signalizacija.",
+                "ruta": "ruta 2",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 6,
+                "datum": new Date('2021, 07, 17'),
+                "zavrseniCasovi": 12,
+                "tema": "Vožnja ulicama sa većom gustinom saobraćaja. Vožnja u četvrtom stepenu prijenosa",
+                "ruta": "ruta 3",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 7,
+                "datum": new Date('2021, 07, 19'),
+                "zavrseniCasovi": 14,
+                "tema": "Polukružno okretanje. Vožnja unazad. Bočno parkiranje",
+                "ruta": "ruta 3, poligon",
+                "komentar": "Polukružno okretanje je dobro. Vožnju unazad i parkiranje moraju se još uvježbavati",
+                "ocjena": 4
+            },
+            {
+                "id": 8,
+                "datum": new Date('2021, 07, 20'),
+                "zavrseniCasovi": 16,
+                "tema": "Vožnja unazad. Bočno parkiranje",
+                "ruta": "poligon",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 9,
+                "datum": new Date('2021, 07, 21'),
+                "zavrseniCasovi": 18,
+                "tema": "Bočno parkiranje. Vožnja u saobraćaju sa velikom gustinom",
+                "ruta": "ruta 4",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 10,
+                "datum": new Date('2021, 07, 22'),
+                "zavrseniCasovi": 20,
+                "tema": "Vožnja van naselja",
+                "ruta": "ruta 5",
+                "komentar": "Odlično.",
+                "ocjena": 5
+            },
+            {
+                "id": 11,
+                "datum": new Date('2021, 07, 23'),
+                "zavrseniCasovi": 22,
+                "tema": "Paralelno parkiranje. Polazak uz korištenje samo kvačila i uz korištenje ručne kočnice. Vožnja u gradu.",
+                "ruta": "ruta 6, poligon",
+                "komentar": "Dobar osjećaj za kvačilo. Treba još uvježbavati proces kretanja uz korištenje ručne kočnice",
+                "ocjena": 4
+            },
+            {
+                "id": 12,
+                "datum": new Date('2021, 07, 24'),
+                "zavrseniCasovi": 24,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 7",
+                "komentar": "Prevelika ležernost. Propisi se moraju poštovati.",
+                "ocjena": 2
+            },
+            {
+                "id": 13,
+                "datum": new Date('2021, 07, 26'),
+                "zavrseniCasovi": 26,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 2",
+                "komentar": "Prevelika ležernost. Propisi se moraju poštovati.",
+                "ocjena": 3
+            },
+            {
+                "id": 14,
+                "datum": new Date('2021, 07, 27'),
+                "zavrseniCasovi": 28,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 3",
+                "komentar": "Truditi se da se pogled ne zadržava na instrument tabli zbog gubitka pravca. Popravlja se poštivanje propisa.",
+                "ocjena": 4
+            },
+            {
+                "id": 15,
+                "datum": new Date('2021, 07, 28'),
+                "zavrseniCasovi": 30,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 4",
+                "komentar": "Procedura kod polukružnog okretanja se mora ispoštovati",
+                "ocjena": 3
+            },
+            {
+                "id": 16,
+                "datum": new Date('2021, 07, 29'),
+                "zavrseniCasovi": 16,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 5",
+                "komentar": "Mora se razmišljati dok se vozi. Prevelika ležernost može koštati na ispitu",
+                "ocjena": 2
+            },
+            {
+                "id": 17,
+                "datum": new Date('2021, 07, 30'),
+                "zavrseniCasovi": 18,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 6",
+                "komentar": "Prihvatljiva tehnik avožnje",
+                "ocjena": 4
+            },
+            {
+                "id": 18,
+                "datum": new Date('2021, 07, 31'),
+                "zavrseniCasovi": 20,
+                "tema": "Predispitna vožnja sa ocjenjivanjem",
+                "ruta": "ruta 7",
+                "komentar": "Ovakvom vožnjom teško da se može položiti. Tehnika je dobra, ali previše kršenja propisa.",
+                "ocjena": 2
             }
         ]
     },
@@ -176,34 +405,7 @@ export const candidates = [
             }
         ],
         "preostaliDug": 420,
-        "ispiti": [
-            {
-                "id": 1,
-                "datum": {
-                    "year": 2021,
-                    "month": 7,
-                    "day": 15
-                },
-                "termin": {
-                    "hour": 9,
-                    "minute": 30
-                },
-                "uspjeh": false
-            },
-            {
-                 "id": 2,
-                 "datum": {
-                    "year": 2021,
-                    "month": 8,
-                    "day": 15
-                 },
-                 "termin": {
-                    "hour": 12,
-                    "minute": 20
-                 },
-                 "uspjeh": false
-            }
-        ],
+        "ispiti": [],
         "dokumenti": [
             "kopija_lk.pdf",
             "CIPS_prijava.pdf",
@@ -213,7 +415,45 @@ export const candidates = [
         ],
         "instructorId": 2,
         "instructorImePrezime": "Miodrag Mandić",
-        "primljeneNotifikacije": []
+        "primljeneNotifikacije": [],
+        "obuka": [
+            {
+                "id": 1,
+                "datum": new Date('2021, 07, 12'),
+                "zavrseniCasovi": 2,
+                "tema": "Dnevni pregled vozila i upoznavanje vozila",
+                "ruta": "poligon",
+                "komentar": "Dobro shvatanje",
+                "ocjena": 5
+            },
+            {
+                "id": 2,
+                "datum": new Date('2021, 07, 13'),
+                "zavrseniCasovi": 4,
+                "tema": "Kretanje i zaustavljanje. Mijenjanje brzina(1 i 2)",
+                "ruta": "poligon",
+                "komentar": "Dobro shvatanje",
+                "ocjena": 5
+            },
+            {
+                "id": 3,
+                "datum": new Date('2021, 07, 14'),
+                "zavrseniCasovi": 6,
+                "tema": "Uključivanje u saobraćaj. Vertikalna signalizacija",
+                "ruta": "ruta 1",
+                "komentar": "Dobar osjećaj za kvačilo. Ne gledati u mjenjač",
+                "ocjena": 4
+            },
+            {
+                "id": 4,
+                "datum": new Date('2021, 07, 15'),
+                "zavrseniCasovi": 8,
+                "tema": "Vožnja ulicama sa malom gustinom saobraćaja. Vožnja u trećem stepenu prijenosa",
+                "ruta": "ruta 1",
+                "komentar": "Opustiti ruke na upravljaču. Ne gledati u mjenjač",
+                "ocjena": 4
+            }
+        ]
     },
     {
         "id": 4,
@@ -279,7 +519,171 @@ export const candidates = [
         ],
         "instructorId": 2,
         "instructorImePrezime": "Miodrag Mandić",
-        "primljeneNotifikacije": []
+        "primljeneNotifikacije": [],
+        "obuka": [
+            {
+                "id": 1,
+                "datum": new Date('2021, 07, 12'),
+                "zavrseniCasovi": 2,
+                "tema": "Dnevni pregled vozila i upoznavanje vozila",
+                "ruta": "poligon",
+                "komentar": "Dobro shvatanje",
+                "ocjena": 5
+            },
+            {
+                "id": 2,
+                "datum": new Date('2021, 07, 13'),
+                "zavrseniCasovi": 4,
+                "tema": "Kretanje i zaustavljanje. Mijenjanje brzina(1 i 2)",
+                "ruta": "poligon",
+                "komentar": "Dobro shvatanje",
+                "ocjena": 5
+            },
+            {
+                "id": 3,
+                "datum": new Date('2021, 07, 14'),
+                "zavrseniCasovi": 6,
+                "tema": "Uključivanje u saobraćaj. Vertikalna signalizacija",
+                "ruta": "ruta 1",
+                "komentar": "Dobar osjećaj za kvačilo. Ne gledati u mjenjač",
+                "ocjena": 4
+            },
+            {
+                "id": 4,
+                "datum": new Date('2021, 07, 15'),
+                "zavrseniCasovi": 8,
+                "tema": "Vožnja ulicama sa malom gustinom saobraćaja. Vožnja u trećem stepenu prijenosa",
+                "ruta": "ruta 1",
+                "komentar": "Opustiti ruke na upravljaču. Ne gledati u mjenjač",
+                "ocjena": 4
+            },
+            {
+                "id": 5,
+                "datum": new Date('2021, 07, 16'),
+                "zavrseniCasovi": 10,
+                "tema": "Prestrojavanje. Svjetlosna signalizacija.",
+                "ruta": "ruta 2",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 6,
+                "datum": new Date('2021, 07, 17'),
+                "zavrseniCasovi": 12,
+                "tema": "Vožnja ulicama sa većom gustinom saobraćaja. Vožnja u četvrtom stepenu prijenosa",
+                "ruta": "ruta 3",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 7,
+                "datum": new Date('2021, 07, 19'),
+                "zavrseniCasovi": 14,
+                "tema": "Polukružno okretanje. Vožnja unazad. Bočno parkiranje",
+                "ruta": "ruta 3, poligon",
+                "komentar": "Polukružno okretanje je dobro. Vožnju unazad i parkiranje moraju se još uvježbavati",
+                "ocjena": 4
+            },
+            {
+                "id": 8,
+                "datum": new Date('2021, 07, 20'),
+                "zavrseniCasovi": 16,
+                "tema": "Vožnja unazad. Bočno parkiranje",
+                "ruta": "poligon",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 9,
+                "datum": new Date('2021, 07, 21'),
+                "zavrseniCasovi": 18,
+                "tema": "Bočno parkiranje. Vožnja u saobraćaju sa velikom gustinom",
+                "ruta": "ruta 4",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 10,
+                "datum": new Date('2021, 07, 22'),
+                "zavrseniCasovi": 20,
+                "tema": "Vožnja van naselja",
+                "ruta": "ruta 5",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 11,
+                "datum": new Date('2021, 07, 23'),
+                "zavrseniCasovi": 22,
+                "tema": "Paralelno parkiranje. Polazak uz korištenje samo kvačila i uz korištenje ručne kočnice. Vožnja u gradu.",
+                "ruta": "ruta 6, poligon",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 12,
+                "datum": new Date('2021, 07, 24'),
+                "zavrseniCasovi": 24,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 7",
+                "komentar": "Savladana tehnika u potpunosti",
+                "ocjena": 5
+            },
+            {
+                "id": 13,
+                "datum": new Date('2021, 07, 26'),
+                "zavrseniCasovi": 26,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 2",
+                "komentar": "Odlična vožnja",
+                "ocjena": 5
+            },
+            {
+                "id": 14,
+                "datum": new Date('2021, 07, 27'),
+                "zavrseniCasovi": 28,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 3",
+                "komentar": "Odlična vožnja",
+                "ocjena": 5
+            },
+            {
+                "id": 15,
+                "datum": new Date('2021, 07, 28'),
+                "zavrseniCasovi": 30,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 4",
+                "komentar": "Odlična vožnja",
+                "ocjena": 5
+            },
+            {
+                "id": 16,
+                "datum": new Date('2021, 07, 29'),
+                "zavrseniCasovi": 16,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 5",
+                "komentar": "Odlična vožnja",
+                "ocjena": 5
+            },
+            {
+                "id": 17,
+                "datum": new Date('2021, 07, 30'),
+                "zavrseniCasovi": 18,
+                "tema": "Uvježbavanje ruta za ispit",
+                "ruta": "ruta 6",
+                "komentar": "Solidna vožnja. Ne razmišljaj previše o ispitu, jer zbog treme možeš loše odraditi ispit.",
+                "ocjena": 4
+            },
+            {
+                "id": 18,
+                "datum": new Date('2021, 07, 31'),
+                "zavrseniCasovi": 20,
+                "tema": "Predispitna vožnja sa ocjenjivanjem",
+                "ruta": "ruta 7",
+                "komentar": "Mislim da te samo trema može blokirati. Pokušaj d ase opustiš na ispitu.",
+                "ocjena": 4
+            }
+        ]
     }
 ];
 
@@ -622,8 +1026,8 @@ export const notificationsFromAdmin = [
     },
     {
         "id": 2,
-        "naslov": 'Dokumenta',
-        "notificationTekst": 'Potrebno je da dođete u kancelariju i ponesete ličnu kartu sa sobom',
+        "naslov": 'Polaganje ispita',
+        "notificationTekst": 'Polažete ispit u srijedu 25.08. u 14:10h',
         "vrijemeSlanja": '13: 00',
         "datumSlanja": new Date('2021, 08, 17'),
         "recipientImePrezime": 'Sead Hodžić' 
@@ -678,17 +1082,17 @@ export const trainings = [
 export const users = [
     {
         "id": 1,
-        "username": "admin",
+        "username": "admin@as.ba",
         "password": "123456"
     },
     {
         "id": 2,
-        "username": "instr",
+        "username": "hasib@gmail.com",
         "password": "123456"
     },
     {
         "id": 3,
-        "username": "candid",
+        "username": "ismail@edu.fit.ba",
         "password": "123456"
     }
 ];

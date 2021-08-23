@@ -32,15 +32,15 @@ export class LoginComponent implements OnInit {
     for (let i = 0; i < this.users.length; i++) {
       if(this.user.username === this.users[i].username && this.user.password === this.users[i].password){
         switch(this.user.username){
-          case 'admin':
+          case 'admin@as.ba':
             this.toastr.success(`Uspješno ste se prijavili`);
             this.router.navigate(['/main']); 
             break;
-          case 'instr':
+          case 'hasib@gmail.com':
             this.toastr.success(`Uspješno ste se prijavili`);
             this.router.navigate(['/instructor-pages/instructor-main']); 
             break;
-          case 'candid':
+          case 'ismail@edu.fit.ba':
             this.toastr.success(`Uspješno ste se prijavili`);
             this.router.navigate(['/candidate-pages/candidate-main']); 
             break;

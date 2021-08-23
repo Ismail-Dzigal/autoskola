@@ -106,14 +106,15 @@
                                     padding-top: 20px;
                                 }
                             }
-                        }
-                        .empty-list {
-                            border: 1px solid grey;
-                            border-radius: 10px;
-                            p {
-                                padding-top: 14px;
-                                margin-left: 20px;
-                                font-weight: bold;
+                            .empty-list {
+                                margin-top: 10px;
+                                border: 1px solid grey;
+                                border-radius: 10px;
+                                p {
+                                    padding-top: 10px;
+                                    margin-left: 20px;
+                                    font-weight: bold;
+                                }
                             }
                         }
                     }
