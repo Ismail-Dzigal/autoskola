@@ -49,11 +49,12 @@ export class DataService {
     }
   }
 
-  addPayment(candidateId, newPayment){
+  addPayment(candidateId, newPayment, preostaliDug){
     for (let i = 0; i < this.CANDIDATES.length; i++) {
       let candidate = this.CANDIDATES[i];
       if(candidate.id === candidateId){
         candidate.uplate.push(newPayment);
+        candidate.preostaliDug = preostaliDug
       }
     }
   }

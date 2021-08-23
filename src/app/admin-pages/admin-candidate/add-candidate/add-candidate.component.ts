@@ -26,6 +26,7 @@ export class AddCandidateComponent implements OnInit {
         ponovljenaLozinka: "",
         slika: "",
         uplate: [],
+        preostaliDug: 1020,
         ispiti: [],
         dokumenti: [],
         instructorId: 0,

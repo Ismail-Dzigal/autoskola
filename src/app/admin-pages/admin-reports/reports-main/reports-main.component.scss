@@ -65,7 +65,10 @@
                 .fixedHeader {
                     tr {
                         th {
-                            min-width: 154px;
+                            min-width: 149px;
+                            &:nth-child(4){
+                                min-width: 200px;
+                            }
                         }
                     }
                 }

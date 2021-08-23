@@ -156,7 +156,8 @@ export class EditCandidateComponent implements OnInit {
       this.newPayment.id = this.payments[this.payments.length - 1].id + 1;
     }
     this.newPayment.iznos = +this.newPayment.iznos;
-    this.dataService.addPayment(this.candidate.id, this.newPayment)
+    this.candidate.preostaliDug = 1020 - (this.paymentsSum + this.newPayment.iznos);
+    this.dataService.addPayment(this.candidate.id, this.newPayment, this.candidate.preostaliDug)
     //set candidate after change
     this.candidate = this.dataService.getCandidate(this.candidate.id);
     this.payments = this.candidate.uplate;

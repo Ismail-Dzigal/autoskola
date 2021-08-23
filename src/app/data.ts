@@ -9,7 +9,7 @@ export const candidates = [
         "drzavljanstvo": "Bosansko",
         "brojLk": "09GHT4518",
         "telefon": "+38761487369",
-        "emailAdresa": "ismail.dzigal@edu.fit.ba",
+        "emailAdresa": "ismail@edu.fit.ba",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
         "slika":"",
@@ -25,6 +25,7 @@ export const candidates = [
                 "datum": new Date('2021, 08, 15')
             }
         ],
+        "preostaliDug": 600,
         "ispiti": [
             {
                 "id": 1,
@@ -83,7 +84,7 @@ export const candidates = [
         "drzavljanstvo": "Bosansko",
         "brojLk": "07MKT4736",
         "telefon": "+38762896652",
-        "emailAdresa": "sead.hodzic@gmail.com",
+        "emailAdresa": "sead@gmail.com",
         "lozinka": "654321",
         "ponovljenaLozinka": "654321",
         "slika":"",
@@ -99,6 +100,7 @@ export const candidates = [
                 "datum": new Date('2021, 08, 14'),
             }
         ],
+        "preostaliDug": 520,
         "ispiti": [
                 {
                     "id": 1,
@@ -149,15 +151,15 @@ export const candidates = [
     },
     {
         "id": 3,
-        "ime": "Jasmina",
-        "prezime": "Selmanović",
-        "imeOca": "Midhat",
+        "ime": "Jasna",
+        "prezime": "Rog",
+        "imeOca": "Mirko",
         "jmbg": "1707000175023",
         "mjestoRodjenja": "Sarajevo",
         "drzavljanstvo": "Bosansko",
         "brojLk": "25KLO5324",
         "telefon": "+38761457567",
-        "emailAdresa": "jasmina.selanovic@gmail.com",
+        "emailAdresa": "jasna@gmail.com",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
         "slika":"",
@@ -173,6 +175,7 @@ export const candidates = [
                 "datum": new Date('2021, 07, 22')
             }
         ],
+        "preostaliDug": 420,
         "ispiti": [
             {
                 "id": 1,
@@ -222,7 +225,7 @@ export const candidates = [
         "drzavljanstvo": "Bosansko",
         "brojLk": "89ZFT6596",
         "telefon": "+38762367851",
-        "emailAdresa": "adisa.palic@gmail.com",
+        "emailAdresa": "adisa@gmail.com",
         "lozinka": "654321",
         "ponovljenaLozinka": "654321",
         "slika":"",
@@ -238,6 +241,7 @@ export const candidates = [
                 "datum": new Date('2021, 06, 14'),
             }
         ],
+        "preostaliDug": 620,
         "ispiti": [
                 {
                     "id": 1,
@@ -263,7 +267,7 @@ export const candidates = [
                         "hour": 11,
                         "minute": 45
                      },
-                     "uspjeh": false
+                     "uspjeh": true
                 }
         ],
         "dokumenti": [
@@ -292,7 +296,7 @@ export const instructors = [
         "brojDozvole": "08KTR8978",
         "zaduzenoVozilo": "E52-J-414",
         "telefon": "+38761158990",
-        "emailAdresa": "hasib.fijuljanin@gmail.com",
+        "emailAdresa": "hasib@gmail.com",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
         "slika": "",
@@ -362,15 +366,15 @@ export const instructors = [
         "brojLk": "03CFT9653",
         "brojDozvole": "07PRI4455",
         "zaduzenoVozilo": "E52-J-466",
-        "telefon": "+3762893695",
-        "emailAdresa": "miodrag.mandic@gmail.com",
+        "telefon": "+38762893695",
+        "emailAdresa": "mico@gmail.com",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
         "slika": "",
         "kandidati": [
             {
                 "id": 1,
-                "imePrezime": "Jasmina Selmanović",
+                "imePrezime": "Jasna Rog",
                 "datum": new Date('2021, 08, 14'),
                 "candidateId": 3
             },

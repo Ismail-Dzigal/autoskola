@@ -1,16 +1,16 @@
 <div class="reports">
     <div class="row buttons-wrapper pl-4 pr-4 pt-4">
         <div class="col-md-12 d-flex">
-          <button class="btn btn-secondary mr-2">Kandidati</button>
-          <button class="btn btn-secondary mr-2">Instruktori</button>
-          <button class="btn btn-secondary mr-auto">Vozila</button>
+          <button class="btn btn-secondary mr-2" (click)="showTable('kandidati')">Kandidati</button>
+          <button class="btn btn-secondary mr-2" (click)="showTable('instruktori')">Instruktori</button>
+          <button class="btn btn-secondary mr-auto" (click)="showTable('vozila')">Vozila</button>
           <button class="btn btn-secondary" [routerLink]="['/main']" routerLinkActive="router-link-active" >Nazad</button>
         </div>
     </div>
-    <h3 class="candidates-header">Kandidati</h3>
-    <!-- <h3 class="instructors-header">Instruktori</h3> DYNAMIC TEXT
-    <h3 class="vehicles-header">Vozila</h3> -->
-    <!-- <div class="table-wrapper candidates">
+    <h3 class="candidates-header" *ngIf="showKandidati">Kandidati</h3>
+    <h3 class="instructors-header" *ngIf="showInstruktori">Instruktori</h3>
+    <h3 class="vehicles-header" *ngIf="showVozila">Vozila</h3>
+    <div class="table-wrapper candidates" *ngIf="showKandidati">
         <table>
             <thead class="fixedHeader">
                 <tr>
@@ -29,66 +29,24 @@
                   </tr>
             </thead>
             <tbody class="scrollContent">
-                <tr>
-                    <td>Alfreds</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Al</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>A</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                  </tr>
-                  <tr>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                  </tr>
-                  <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                  </tr>
-                  <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
+                <tr *ngFor="let candidate of candidates">
+                    <td>{{candidate.ime}}</td>
+                    <td>{{candidate.prezime}}</td>
+                    <td>{{candidate.imeOca}}</td>
+                    <td>{{candidate.jmbg}}</td>
+                    <td>{{candidate.mjestoRodjenja}}</td>
+                    <td>{{candidate.drzavljanstvo}}</td>
+                    <td>{{candidate.brojLk}}</td>
+                    <td>{{candidate.telefon}}</td>
+                    <td>{{candidate.emailAdresa}}</td>
+                    <td>{{candidate.uplate.length > 0 ? (candidate.uplate[candidate.uplate.length - 1].datum | date: 'd/M/yyyy') : ' - '}}</td>
+                    <td>{{candidate.preostaliDug | number:'1.2-2'}}KM</td>
+                    <td>{{candidate.ispiti.length > 0 && candidate.ispiti[candidate.ispiti.length - 1].uspjeh === true ? 'Da' : 'Ne'}}</td>
                   </tr>
             </tbody>
         </table>
-    </div> -->
-    <!-- <div class="table-wrapper instructors">
+    </div>
+    <div class="table-wrapper instructors" *ngIf="showInstruktori">
           <table>
             <thead class="fixedHeader">
                 <tr>
@@ -103,70 +61,33 @@
                     <th>Zaduženo vozilo</th>
                     <th>Broj telefona</th>
                     <th>Email adresa</th>
-                    <th>Potvrde</th>
+                    <th>Kandidati</th>
                   </tr>
             </thead>
             <tbody class="scrollContent">
-                <tr>
-                    <td>Alfreds</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Al</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>A</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                  </tr>
-                  <tr>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                  </tr>
-                  <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                  </tr>
-                  <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
+                <tr *ngFor="let instructor of instructors">
+                    <td>{{instructor.ime}}</td>
+                    <td>{{instructor.prezime}}</td>
+                    <td>{{instructor.imeOca}}</td>
+                    <td>{{instructor.jmbg}}</td>
+                    <td>{{instructor.mjestoRodjenja}}</td>
+                    <td>{{instructor.drzavljanstvo}}</td>
+                    <td>{{instructor.brojLk}}</td>
+                    <td>{{instructor.brojDozvole}}</td>
+                    <td>{{instructor.zaduzenoVozilo}}</td>
+                    <td>{{instructor.telefon}}</td>
+                    <td>{{instructor.emailAdresa}}</td>
+                    <td>
+                      <span *ngFor="let candidate of instructor.kandidati; let i='index'">
+                        {{i + 1}}. {{candidate.imePrezime}} 
+                        <br>
+                      </span>
+                    </td>
                   </tr>
             </tbody>
         </table>
-    </div> -->
-    <div class="table-wrapper vehicles">
+    </div>
+    <div class="table-wrapper vehicles" *ngIf="showVozila">
         <table>
             <thead class="fixedHeader">
                 <tr>
@@ -181,65 +102,28 @@
                     <th>Datum registr.</th>
                     <th>Br. saobraćajne</th>
                     <th>Br. vlasničke</th>
-                    <th>Zaduženo kod</th>
+                    <th>Zadužio/la</th>
                 </tr>
             </thead>
             <tbody class="scrollContent">
-                <tr>
-                    <td>Alfreds</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Al</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>A</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                  </tr>
-                  <tr>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td>Centro</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                  </tr>
-                  <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                  </tr>
-                  <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
+                <tr *ngFor="let vehicle of vehicles">
+                    <td>{{vehicle.vrstaVozila}}</td>
+                    <td>{{vehicle.marka}}</td>
+                    <td>{{vehicle.tip}}</td>
+                    <td>{{vehicle.brojSasije}}</td>
+                    <td>{{vehicle.brojMotora}}</td>
+                    <td>{{vehicle.gorivo}}</td>
+                    <td>{{vehicle.registarskaOznaka}}</td>
+                    <td>{{vehicle.godinaProizvodnje}}</td>
+                    <td>{{vehicle.datumRegistracije.day}}/{{vehicle.datumRegistracije.month}}/{{vehicle.datumRegistracije.year}}</td>
+                    <td>{{vehicle.saobracajnaDozvola}}</td>
+                    <td>{{vehicle.vlasnicka}}</td>
+                    <td>
+                      <span *ngFor="let instructor of vehicle.instruktori; let i='index'">
+                        {{i + 1}}. {{instructor.imePrezime}} 
+                        <br>
+                      </span>
+                    </td>
                   </tr>
             </tbody>
         </table>
