@@ -12,6 +12,18 @@
         margin-left: 15px;
         margin-bottom: 40px;
         .notification {
+            .displayNone {
+                display: none;
+            }
+            .red {
+              color: red;
+            }
+            .blue {
+              color: blue;
+            }
+            .green {
+              color: green;
+            }
             display: flex;
             position: relative;
             p {
@@ -40,20 +52,31 @@
                 }
             }
             .images-wrapper {
+                position: relative;
                 margin-top: 6px;
                 a {
                     text-decoration: none;
-                    &:nth-child(2) {
-                        .fas {
+                    .fas {
+                        margin-right: 10px;
+                        &.fa-undo {
+                            margin-right: 10px;
                             color: red;
-                            font-size: 1.2rem;
+                            font-size: 0.8rem;
+                            cursor: pointer;
+                        }
+                        &.fa-check {
+                            color: green;
+                            cursor: pointer;
+                        }
+                        &.fa-wrench {
                             cursor: pointer;
                         }
                     }
-                    .fas {
-                        margin-right: 10px;
-                  
-                    }
+                }
+                .statesDropdown {
+                    position: absolute;
+                    top: 0;
+                    left: -100px;
                 }
             }
         }

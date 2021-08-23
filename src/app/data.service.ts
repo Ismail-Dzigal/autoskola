@@ -103,6 +103,15 @@ export class DataService {
     return null;
   }
 
+  setNotificationForAdmin(editedNotification){
+    for (let i = 0; i < this.NOTIFICATIONSFORADMIN.length; i++) {
+      let notification = this.NOTIFICATIONSFORADMIN[i];
+      if(notification.id === editedNotification.id){
+        notification = Object.assign({}, editedNotification);
+      }
+    }
+  }
+
   deleteNotificationForAdmin(id) {
     for (let i = 0; i < this.NOTIFICATIONSFORADMIN.length; i++) {
       const notification = this.NOTIFICATIONSFORADMIN[i];

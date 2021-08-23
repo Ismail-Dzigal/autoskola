@@ -597,17 +597,17 @@ export const notificationsForAdmin = [
         "id": 1,
         "title": "Kvar na vozilu",
         "body":"Danas je doslo do curenja ulja na vozilu. Morao sam da otkazem svu obuku",
-        "sender": `${instructors[0].ime} ${instructors[0].prezime}`,
+        "sender": "Hasib Fijuljanin",
         "createdAt": new Date('2021, 08, 15'),
-        "removed": false
+        "state": "završeno"
     },
     {
         "id": 2,
         "title": "Inspekcija",
         "body":"Zaustavila me je inspekcija. Sva dokumentacija je bila uredna",
-        "sender": `${instructors[1].ime} ${instructors[1].prezime}`,
+        "sender": "Miodrag Mandić",
         "createdAt": new Date('2021, 08, 12'),
-        "removed": false
+        "state": "u toku"
     }
 ];
 

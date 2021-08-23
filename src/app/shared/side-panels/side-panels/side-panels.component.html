@@ -1,18 +1,27 @@
 <div class="content-wrapper">
     <h5>Notifikacije</h5>
     <div class="notifications-wrapper">
-      <div class="notification" *ngFor="let notification of notificationsForAdmin">
-        <p>- {{notification.title}}</p>
+      <div class="notification" *ngFor="let notification of notificationsForAdmin; let i='index'">
+        <p [ngClass]="{'red': notification.state === 'novo', 'blue': notification.state === 'u toku', 'green': notification.state === 'završeno'}">- {{notification.title}}</p>
         <div class="notification-body">
           <p>{{notification.createdAt | date: 'd/M/yyyy'}}</p>
           <p>{{notification.body}}</p>
           <p>{{notification.sender}}</p>
         </div>
         <div class="images-wrapper">
-          <a href="#">
+          <a *ngIf="checkVisible" [ngClass]="{'displayNone': i !== setNumber }">
+            <i class="fas fa-check" (click)="changeState(notification.id)"></i>
+          </a>
+          <a *ngIf="checkVisible" (click)="cancelEditNotification()" [ngClass]="{'displayNone': i !== setNumber }" title="Odustani od editovanja notifikacije">
+            <i class="fas fa-undo"></i>
+          </a>
+          <select [(ngModel)]="selectedStateId" name="selectedStateId" class="statesDropdown" *ngIf="checkVisible" [ngClass]="{'displayNone': i !== setNumber }">
+            <option *ngFor="let state of states" value ="{{state.id}}" >{{state.naziv}}</option>
+          </select>
+          <a *ngIf="!checkVisible" (click)="openEditNotification(i)">
             <i class="fas fa-wrench"></i>
           </a>
-          <ngbd-modal-options (deleteItemEvent)="deleteNotificationForAdmin(notification.id)"></ngbd-modal-options>
+          <ngbd-modal-options (deleteItemEvent)="deleteNotificationForAdmin(notification.id)" *ngIf="!checkVisible" title="Obriši notifikaciju"></ngbd-modal-options>
         </div>
       </div>
       <div *ngIf="notificationsForAdmin.length === 0" class="blank-list">
