@@ -35,9 +35,10 @@
     <div class="row main-content">
         <div class="col-md-12">
             <div class="headers d-flex">
-                <h5>Obuka kandidata: Ismail Džigal</h5>
-                <h5 class="ml-auto mr-2">Preostalo časova: 10</h5>
+                <h5>Obuka kandidata: {{candidate.ime}} {{candidate.prezime}}</h5>
+                <button type="button" class="btn btn-secondary panel-button ml-auto mr-2" [routerLink]="['/instructor-pages/candidates']">Nazad</button>
             </div>
+            <h5>Preostalo časova: {{preostaloCasova}}</h5>
             <div class="table">
                 <table id="obuka">
                     <thead>
@@ -51,171 +52,62 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.
-                            </td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>4</td>
-                            <td>Kretanje i zaustavljanje</td>
-                            <td>Poligon</td>
-                            <td>Dobar osjećaj za kvačilo. Ne gledati u mjenjač.</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>02.05.2021.</td>
-                            <td>2</td>
-                            <td>Dnevni pregled vozila i upoznavanje vozila</td>
-                            <td>Poligon</td>
-                            <td>Dobro shvatanje</td>
-                            <td>5</td>
+                        <tr *ngFor="let lecture of lectures">
+                            <td>{{lecture.datum.day}}/{{lecture.datum.month}}/{{lecture.datum.year}}</td>
+                            <td>{{lecture.zavrseniCasovi }}</td>
+                            <td>{{lecture.tema }}</td>
+                            <td>{{lecture.ruta }}</td>
+                            <td>{{lecture.komentar }}</td>
+                            <td>{{lecture.ocjena }}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="new-comment">
-                <button type="button" class="btn btn-success panel-button">Dodaj podatke</button>
-                <!-- <form id="newCommentForm">
+                <button type="button" class="btn btn-success panel-button" *ngIf="!newDataInputVisible" (click)="shownewDataInput()">Dodaj podatke</button>
+                <form id="newCommentForm" *ngIf="newDataInputVisible" (ngSubmit)="submitAddDataForm(addDataForm)"
+                #addDataForm="ngForm">
                     <h5>Dodaj nove podatke:</h5>
                     <div class="row justify-content-start">
-                        <input type="text" placeholder="Datum">
-                        <input type="text" placeholder="Završeni časovi">
-                        <input type="text" placeholder="Tema">
-                        <input type="text" placeholder="Ruta">
-                        <input type="text" placeholder="Komentar">
-                        <input type="text" placeholder="Ocjena">
+                        <div class="form-group datepicker">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="datum"
+                                    name="dp" [(ngModel)]="newData.datum" ngbDatepicker #d="ngbDatepicker"  required title="Unesite datum obuke">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="Završeni časovi" title="Broj odvoženih časova dosad"
+                        required
+                        [(ngModel)] = "newData.zavrseniCasovi"
+                        name="zavrseniCasovi"
+                        #zavrseniCasoviVar = "ngModel"
+                        [ngClass]="{'input-invalid':zavrseniCasoviVar.touched && !zavrseniCasoviVar.valid}">
+                        <input type="text" placeholder="Tema" title="Unesite temu obuke"
+                        required
+                        [(ngModel)] = "newData.tema"
+                        name="tema"
+                        #temaVar = "ngModel"
+                        [ngClass]="{'input-invalid':temaVar.touched && !temaVar.valid}">
+                        <input type="text" placeholder="Ruta" title="Unesite rutu koja je vožena"
+                        required
+                        [(ngModel)] = "newData.ruta"
+                        name="ruta"
+                        #rutaVar = "ngModel"
+                        [ngClass]="{'input-invalid':rutaVar.touched && !rutaVar.valid}">
+                        <input type="text" placeholder="Komentar" title="Unesite komentar obuke"
+                        [(ngModel)] = "newData.komentar"
+                        name="komentar">
+                        <input type="text" placeholder="Ocjena" title="Unesite ocjenu obuke"
+                        [(ngModel)] = "newData.ocjena"
+                        name="ocjena">
                     </div>
                     <div class="buttons">
                         <button type="submit" class="btn btn-success mr-2">Dodaj</button>
-                        <button type="button" class="btn btn-danger">Odustani</button>
+                        <button type="button" class="btn btn-danger" (click)="cancelAddData()">Odustani</button>
                     </div>
-                </form> -->
+                </form>
             </div>
         </div>
     </div>

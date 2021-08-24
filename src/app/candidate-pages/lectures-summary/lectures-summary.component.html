@@ -48,7 +48,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let lecture of lectures">
-                            <td>{{lecture.datum | date: 'd/M/yyyy'}}</td>
+                            <td>{{lecture.datum.day}}/{{lecture.datum.month}}/{{lecture.datum.year}}</td>
                             <td>{{lecture.zavrseniCasovi }}</td>
                             <td>{{lecture.tema }}</td>
                             <td>{{lecture.ruta }}</td>

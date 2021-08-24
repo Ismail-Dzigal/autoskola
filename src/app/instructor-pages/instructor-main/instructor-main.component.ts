@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-instructor-main',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./instructor-main.component.scss']
 })
 export class InstructorMainComponent implements OnInit {
+  instructor;
+  seminari;
+  documents;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.instructor = this.dataService.getInstructor(1);
+    this.seminari = this.instructor.seminari;
+    this.documents = this.instructor.dokumenti;
   }
 
 }

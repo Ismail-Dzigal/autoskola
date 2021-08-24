@@ -45,49 +45,49 @@
                         <div class="col-md-6">
                             <div class="data-group">
                                 <span class="header">Ime:</span>
-                                <p id="ime"></p>
+                                <p id="ime">{{instructor.ime}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Prezime:</span>
-                                <p id="prezime"></p>
+                                <p id="prezime">{{instructor.prezime}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Ime oca:</span>
-                                <p id="imeOca"></p>
+                                <p id="imeOca">{{instructor.imeOca}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">JMBG:</span>
-                                <p id="jmbg"></p>
+                                <p id="jmbg">{{instructor.jmbg}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Mjesto rođenja:</span>
-                                <p id="mjestoRodjenja">AAAA</p>
+                                <p id="mjestoRodjenja">{{instructor.mjestoRodjenja}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Državljanstvo:</span>
-                                <p id="drzavljanstvo"></p>
+                                <p id="drzavljanstvo">{{instructor.drzavljanstvo}}</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="data-group">
                                 <span class="header">Broj lk:</span>
-                                <p id="brojLk"></p>
+                                <p id="brojLk">{{instructor.brojLk}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Broj dozvole:</span>
-                                <p id="brojDozvole"></p>
+                                <p id="brojDozvole">{{instructor.brojDozvole}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Zaduženo vozilo:</span>
-                                <p id="zaduzenoVozilo"></p>
+                                <p id="zaduzenoVozilo">{{instructor.zaduzenoVozilo}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Broj telefona:</span>
-                                <p id="telefon"></p>
+                                <p id="telefon">{{instructor.telefon}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Email adresa:</span>
-                                <p id="emailAdresa"></p>
+                                <p id="emailAdresa">{{instructor.emailAdresa}}</p>
                             </div>
                         </div>
                     </div>
@@ -104,15 +104,10 @@
                         <th>Tema</th>
                         <th>Predavač</th>
                     </tr>
-                    <tr>
-                        <td>01.12.2020.</td>
-                        <td>Saobraćajne nezgode</td>
-                        <td>Refik Ahmetović</td>
-                    </tr>
-                    <tr>
-                        <td>08.12.2020.</td>
-                        <td>Održavanje vozila</td>
-                        <td>Sead Fijuljanin</td>
+                    <tr *ngFor="let seminar of seminari">
+                        <td>{{seminar.datum.day}}/{{seminar.datum.month}}/{{seminar.datum.year}}</td>
+                        <td>{{seminar.tema}}</td>
+                        <td>{{seminar.predavac}}</td>
                     </tr>
                 </table>
             </div>
@@ -122,10 +117,7 @@
             <h5>Dokumenti</h5>
             <div class="row">
                 <div id="documents">
-                    <a href="#">kopija_lk.pdf</a>
-                    <a href="#">CIPS_prijava.pdf.pdf</a>
-                    <a href="#">ljekarsko_uvjerenje.pdf</a>
-                    <a href="#">kopija_dozvole.pdf</a>
+                    <a href="#" *ngFor="let document of documents">{{document}}</a>
                 </div>
             </div>
         </div>

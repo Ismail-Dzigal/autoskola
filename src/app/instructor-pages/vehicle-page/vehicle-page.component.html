@@ -45,49 +45,49 @@
                         <div class="col-md-6">
                             <div class="data-group">
                                 <span class="header">Vrsta vozila:</span>
-                                <p id="vrstaVozila"></p>
+                                <p id="vrstaVozila">{{vehicle.vrstaVozila}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Marka:</span>
-                                <p id="marka"></p>
+                                <p id="marka">{{vehicle.marka}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Tip:</span>
-                                <p id="tip"></p>
+                                <p id="tip">{{vehicle.tip}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Broj šasije:</span>
-                                <p id="brojSasije"></p>
+                                <p id="brojSasije">{{vehicle.brojSasije}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Broj motora:</span>
-                                <p id="brojMotora">AAAA</p>
+                                <p id="brojMotora">{{vehicle.brojMotora}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Gorivo:</span>
-                                <p id="gorivo"></p>
+                                <p id="gorivo">{{vehicle.gorivo}}</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="data-group">
                                 <span class="header">Registarska oznaka:</span>
-                                <p id="registarskaOznaka"></p>
+                                <p id="registarskaOznaka">{{vehicle.registarskaOznaka}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Godina proizvodnje:</span>
-                                <p id="godinaProizvodnje"></p>
+                                <p id="godinaProizvodnje">{{vehicle.godinaProizvodnje}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Datum registracije:</span>
-                                <p id="datumRegistracije"></p>
+                                <p id="datumRegistracije">{{vehicle.datumRegistracije.day}}/{{vehicle.datumRegistracije.month}}/{{vehicle.datumRegistracije.year}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Saobraćajna dozvola:</span>
-                                <p id="saobracajna"></p>
+                                <p id="saobracajna">{{vehicle.saobracajnaDozvola}}</p>
                             </div>
                             <div class="data-group">
                                 <span class="header">Potvrda o vlasništvu:</span>
-                                <p id="vlasnicka"></p>
+                                <p id="vlasnicka">{{vehicle.vlasnicka}}</p>
                             </div>
                         </div>
                     </div>
@@ -100,19 +100,14 @@
             <div class="row">
                 <table id="intervention">
                     <tr>
-                        <th>Opis</th>
                         <th>Datum</th>
+                        <th>Opis</th>
                         <th>Trajanje</th>
                     </tr>
-                    <tr>
-                        <td>Tehnički pregled</td>
-                        <td>01.01.2020.</td>
-                        <td>2h</td>
-                    </tr>
-                    <tr>
-                        <td>Zamjena prednjih guma</td>
-                        <td>10.01.2020.</td>
-                        <td>3h</td>
+                    <tr *ngFor="let intervencija of intervencije">
+                        <td>{{intervencija.datum.day}}/{{intervencija.datum.month}}/{{intervencija.datum.year}}</td>
+                        <td>{{intervencija.opis}}</td>
+                        <td>{{intervencija.trajanje}}</td>
                     </tr>
                 </table>
             </div>
@@ -122,10 +117,7 @@
             <h5>Dokumenti</h5>
             <div class="row">
                 <div id="documents">
-                    <a href="#">kopija_saobracajne.pdf</a>
-                    <a href="#">kopija_vlasnicke.pdf</a>
-                    <a href="#">atest_komandi.pdf</a>
-                    <a href="#">karton_tehnicki.pdf</a>
+                    <a href="#" *ngFor="let document of documents">{{document}}</a>
                 </div>
             </div>
         </div>

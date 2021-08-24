@@ -49,7 +49,11 @@ export const candidates = [
         "obuka": [
             {
                 "id": 1,
-                "datum": new Date('2021, 08, 02'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 2
+                },
                 "zavrseniCasovi": 2,
                 "tema": "Dnevni pregled vozila i upoznavanje vozila",
                 "ruta": "poligon",
@@ -58,7 +62,11 @@ export const candidates = [
             },
             {
                 "id": 2,
-                "datum": new Date('2021, 08, 03'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 3
+                },
                 "zavrseniCasovi": 4,
                 "tema": "Kretanje i zaustavljanje.Mijenjanje brzina(1 i 2)",
                 "ruta": "poligon",
@@ -67,7 +75,11 @@ export const candidates = [
             },
             {
                 "id": 3,
-                "datum": new Date('2021, 08, 04'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 4
+                },
                 "zavrseniCasovi": 6,
                 "tema": "Uključivanje u saobraćaj. Vertikalna signalizacija",
                 "ruta": "ruta 1",
@@ -76,7 +88,11 @@ export const candidates = [
             },
             {
                 "id": 4,
-                "datum": new Date('2021, 08, 05'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 5
+                },
                 "zavrseniCasovi": 8,
                 "tema": "Vožnja ulicama sa malom gustinom saobraćaja. Vožnja u trećem stepenu prijenosa",
                 "ruta": "ruta 1",
@@ -85,7 +101,11 @@ export const candidates = [
             },
             {
                 "id": 5,
-                "datum": new Date('2021, 08, 06'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 6
+                },
                 "zavrseniCasovi": 10,
                 "tema": "Prestrojavanje. Svjetlosna signalizacija.",
                 "ruta": "ruta 2",
@@ -94,7 +114,11 @@ export const candidates = [
             },
             {
                 "id": 6,
-                "datum": new Date('2021, 08, 07'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 7
+                },
                 "zavrseniCasovi": 12,
                 "tema": "Vožnja ulicama sa većom gustinom saobraćaja. Vožnja u četvrtom stepenu prijenosa",
                 "ruta": "ruta 3",
@@ -103,7 +127,11 @@ export const candidates = [
             },
             {
                 "id": 7,
-                "datum": new Date('2021, 08, 09'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 9
+                },
                 "zavrseniCasovi": 14,
                 "tema": "Polukružno okretanje. Vožnja unazad. Bočno parkiranje",
                 "ruta": "ruta 3, poligon",
@@ -112,7 +140,11 @@ export const candidates = [
             },
             {
                 "id": 8,
-                "datum": new Date('2021, 08, 10'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 10
+                },
                 "zavrseniCasovi": 16,
                 "tema": "Vožnja unazad. Bočno parkiranje",
                 "ruta": "poligon",
@@ -121,7 +153,11 @@ export const candidates = [
             },
             {
                 "id": 9,
-                "datum": new Date('2021, 08, 11'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 11
+                },
                 "zavrseniCasovi": 18,
                 "tema": "Bočno parkiranje. Vožnja u saobraćaju sa velikom gustinom",
                 "ruta": "ruta 4",
@@ -130,7 +166,11 @@ export const candidates = [
             },
             {
                 "id": 10,
-                "datum": new Date('2021, 08, 12'),
+                "datum": {
+                    "year": 2021,
+                    "month": 8,
+                    "day": 12
+                },
                 "zavrseniCasovi": 20,
                 "tema": "Vožnja van naselja",
                 "ruta": "ruta 5",
@@ -216,7 +256,11 @@ export const candidates = [
         "obuka": [
             {
                 "id": 1,
-                "datum": new Date('2021, 07, 12'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 12
+                },
                 "zavrseniCasovi": 2,
                 "tema": "Dnevni pregled vozila i upoznavanje vozila",
                 "ruta": "poligon",
@@ -225,7 +269,11 @@ export const candidates = [
             },
             {
                 "id": 2,
-                "datum": new Date('2021, 07, 13'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 13
+                },
                 "zavrseniCasovi": 4,
                 "tema": "Kretanje i zaustavljanje. Mijenjanje brzina(1 i 2)",
                 "ruta": "poligon",
@@ -234,7 +282,11 @@ export const candidates = [
             },
             {
                 "id": 3,
-                "datum": new Date('2021, 07, 14'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 14
+                },
                 "zavrseniCasovi": 6,
                 "tema": "Uključivanje u saobraćaj. Vertikalna signalizacija",
                 "ruta": "ruta 1",
@@ -243,7 +295,11 @@ export const candidates = [
             },
             {
                 "id": 4,
-                "datum": new Date('2021, 07, 15'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 15
+                },
                 "zavrseniCasovi": 8,
                 "tema": "Vožnja ulicama sa malom gustinom saobraćaja. Vožnja u trećem stepenu prijenosa",
                 "ruta": "ruta 1",
@@ -252,7 +308,11 @@ export const candidates = [
             },
             {
                 "id": 5,
-                "datum": new Date('2021, 07, 16'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 16
+                },
                 "zavrseniCasovi": 10,
                 "tema": "Prestrojavanje. Svjetlosna signalizacija.",
                 "ruta": "ruta 2",
@@ -261,7 +321,11 @@ export const candidates = [
             },
             {
                 "id": 6,
-                "datum": new Date('2021, 07, 17'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 17
+                },
                 "zavrseniCasovi": 12,
                 "tema": "Vožnja ulicama sa većom gustinom saobraćaja. Vožnja u četvrtom stepenu prijenosa",
                 "ruta": "ruta 3",
@@ -270,7 +334,11 @@ export const candidates = [
             },
             {
                 "id": 7,
-                "datum": new Date('2021, 07, 19'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 19
+                },
                 "zavrseniCasovi": 14,
                 "tema": "Polukružno okretanje. Vožnja unazad. Bočno parkiranje",
                 "ruta": "ruta 3, poligon",
@@ -279,7 +347,11 @@ export const candidates = [
             },
             {
                 "id": 8,
-                "datum": new Date('2021, 07, 20'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 20
+                },
                 "zavrseniCasovi": 16,
                 "tema": "Vožnja unazad. Bočno parkiranje",
                 "ruta": "poligon",
@@ -288,7 +360,11 @@ export const candidates = [
             },
             {
                 "id": 9,
-                "datum": new Date('2021, 07, 21'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 21
+                },
                 "zavrseniCasovi": 18,
                 "tema": "Bočno parkiranje. Vožnja u saobraćaju sa velikom gustinom",
                 "ruta": "ruta 4",
@@ -297,7 +373,11 @@ export const candidates = [
             },
             {
                 "id": 10,
-                "datum": new Date('2021, 07, 22'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 22
+                },
                 "zavrseniCasovi": 20,
                 "tema": "Vožnja van naselja",
                 "ruta": "ruta 5",
@@ -306,7 +386,11 @@ export const candidates = [
             },
             {
                 "id": 11,
-                "datum": new Date('2021, 07, 23'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 23
+                },
                 "zavrseniCasovi": 22,
                 "tema": "Paralelno parkiranje. Polazak uz korištenje samo kvačila i uz korištenje ručne kočnice. Vožnja u gradu.",
                 "ruta": "ruta 6, poligon",
@@ -315,7 +399,11 @@ export const candidates = [
             },
             {
                 "id": 12,
-                "datum": new Date('2021, 07, 24'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 24
+                },
                 "zavrseniCasovi": 24,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 7",
@@ -324,7 +412,11 @@ export const candidates = [
             },
             {
                 "id": 13,
-                "datum": new Date('2021, 07, 26'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 26
+                },
                 "zavrseniCasovi": 26,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 2",
@@ -333,7 +425,11 @@ export const candidates = [
             },
             {
                 "id": 14,
-                "datum": new Date('2021, 07, 27'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 27
+                },
                 "zavrseniCasovi": 28,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 3",
@@ -342,7 +438,11 @@ export const candidates = [
             },
             {
                 "id": 15,
-                "datum": new Date('2021, 07, 28'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 28
+                },
                 "zavrseniCasovi": 30,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 4",
@@ -351,7 +451,11 @@ export const candidates = [
             },
             {
                 "id": 16,
-                "datum": new Date('2021, 07, 29'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 29
+                },
                 "zavrseniCasovi": 16,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 5",
@@ -360,7 +464,11 @@ export const candidates = [
             },
             {
                 "id": 17,
-                "datum": new Date('2021, 07, 30'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 30
+                },
                 "zavrseniCasovi": 18,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 6",
@@ -369,7 +477,11 @@ export const candidates = [
             },
             {
                 "id": 18,
-                "datum": new Date('2021, 07, 31'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 31
+                },
                 "zavrseniCasovi": 20,
                 "tema": "Predispitna vožnja sa ocjenjivanjem",
                 "ruta": "ruta 7",
@@ -419,7 +531,11 @@ export const candidates = [
         "obuka": [
             {
                 "id": 1,
-                "datum": new Date('2021, 07, 12'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 12
+                },
                 "zavrseniCasovi": 2,
                 "tema": "Dnevni pregled vozila i upoznavanje vozila",
                 "ruta": "poligon",
@@ -428,7 +544,11 @@ export const candidates = [
             },
             {
                 "id": 2,
-                "datum": new Date('2021, 07, 13'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 13
+                },
                 "zavrseniCasovi": 4,
                 "tema": "Kretanje i zaustavljanje. Mijenjanje brzina(1 i 2)",
                 "ruta": "poligon",
@@ -437,7 +557,11 @@ export const candidates = [
             },
             {
                 "id": 3,
-                "datum": new Date('2021, 07, 14'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 14
+                },
                 "zavrseniCasovi": 6,
                 "tema": "Uključivanje u saobraćaj. Vertikalna signalizacija",
                 "ruta": "ruta 1",
@@ -446,7 +570,11 @@ export const candidates = [
             },
             {
                 "id": 4,
-                "datum": new Date('2021, 07, 15'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 15
+                },
                 "zavrseniCasovi": 8,
                 "tema": "Vožnja ulicama sa malom gustinom saobraćaja. Vožnja u trećem stepenu prijenosa",
                 "ruta": "ruta 1",
@@ -523,7 +651,11 @@ export const candidates = [
         "obuka": [
             {
                 "id": 1,
-                "datum": new Date('2021, 07, 12'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 12
+                },
                 "zavrseniCasovi": 2,
                 "tema": "Dnevni pregled vozila i upoznavanje vozila",
                 "ruta": "poligon",
@@ -532,7 +664,11 @@ export const candidates = [
             },
             {
                 "id": 2,
-                "datum": new Date('2021, 07, 13'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 13
+                },
                 "zavrseniCasovi": 4,
                 "tema": "Kretanje i zaustavljanje. Mijenjanje brzina(1 i 2)",
                 "ruta": "poligon",
@@ -541,7 +677,11 @@ export const candidates = [
             },
             {
                 "id": 3,
-                "datum": new Date('2021, 07, 14'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 14
+                },
                 "zavrseniCasovi": 6,
                 "tema": "Uključivanje u saobraćaj. Vertikalna signalizacija",
                 "ruta": "ruta 1",
@@ -550,7 +690,11 @@ export const candidates = [
             },
             {
                 "id": 4,
-                "datum": new Date('2021, 07, 15'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 15
+                },
                 "zavrseniCasovi": 8,
                 "tema": "Vožnja ulicama sa malom gustinom saobraćaja. Vožnja u trećem stepenu prijenosa",
                 "ruta": "ruta 1",
@@ -559,7 +703,11 @@ export const candidates = [
             },
             {
                 "id": 5,
-                "datum": new Date('2021, 07, 16'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 16
+                },
                 "zavrseniCasovi": 10,
                 "tema": "Prestrojavanje. Svjetlosna signalizacija.",
                 "ruta": "ruta 2",
@@ -568,7 +716,11 @@ export const candidates = [
             },
             {
                 "id": 6,
-                "datum": new Date('2021, 07, 17'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 17
+                },
                 "zavrseniCasovi": 12,
                 "tema": "Vožnja ulicama sa većom gustinom saobraćaja. Vožnja u četvrtom stepenu prijenosa",
                 "ruta": "ruta 3",
@@ -577,7 +729,11 @@ export const candidates = [
             },
             {
                 "id": 7,
-                "datum": new Date('2021, 07, 19'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 19
+                },
                 "zavrseniCasovi": 14,
                 "tema": "Polukružno okretanje. Vožnja unazad. Bočno parkiranje",
                 "ruta": "ruta 3, poligon",
@@ -586,7 +742,11 @@ export const candidates = [
             },
             {
                 "id": 8,
-                "datum": new Date('2021, 07, 20'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 20
+                },
                 "zavrseniCasovi": 16,
                 "tema": "Vožnja unazad. Bočno parkiranje",
                 "ruta": "poligon",
@@ -595,7 +755,11 @@ export const candidates = [
             },
             {
                 "id": 9,
-                "datum": new Date('2021, 07, 21'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 21
+                },
                 "zavrseniCasovi": 18,
                 "tema": "Bočno parkiranje. Vožnja u saobraćaju sa velikom gustinom",
                 "ruta": "ruta 4",
@@ -604,7 +768,11 @@ export const candidates = [
             },
             {
                 "id": 10,
-                "datum": new Date('2021, 07, 22'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 22
+                },
                 "zavrseniCasovi": 20,
                 "tema": "Vožnja van naselja",
                 "ruta": "ruta 5",
@@ -613,7 +781,11 @@ export const candidates = [
             },
             {
                 "id": 11,
-                "datum": new Date('2021, 07, 23'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 23
+                },
                 "zavrseniCasovi": 22,
                 "tema": "Paralelno parkiranje. Polazak uz korištenje samo kvačila i uz korištenje ručne kočnice. Vožnja u gradu.",
                 "ruta": "ruta 6, poligon",
@@ -622,7 +794,11 @@ export const candidates = [
             },
             {
                 "id": 12,
-                "datum": new Date('2021, 07, 24'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 24
+                },
                 "zavrseniCasovi": 24,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 7",
@@ -631,7 +807,11 @@ export const candidates = [
             },
             {
                 "id": 13,
-                "datum": new Date('2021, 07, 26'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 26
+                },
                 "zavrseniCasovi": 26,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 2",
@@ -640,7 +820,11 @@ export const candidates = [
             },
             {
                 "id": 14,
-                "datum": new Date('2021, 07, 27'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 27
+                },
                 "zavrseniCasovi": 28,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 3",
@@ -649,7 +833,11 @@ export const candidates = [
             },
             {
                 "id": 15,
-                "datum": new Date('2021, 07, 28'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 28
+                },
                 "zavrseniCasovi": 30,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 4",
@@ -658,7 +846,11 @@ export const candidates = [
             },
             {
                 "id": 16,
-                "datum": new Date('2021, 07, 29'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 29
+                },
                 "zavrseniCasovi": 16,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 5",
@@ -667,7 +859,11 @@ export const candidates = [
             },
             {
                 "id": 17,
-                "datum": new Date('2021, 07, 30'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 30
+                },
                 "zavrseniCasovi": 18,
                 "tema": "Uvježbavanje ruta za ispit",
                 "ruta": "ruta 6",
@@ -676,7 +872,11 @@ export const candidates = [
             },
             {
                 "id": 18,
-                "datum": new Date('2021, 07, 31'),
+                "datum": {
+                    "year": 2021,
+                    "month": 7,
+                    "day": 31
+                },
                 "zavrseniCasovi": 20,
                 "tema": "Predispitna vožnja sa ocjenjivanjem",
                 "ruta": "ruta 7",

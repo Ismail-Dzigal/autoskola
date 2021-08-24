@@ -332,6 +332,15 @@ export class DataService {
     }    
   }
 
+  addNewDataLectures(candidateId, newData){
+    for (let i = 0; i < this.CANDIDATES.length; i++) {
+      let candidate = this.CANDIDATES[i];
+      if(candidate.id === candidateId){
+        candidate.obuka.push(newData);
+      }
+    }
+  }
+
   getUsers(){
     return [...this.USERS];
   }
