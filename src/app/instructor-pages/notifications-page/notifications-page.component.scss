@@ -124,6 +124,23 @@
                 min-height: 200px;
                 form {
                     .col-md-12 {
+                        position: relative;
+                        .text-invalid {
+                            display: inline-block;
+                            position: absolute;
+                            top: 85px;
+                            color: red;
+                            margin: 0 auto 8px 100px;
+                            font-size: 0.8rem;
+                        }
+                        .text-invalid-textarea {
+                            display: inline-block;
+                            position: absolute;
+                            top: 245px;
+                            color: red;
+                            margin: 0 auto 8px 10px;
+                            font-size: 0.8rem;
+                        }
                         h5 {
                             margin-bottom: 20px;
                         }

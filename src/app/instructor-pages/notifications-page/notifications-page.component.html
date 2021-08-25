@@ -87,7 +87,7 @@
                         <span class="text-invalid-textarea" *ngIf="bodyVar.touched && bodyVar.errors?.required">Unesite sadržaj notifikacije</span>
                         <span class="text-invalid-textarea" *ngIf="bodyVar.touched && bodyVar.errors?.minlength">Sadržaj notifikacije mora imati minimalno 5 karaktera</span>
                         <button type="submit" class="btn btn-success submit-button">Pošalji</button>
-                        <button class="btn btn-danger submit-button ml-3">Odustani</button>
+                        <button class="btn btn-danger submit-button ml-3" [routerLink]="['/instructor-pages/instructor-main']" routerLinkActive="router-link-active">Odustani</button>
                     </div>
                 </div>
             </form>
