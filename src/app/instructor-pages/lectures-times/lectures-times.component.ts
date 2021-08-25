@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbCalendar, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-lectures-times',
@@ -8,16 +9,16 @@ import { NgbCalendar, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
   encapsulation: ViewEncapsulation.None
 })
 export class LecturesTimesComponent implements OnInit {
-  time = {
-    hour: 13,
-    minute: 30
-  };
+  lectureTimes;
 
-  model: NgbDateStruct;
-  date: {year: number, month: number};
-
-  constructor(private calendar: NgbCalendar) { }
+  constructor(private calendar: NgbCalendar,
+              private dataService:DataService) { }
 
   ngOnInit(): void {
+    this.lectureTimes = this.dataService.getLectureTimes();
+  }
+
+  submittimesForm(timesForm){
+     console.log("lectureTimes", this.lectureTimes);
   }
 }

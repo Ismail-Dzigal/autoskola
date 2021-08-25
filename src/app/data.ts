@@ -1261,15 +1261,61 @@ export const reminders = [
     }
 ];
 
-export const lectureTimes = [
-    {
-        "id": 1
-    },
-    {
-        "id": 2
-    }
-];
-
+export const lectureTimes = {
+   "datumObuke":  {
+    "year": new Date().getFullYear(),
+    "month": new Date().getMonth() + 1,
+    "day": new Date().getDate()
+   },
+   "termini": [
+        {
+            "id": 1,
+            "time": {
+                "hour": 8,
+                "minute": 15
+            },
+            "kandidat": "test",
+            "rezervisan": true
+        },
+        {
+            "id": 1,
+            "time": {
+                "hour": 10,
+                "minute": 15
+            },
+            "kandidat": "",
+            "rezervisan": false
+        },
+        {
+            "id": 1,
+            "time": {
+                "hour": 12,
+                "minute": 15
+            },
+            "kandidat": "",
+            "rezervisan": false
+        },
+        {
+            "id": 1,
+            "time": {
+                "hour": 14,
+                "minute": 15
+            },
+            "kandidat": "",
+            "rezervisan": false
+        },
+        {
+            "id": 1,
+            "time": {
+                "hour": 16,
+                "minute": 15
+            },
+            "kandidat": "",
+            "rezervisan": false
+        }
+    ]
+}
+    
 export const users = [
     {
         "id": 1,

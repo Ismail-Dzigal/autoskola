@@ -36,40 +36,40 @@
         <div class="personal-data">
             <h5>Definisanje datuma i termina obuke</h5>
             <div class="row">
-                <form #timesForm="ngForm">
+                <form (ngSubmit)="submittimesForm(timesForm)" #timesForm="ngForm">
                     <div class="col-md-12 d-flex align-items-start">
                         <div class="datepicker">
-                            <ngb-datepicker name="date" [(ngModel)]="model"></ngb-datepicker>
+                            <ngb-datepicker name="date" [(ngModel)]="lectureTimes.datumObuke"></ngb-datepicker>
                         </div>
                         <div class="times d-flex align-items-start">
                             <div class="time">
                                 <p class="time-header">Termin 1</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin1" [(ngModel)]="time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin1" [(ngModel)]="lectureTimes.termini[0].time"></ngb-timepicker>
                                 </div>
                             </div>
                             <div class="time">
                                 <p class="time-header">Termin 2</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin2" [(ngModel)]="time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin2"  [(ngModel)]="lectureTimes.termini[1].time"></ngb-timepicker>
                                 </div>
                             </div>
                             <div class="time">
                                 <p class="time-header">Termin 3</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin3" [(ngModel)]="time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin3"  [(ngModel)]="lectureTimes.termini[2].time"></ngb-timepicker>
                                 </div>
                             </div>
                             <div class="time">
                                 <p class="time-header">Termin 4</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin4" [(ngModel)]="time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin4"  [(ngModel)]="lectureTimes.termini[3].time"></ngb-timepicker>
                                 </div>
                             </div>
                             <div class="time">
                                 <p class="time-header">Termin 5</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin5" [(ngModel)]="time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin5"  [(ngModel)]="lectureTimes.termini[4].time"></ngb-timepicker>
                                 </div>
                             </div>
                         </div>
@@ -86,48 +86,22 @@
                     <tr>
                         <th>Termin</th>
                         <th>Kandidat</th>
-                        <th>
-                            <button class="btn edit-btn">Uredi</button>
-                        </th>
+                        <th></th>
                     </tr>
-                    <tr>
-                        <td>08:00</td>
-                        <td>Ismail Džigal</td>
-                        <td>rezervisan</td>
-                    </tr>
-                    <tr>
-                        <td>10:00</td>
-                        <td>Ismail Džigal</td>
-                        <td>rezervisan</td>
-                    </tr>
-                    <tr>
-                        <td>12:00</td>
+                    <tr *ngFor="let termin of lectureTimes.termini">
+                        <td>{{termin.time.hour}}:{{termin.time.minute}}</td>
                         <td>
-                            <select class="form-control" id="kandidat">
-                                <option>Kandidati</option>
-                                <option>Prva</option>
-                                <option>Prva</option>
-                                <option>Prva</option>
+                            <span *ngIf="termin.kandidat !== ''">{{termin.kandidat}}</span>
+                            <select [(ngModel)]="selectedCandidateId" name="selectedCandidateId" *ngIf="termin.kandidat === ''">
+                                <option *ngFor="let candidate of allUnsetCandidates" value ="{{candidate.id}}" >{{candidate.ime}} {{candidate.prezime}}</option>
                             </select>
                         </td>
                         <td>
-                            <button class="btn confirm-btn">
+                            <span *ngIf="termin.rezervisan">rezervisan</span>
+                            <button class="btn confirm-btn" *ngIf="!termin.rezervisan">
                                 Rezerviši
                             </button>
-                            <button class="btn cancel-btn">
-                                Odustani
-                            </button>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>14:00</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>16:00</td>
-                        <td>Ismail Džigal</td>
-                        <td>rezervisan</td>
                     </tr>
                 </table>
             </div>

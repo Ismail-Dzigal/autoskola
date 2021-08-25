@@ -343,6 +343,10 @@ export class DataService {
     }
   }
 
+  getLectureTimes(){
+    return Object.assign({}, lectureTimes);
+  }
+
   getUsers(){
     return [...this.USERS];
   }
