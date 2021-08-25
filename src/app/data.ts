@@ -1270,15 +1270,6 @@ export const lectureTimes = [
     }
 ];
 
-export const trainings = [
-    {
-        "id": 1
-    },
-    {
-        "id": 2
-    }
-];
-
 export const users = [
     {
         "id": 1,

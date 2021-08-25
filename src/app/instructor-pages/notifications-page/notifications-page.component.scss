@@ -108,10 +108,11 @@
                             }
                         }
                         .empty-list {
+                            margin-top: 10px;
                             border: 1px solid grey;
                             border-radius: 10px;
                             p {
-                                padding-top: 14px;
+                                padding-top: 10px !important;
                                 margin-left: 20px;
                                 font-weight: bold;
                             }

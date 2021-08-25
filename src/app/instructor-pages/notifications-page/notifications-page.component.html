@@ -39,43 +39,55 @@
                 <div class="col-md-12">
                     <div class="row search-wrapper">
                         <div class="col-md-12">
-                            <input type="text" class="search-list form-control" placeholder="Pretraži listu notifikacija"/>
+                            <input type="text" class="search-list form-control" placeholder="Pretraži listu notifikacija" [(ngModel)]='listFilter'/>
                         </div>
                     </div>
                     <div class="row list-wrapper">
                         <div class="col-md-12 list-container">
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                            <p>22.02.2020 - Vaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopijuVaša lična karta je istekla, dostavite novu kopiju</p>
-                        </div>
-                        <!-- <div class="col-md-12 empty-list">
+                            <p *ngFor="let notification of filteredNotifications">{{notification.datumSlanja | date: 'd/M/yyyy'}} - {{notification.naslov}} - {{notification.notificationTekst}}</p>
+                            <div class="col-md-12 empty-list" *ngIf="filteredNotifications.length === 0">
                             <p>Nema pronađenih notifikacija</p>
-                        </div> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <hr>
         <div class="send-notification">
-            <form>
+            <form (ngSubmit)="submitSendNotificationForm(sendNotificationForm)"
+            #sendNotificationForm="ngForm">
                 <div class="row">
                     <div class="col-md-12">
                         <h5>Pošalji notifikaciju</h5>
                         <div class="form-group">
-                            <label for="naslov">Naslov:</label>
-                            <input type="text" class="form-control" id="naslov" aria-describedby="naslov" placeholder="Naslov">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            <label for="title">Naslov:</label>
+                            <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Naslov"
+                            required
+                            minlength="5"
+                            [(ngModel)] = "newNotification.title"
+                            name="title"
+                            #naslovVar = "ngModel"
+                            [ngClass]="{'input-invalid':naslovVar.touched && !naslovVar.valid}" autocomplete="off">
                         </div>
+                        <span class="text-invalid" *ngIf="naslovVar.touched && naslovVar.errors?.required">Unesite naslov</span>
+                        <span class="text-invalid" *ngIf="naslovVar.touched && naslovVar.errors?.minlength">Naslov mora imati minimalno 5 karaktera</span>
                         <div class="form-group">
-                            <textarea class="form-control" id="notification-body" name="notificationBody" placeholder="Ovdje unesite sadržaj notifikacije" rows="5" cols="70"></textarea>
+                            <textarea class="form-control" id="body" name="body"
+                            placeholder="Ovdje unesite sadržaj notifikacije" 
+                            rows="5" 
+                            cols="70"
+                            required
+                            minlength="5"
+                            [(ngModel)] = "newNotification.body"
+                            #bodyVar = "ngModel"
+                            [ngClass]="{'input-invalid':bodyVar.touched && !bodyVar.valid}" autocomplete="off"
+                            ></textarea>
                         </div>
+                        <span class="text-invalid-textarea" *ngIf="bodyVar.touched && bodyVar.errors?.required">Unesite sadržaj notifikacije</span>
+                        <span class="text-invalid-textarea" *ngIf="bodyVar.touched && bodyVar.errors?.minlength">Sadržaj notifikacije mora imati minimalno 5 karaktera</span>
                         <button type="submit" class="btn btn-success submit-button">Pošalji</button>
-                        <button class="btn btn-danger submit-button ml-3" [routerLink]="['/admin-notification/notifications-list']" routerLinkActive="router-link-active">Odustani</button>
+                        <button class="btn btn-danger submit-button ml-3">Odustani</button>
                     </div>
                 </div>
             </form>

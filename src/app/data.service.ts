@@ -6,7 +6,6 @@ import { notificationsForAdmin } from './data';
 import { notificationsFromAdmin } from './data';
 import { reminders } from './data';
 import { lectureTimes } from './data';
-import { trainings } from './data';
 import { users } from './data';
 
 
@@ -21,7 +20,6 @@ export class DataService {
   NOTIFICATIONSFROMADMIN = notificationsFromAdmin;
   REMINDERS = reminders;
   LECTURETIMES = lectureTimes;
-  TRAININGS = trainings;
   USERS = users;
 
   //CRUD CANDIDATE
@@ -89,7 +87,7 @@ export class DataService {
 
    //CRUD NOTIFICATIONSFORADMIN
 
-   getNotificationsForAdmin() {
+  getNotificationsForAdmin() {
     return [...this.NOTIFICATIONSFORADMIN];
   }
 
@@ -101,6 +99,10 @@ export class DataService {
       }
     }
     return null;
+  }
+
+  addNotificationForAdmin(newNotification){
+    this.NOTIFICATIONSFORADMIN.push(newNotification);
   }
 
   setNotificationForAdmin(editedNotification){
