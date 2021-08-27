@@ -36,7 +36,7 @@
         <div class="personal-data">
             <h5>Definisanje datuma i termina obuke</h5>
             <div class="row">
-                <form (ngSubmit)="submittimesForm(timesForm)" #timesForm="ngForm">
+                <form (ngSubmit)="submitTimesForm(timesForm)" #timesForm="ngForm">
                     <div class="col-md-12 d-flex align-items-start">
                         <div class="datepicker">
                             <ngb-datepicker name="date" [(ngModel)]="lectureTimes.datumObuke"></ngb-datepicker>
@@ -45,31 +45,31 @@
                             <div class="time">
                                 <p class="time-header">Termin 1</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin1" [(ngModel)]="lectureTimes.termini[0].time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin1" [(ngModel)]="vremena[0]"></ngb-timepicker>
                                 </div>
                             </div>
                             <div class="time">
                                 <p class="time-header">Termin 2</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin2"  [(ngModel)]="lectureTimes.termini[1].time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin2"  [(ngModel)]="vremena[1]"></ngb-timepicker>
                                 </div>
                             </div>
                             <div class="time">
                                 <p class="time-header">Termin 3</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin3"  [(ngModel)]="lectureTimes.termini[2].time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin3"  [(ngModel)]="vremena[2]"></ngb-timepicker>
                                 </div>
                             </div>
                             <div class="time">
                                 <p class="time-header">Termin 4</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin4"  [(ngModel)]="lectureTimes.termini[3].time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin4"  [(ngModel)]="vremena[3]"></ngb-timepicker>
                                 </div>
                             </div>
                             <div class="time">
                                 <p class="time-header">Termin 5</p>
                                 <div class="timepicker">
-                                    <ngb-timepicker name="termin5"  [(ngModel)]="lectureTimes.termini[4].time"></ngb-timepicker>
+                                    <ngb-timepicker name="termin5"  [(ngModel)]="vremena[4]"></ngb-timepicker>
                                 </div>
                             </div>
                         </div>
@@ -88,17 +88,82 @@
                         <th>Kandidat</th>
                         <th></th>
                     </tr>
-                    <tr *ngFor="let termin of lectureTimes.termini">
-                        <td>{{termin.time.hour}}:{{termin.time.minute}}</td>
+                    <tr>
+                        <td>{{lectureTimes.termini[0].time.hour}}:{{lectureTimes.termini[0].time.minute}}</td>
                         <td>
-                            <span *ngIf="termin.kandidat !== ''">{{termin.kandidat}}</span>
-                            <select [(ngModel)]="selectedCandidateId" name="selectedCandidateId" *ngIf="termin.kandidat === ''">
-                                <option *ngFor="let candidate of allUnsetCandidates" value ="{{candidate.id}}" >{{candidate.ime}} {{candidate.prezime}}</option>
+                            <span *ngIf="lectureTimes.termini[0].kandidat !== ''">{{lectureTimes.termini[0].kandidat}}</span>
+                            <select [(ngModel)]="selectedCandidate0" name="selectedCandidate0" *ngIf="lectureTimes.termini[0].kandidat === '' && allCandidates.length !== 0">
+                                <option>Izaberi kandidata</option>
+                                <option *ngFor="let candidate of allCandidates" value ="{{candidate.imePrezime}}" >{{candidate.imePrezime}}</option>
                             </select>
                         </td>
                         <td>
-                            <span *ngIf="termin.rezervisan">rezervisan</span>
-                            <button class="btn confirm-btn" *ngIf="!termin.rezervisan">
+                            <span *ngIf="lectureTimes.termini[0].rezervisan">rezervisan</span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[0].rezervisan && allCandidates.length !== 0" (click)="setCandidateTime(lectureTimes.termini[0].id)">
+                                Rezerviši
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{lectureTimes.termini[1].time.hour}}:{{lectureTimes.termini[1].time.minute}}</td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[1].kandidat !== ''">{{lectureTimes.termini[1].kandidat}}</span>
+                            <select [(ngModel)]="selectedCandidate1" name="selectedCandidate1" *ngIf="lectureTimes.termini[1].kandidat === '' && allCandidates.length !== 0">
+                                <option>Izaberi kandidata</option>
+                                <option *ngFor="let candidate of allCandidates" value ="{{candidate.imePrezime}}" >{{candidate.imePrezime}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[1].rezervisan">rezervisan</span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[1].rezervisan && allCandidates.length !== 0" (click)="setCandidateTime(lectureTimes.termini[1].id)">
+                                Rezerviši
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{lectureTimes.termini[2].time.hour}}:{{lectureTimes.termini[2].time.minute}}</td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[2].kandidat !== ''">{{lectureTimes.termini[2].kandidat}}</span>
+                            <select [(ngModel)]="selectedCandidate2" name="selectedCandidate2" *ngIf="lectureTimes.termini[2].kandidat === '' && allCandidates.length !== 0">
+                                <option>Izaberi kandidata</option>
+                                <option *ngFor="let candidate of allCandidates" value ="{{candidate.imePrezime}}" >{{candidate.imePrezime}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[2].rezervisan">rezervisan</span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[2].rezervisan && allCandidates.length !== 0" (click)="setCandidateTime(lectureTimes.termini[2].id)">
+                                Rezerviši
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{lectureTimes.termini[3].time.hour}}:{{lectureTimes.termini[3].time.minute}}</td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[3].kandidat !== ''">{{lectureTimes.termini[3].kandidat}}</span>
+                            <select [(ngModel)]="selectedCandidate3" name="selectedCandidate3" *ngIf="lectureTimes.termini[3].kandidat === '' && allCandidates.length !== 0">
+                                <option>Izaberi kandidata</option>
+                                <option *ngFor="let candidate of allCandidates" value ="{{candidate.imePrezime}}" >{{candidate.imePrezime}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[3].rezervisan">rezervisan</span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[3].rezervisan && allCandidates.length !== 0" (click)="setCandidateTime(lectureTimes.termini[3].id)">
+                                Rezerviši
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{lectureTimes.termini[4].time.hour}}:{{lectureTimes.termini[4].time.minute}}</td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[4].kandidat !== ''">{{lectureTimes.termini[4].kandidat}}</span>
+                            <select [(ngModel)]="selectedCandidate4" name="selectedCandidate4" *ngIf="lectureTimes.termini[4].kandidat === '' && allCandidates.length !== 0">
+                                <option>Izaberi kandidata</option>
+                                <option *ngFor="let candidate of allCandidates" value ="{{candidate.imePrezime}}" >{{candidate.imePrezime}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[4].rezervisan">rezervisan</span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[4].rezervisan && allCandidates.length !== 0" (click)="setCandidateTime(lectureTimes.termini[4].id)">
                                 Rezerviši
                             </button>
                         </td>

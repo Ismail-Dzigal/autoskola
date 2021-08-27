@@ -344,7 +344,21 @@ export class DataService {
   }
 
   getLectureTimes(){
-    return Object.assign({}, lectureTimes);
+    return Object.assign({}, this.LECTURETIMES);
+  }
+
+  setLectureTimes(editedLecturTimes){
+    this.LECTURETIMES = Object.assign({}, editedLecturTimes);
+  }
+
+  setCandidateTime(editedTermin){
+    for (let i = 0; i < this.LECTURETIMES.termini.length; i++) {
+      let termin = this.LECTURETIMES.termini[i];
+      if(termin.id === editedTermin.id){
+        termin.kandidat = editedTermin.kandidat;
+        termin.rezervisan = true;
+      }
+    }
   }
 
   getUsers(){

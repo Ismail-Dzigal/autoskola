@@ -1274,11 +1274,11 @@ export const lectureTimes = {
                 "hour": 8,
                 "minute": 15
             },
-            "kandidat": "test",
-            "rezervisan": true
+            "kandidat": "",
+            "rezervisan": false
         },
         {
-            "id": 1,
+            "id": 2,
             "time": {
                 "hour": 10,
                 "minute": 15
@@ -1287,7 +1287,7 @@ export const lectureTimes = {
             "rezervisan": false
         },
         {
-            "id": 1,
+            "id": 3,
             "time": {
                 "hour": 12,
                 "minute": 15
@@ -1296,7 +1296,7 @@ export const lectureTimes = {
             "rezervisan": false
         },
         {
-            "id": 1,
+            "id": 4,
             "time": {
                 "hour": 14,
                 "minute": 15
@@ -1305,7 +1305,7 @@ export const lectureTimes = {
             "rezervisan": false
         },
         {
-            "id": 1,
+            "id": 5,
             "time": {
                 "hour": 16,
                 "minute": 15
