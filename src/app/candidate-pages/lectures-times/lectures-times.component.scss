@@ -111,6 +111,20 @@
                             font-weight: bold;
                             border: 2px solid green;
                         }
+                        .rezervisan {
+                            position: relative;
+                            span {
+                                display: none;
+                                &.moj-termin {
+                                    display: block;
+                                    color: red;
+                                    position: absolute;
+                                    top: 0;
+                                    display: inline-block;
+                                    width: 100px;
+                                }
+                            }
+                        }
                     }
                 }
             }

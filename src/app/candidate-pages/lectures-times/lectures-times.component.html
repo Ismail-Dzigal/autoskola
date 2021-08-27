@@ -30,41 +30,57 @@
     </div>
     <div class="main-content">
         <div class="lectures-data">
-            <h5>Rezervisanje termina za dan 15.08.2021.</h5>
+            <h5>Rezervisanje termina za dan {{lectureTimes.datumObuke.day}}/{{lectureTimes.datumObuke.month}}/{{lectureTimes.datumObuke.year}}</h5>
             <div class="row">
                 <table id="lectures-table">
                     <tr>
                         <th>Termin</th>
-                        <th>
-                            <button class="btn edit-btn">Odaberi</button>
-                        </th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>08:00</td>
-                        <td>rezervisan</td>
-                    </tr>
-                    <tr>
-                        <td>10:00</td>
-                        <td>rezervisan</td>
-                    </tr>
-                    <tr>
-                        <td>12:00</td>
+                        <td>{{lectureTimes.termini[0].time.hour}}:{{lectureTimes.termini[0].time.minute}}</td>
                         <td>
-                            <button class="btn confirm-btn">
+                            <span *ngIf="lectureTimes.termini[0].rezervisan" class="rezervisan">rezervisan<span [ngClass]="{'moj-termin':lectureTimes.termini[0].kandidat === candidate.ime + ' ' + candidate.prezime}">- moj termin</span></span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[0].rezervisan && izabranTermin === false" (click)="setCandidateTime(lectureTimes.termini[0].id)">
                                 Rezerviši
-                            </button>
-                            <button class="btn cancel-btn">
-                                Odustani
                             </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>14:00</td>
-                        <td></td>
+                        <td>{{lectureTimes.termini[1].time.hour}}:{{lectureTimes.termini[1].time.minute}}</td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[1].rezervisan" class="rezervisan">rezervisan<span  [ngClass]="{'moj-termin':lectureTimes.termini[1].kandidat === candidate.ime + ' ' + candidate.prezime}">- moj termin</span></span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[1].rezervisan && izabranTermin === false" (click)="setCandidateTime(lectureTimes.termini[1].id)">
+                                Rezerviši
+                            </button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>16:00</td>
-                        <td>rezervisan</td>
+                        <td>{{lectureTimes.termini[2].time.hour}}:{{lectureTimes.termini[2].time.minute}}</td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[2].rezervisan" class="rezervisan">rezervisan<span  [ngClass]="{'moj-termin':lectureTimes.termini[2].kandidat === candidate.ime + ' ' + candidate.prezime}">- moj termin</span></span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[2].rezervisan && izabranTermin === false" (click)="setCandidateTime(lectureTimes.termini[2].id)">
+                                Rezerviši
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{lectureTimes.termini[3].time.hour}}:{{lectureTimes.termini[3].time.minute}}</td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[3].rezervisan" class="rezervisan">rezervisan<span [ngClass]="{'moj-termin':lectureTimes.termini[3].kandidat === candidate.ime + ' ' + candidate.prezime}">- moj termin</span></span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[3].rezervisan && izabranTermin === false" (click)="setCandidateTime(lectureTimes.termini[3].id)">
+                                Rezerviši
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{lectureTimes.termini[4].time.hour}}:{{lectureTimes.termini[4].time.minute}}</td>
+                        <td>
+                            <span *ngIf="lectureTimes.termini[4].rezervisan" class="rezervisan">rezervisan<span [ngClass]="{'moj-termin':lectureTimes.termini[4].kandidat === candidate.ime + ' ' + candidate.prezime}">- moj termin</span></span>
+                            <button class="btn confirm-btn" *ngIf="!lectureTimes.termini[4].rezervisan && izabranTermin === false" (click)="setCandidateTime(lectureTimes.termini[4].id)">
+                                Rezerviši
+                            </button>
+                        </td>
                     </tr>
                 </table>
             </div>

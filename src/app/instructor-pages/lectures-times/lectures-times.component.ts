@@ -47,9 +47,12 @@ export class LecturesTimesComponent implements OnInit {
 
   ngOnInit(): void {
     this.lectureTimes = this.dataService.getLectureTimes();
-    this.allCandidates = this.dataService.getInstructor(1).kandidati;
+    this.allCandidates = [...this.dataService.getInstructor(1).kandidati];
     for (let i = this.allCandidates.length - 1; i >= 0; i--) {
       for (let j = 0; j < this.lectureTimes.termini.length; j++) {
+        if(this.allCandidates[i] === undefined){
+           break;
+        }
         if(this.allCandidates[i].imePrezime === this.lectureTimes.termini[j].kandidat){
           this.allCandidates.splice(i, 1);
         }
@@ -70,30 +73,42 @@ export class LecturesTimesComponent implements OnInit {
 
   setCandidateTime(id){
     if(id === 1){
+      if(this.selectedCandidate0 === "Izaberi kandidata"){
+        this.toastr.error('Morate odabrati kandidata iz liste');
+        return;
+      }
       this.lectureTimes.termini[id - 1].kandidat = this.selectedCandidate0;
-      console.log("0", this.selectedCandidate0);
     } else if (id === 2){
+      if(this.selectedCandidate1 === "Izaberi kandidata"){
+        this.toastr.error('Morate odabrati kandidata iz liste');
+        return;
+      }
       this.lectureTimes.termini[id - 1].kandidat = this.selectedCandidate1;
-      console.log("1", this.selectedCandidate1);
     } else if(id === 3){
+      if(this.selectedCandidate2 === "Izaberi kandidata"){
+        this.toastr.error('Morate odabrati kandidata iz liste');
+        return;
+      }
       this.lectureTimes.termini[id - 1].kandidat = this.selectedCandidate2;
-      console.log("2", this.selectedCandidate2);
     } else if(id === 4){
+      if(this.selectedCandidate3 === "Izaberi kandidata"){
+        this.toastr.error('Morate odabrati kandidata iz liste');
+        return;
+      }
       this.lectureTimes.termini[id - 1].kandidat = this.selectedCandidate3;
-      console.log("3", this.selectedCandidate3);
     } else if (id === 5){
+      if(this.selectedCandidate4 === "Izaberi kandidata"){
+        this.toastr.error('Morate odabrati kandidata iz liste');
+        return;
+      }
       this.lectureTimes.termini[id - 1].kandidat = this.selectedCandidate4;
-      console.log("4", this.selectedCandidate4);
     }
-    console.log(this.lectureTimes.termini[id - 1]);
     this.dataService.setCandidateTime(this.lectureTimes.termini[id - 1]);
     for (let i = this.allCandidates.length - 1; i >= 0 ; i--) {
-      console.log("this.lectureTimes.termini[id - 1].kandidat",this.lectureTimes.termini[id - 1].kandidat);
         if(this.allCandidates[i].imePrezime === this.lectureTimes.termini[id - 1].kandidat){
           this.allCandidates.splice(i, 1);
         }
     }
-    console.log("this.allCandidates", this.allCandidates);
     this.lectureTimes = this.dataService.getLectureTimes();
     this.toastr.success('Uspješno sačuvani podaci');
   }
