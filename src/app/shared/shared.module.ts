@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SidePanelsComponent } from './side-panels/side-panels/side-panels.component';
 import { PopupConfirmComponent } from './popup-confirm/popup-confirm.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PopupConfirmButtonComponent } from './popup-confirm-button/popup-confirm-button.component';
 
 @NgModule({
   imports: [
@@ -18,10 +19,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     SidePanelsComponent,
-    PopupConfirmComponent
+    PopupConfirmComponent,
+    PopupConfirmButtonComponent
   ],
   declarations: [
     SidePanelsComponent, 
-    PopupConfirmComponent],
+    PopupConfirmComponent, 
+    PopupConfirmButtonComponent],
 })
 export class SharedModule { }

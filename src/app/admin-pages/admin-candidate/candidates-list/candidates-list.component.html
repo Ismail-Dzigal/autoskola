@@ -50,7 +50,7 @@
                       </div>
                       <div class="col-md-3">
                           <button  [routerLink]="['/admin-candidate/edit-candidate/', candidate.id]" routerLinkActive="router-link-active">Uredi</button>
-                          <button (click)="deleteCandidate(candidate.id)">Obriši</button>
+                          <app-popup-confirm-button (deleteItemEvent)="deleteCandidate(candidate.id)"></app-popup-confirm-button>
                       </div>
                   </div>
                </div>

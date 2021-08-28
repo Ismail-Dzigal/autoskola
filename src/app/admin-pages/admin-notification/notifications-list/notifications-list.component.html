@@ -50,7 +50,7 @@
                       </div>
                       <div class="col-md-3">
                           <button  [routerLink]="['/admin-notification/see-notification/', notification.id]" routerLinkActive="router-link-active">Detalji</button>
-                          <button (click)="deleteNotification(notification.id)">Obriši</button>
+                          <app-popup-confirm-button (deleteItemEvent)="deleteNotification(notification.id)"></app-popup-confirm-button>
                       </div>
                 </div>
                </div>

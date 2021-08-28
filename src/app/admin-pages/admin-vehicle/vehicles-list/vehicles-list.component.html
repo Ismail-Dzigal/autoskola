@@ -50,7 +50,7 @@
                       </div>
                       <div class="col-md-3">
                           <button [routerLink]="['/admin-vehicle/edit-vehicle', vehicle.id]" routerLinkActive="router-link-active">Uredi</button>
-                          <button (click)="deleteVehicle(vehicle.id)">Obriši</button>
+                          <app-popup-confirm-button (deleteItemEvent)="deleteVehicle(vehicle.id)"></app-popup-confirm-button>
                       </div>
                   </div>
                </div>

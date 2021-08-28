@@ -1,0 +1,11 @@
+<ng-template #content let-modal>
+    <div class="modal-body">
+      <p>Da li ste sigurni?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="deleteItem(modal)">Da</button>
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Ne</button>
+    </div>
+  </ng-template>
+  <button class="popup-button" (click)="openSm(content)">Obriši
+  </button>
