@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="image-wrapper">
-    
+                            <img src="{{vehicle.slika}}" alt="avatar">
                         </div>
                         <button type="button" class="btn btn-success submit-image-button">Nova slika</button>
                     </div>
@@ -229,9 +229,9 @@
                                     </div>
                                 </div>
                                 <span class="title">Opis:</span>
-                                <input type="text" name="newSeminarTema" [(ngModel)]="newSeminar.tema" class="body"/>
+                                <input type="text" name="newSeminarTema" [(ngModel)]="newSeminar.tema" class="body" autocomplete="off"/>
                                 <span class="title">Trajanje:</span>
-                                <input type="text" name="newSeminarPredavac" [(ngModel)]="newSeminar.predavac" class="body"/>
+                                <input type="text" name="newSeminarPredavac" [(ngModel)]="newSeminar.predavac" class="body" autocomplete="off"/>
                                 
                                 <i class="fas fa-check" (click)="addIntervencija()" title="Potvrdite unos"></i>
                             </div>

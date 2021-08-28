@@ -79,7 +79,7 @@
                             [(ngModel)] = "instructor.imeOca"
                             name="imeOca"
                             #imeOcaVar = "ngModel"
-                            [ngClass]="{'input-invalid':imeOcaVar.touched && !imeOcaVar.valid}"/>
+                            [ngClass]="{'input-invalid':imeOcaVar.touched && !imeOcaVar.valid}" autocomplete="off"/>
                         </div>
                         <span class="text-invalid" *ngIf="imeOcaVar.touched && imeOcaVar.errors?.required">Unesite ime oca</span>
                         <span class="text-invalid" *ngIf="imeOcaVar.touched && imeOcaVar.errors?.minlength">Ime oca mora imati minimalno 3 karaktera</span>
@@ -93,7 +93,7 @@
                             [(ngModel)] = "instructor.jmbg"
                             name="jmbg"
                             #jmbgVar = "ngModel"
-                            [ngClass]="{'input-invalid':jmbgVar.touched && !jmbgVar.valid}"/>
+                            [ngClass]="{'input-invalid':jmbgVar.touched && !jmbgVar.valid}" autocomplete="off"/>
                         </div>
                         <span class="text-invalid" *ngIf="jmbgVar.touched && jmbgVar.errors?.required">Unesite JMBG</span>
                         <span class="text-invalid" *ngIf="jmbgVar.touched && jmbgVar.errors?.minlength || jmbgVar.errors?.maxlength">JMBG mora imati tačno 13 karaktera</span>
@@ -105,7 +105,7 @@
                             [(ngModel)] = "instructor.mjestoRodjenja"
                             name="mjestoRodjenja"
                             #mjestoRodjenjaVar = "ngModel"
-                            [ngClass]="{'input-invalid':mjestoRodjenjaVar.touched && !mjestoRodjenjaVar.valid}"/>
+                            [ngClass]="{'input-invalid':mjestoRodjenjaVar.touched && !mjestoRodjenjaVar.valid}" autocomplete="off"/>
                         </div>
                         <span class="text-invalid" *ngIf="mjestoRodjenjaVar.touched && mjestoRodjenjaVar.errors?.minlength">Mjesto rođenja mora imati minimalno 2 karaktera</span>
                         <div class="form-group">
@@ -116,7 +116,7 @@
                             [(ngModel)] = "instructor.drzavljanstvo"
                             name="drzavljanstvo"
                             #drzavljanstvoVar = "ngModel"
-                            [ngClass]="{'input-invalid':drzavljanstvoVar.touched && !drzavljanstvoVar.valid}"/>
+                            [ngClass]="{'input-invalid':drzavljanstvoVar.touched && !drzavljanstvoVar.valid}" autocomplete="off"/>
                         </div>
                         <span class="text-invalid" *ngIf="drzavljanstvoVar.touched && drzavljanstvoVar.errors?.minlength">Državljanstvo mora imati minimalno 3 karaktera</span>
                         <div class="form-group">
@@ -128,7 +128,7 @@
                             [(ngModel)] = "instructor.brojLk"
                             name="brojLk"
                             #brojLkVar = "ngModel"
-                            [ngClass]="{'input-invalid':brojLkVar.touched && !brojLkVar.valid}"/>
+                            [ngClass]="{'input-invalid':brojLkVar.touched && !brojLkVar.valid}" autocomplete="off"/>
                         </div>
                         <span class="text-invalid" *ngIf="brojLkVar.touched && brojLkVar.errors?.required">Unesite broj lk/pasoša</span>
                         <span class="text-invalid" *ngIf="brojLkVar.touched && brojLkVar.errors?.minlength">Broj lk/pasoša mora imati minimalno 7 karaktera</span>
@@ -142,7 +142,7 @@
                             [(ngModel)] = "instructor.brojDozvole"
                             name="brojDozvole"
                             #brojDozvoleVar = "ngModel"
-                            [ngClass]="{'input-invalid':brojDozvoleVar.touched && !brojDozvoleVar.valid}"/>
+                            [ngClass]="{'input-invalid':brojDozvoleVar.touched && !brojDozvoleVar.valid}" autocomplete="off"/>
                         </div>
                         <span class="text-invalid" *ngIf="brojDozvoleVar.touched && brojDozvoleVar.errors?.required">Unesite broj instruktorske dozvole</span>
                         <span class="text-invalid" *ngIf="brojDozvoleVar.touched && brojDozvoleVar.errors?.minlength">Broj instruktorske dozvole mora imati minimalno 7 karaktera</span>
@@ -164,7 +164,7 @@
                             [(ngModel)] = "instructor.telefon"
                             name="telefon"
                             #telefonVar = "ngModel"
-                            [ngClass]="{'input-invalid':telefonVar.touched && !telefonVar.valid}"/>
+                            [ngClass]="{'input-invalid':telefonVar.touched && !telefonVar.valid}" autocomplete="off"/>
                         </div>
                         <span class="text-invalid" *ngIf="telefonVar.touched && telefonVar.errors?.required">Unesite broj telefona</span>
                         <span class="text-invalid" *ngIf="telefonVar.touched && telefonVar.errors?.minlength">Broj telefona mora imati minimalno 9 cifara</span>
@@ -179,7 +179,7 @@
                             [(ngModel)] = "instructor.emailAdresa"
                             name="emailAdresa"
                             #emailAdresaVar = "ngModel"
-                            [ngClass]="{'input-invalid':emailAdresaVar.touched && !emailAdresaVar.valid}"/>
+                            [ngClass]="{'input-invalid':emailAdresaVar.touched && !emailAdresaVar.valid}" autocomplete="off"/>
                         </div>
                         <span class="text-invalid" *ngIf="emailAdresaVar.touched && (emailAdresaVar.errors?.required || emailAdresaVar.errors?.pattern)">Unesite validnu email adresu</span>
                         <span class="text-invalid" *ngIf="emailAdresaVar.touched && emailAdresaVar.errors?.minlength">Email adresa mora imati minimalno 6 karaktera</span>
@@ -223,9 +223,9 @@
                                     </div>
                                 </div>
                                 <span class="title">Tema:</span>
-                                <input type="text" name="newSeminarTema" [(ngModel)]="newSeminar.tema" class="body"/>
+                                <input type="text" name="newSeminarTema" [(ngModel)]="newSeminar.tema" class="body" autocomplete="off"/>
                                 <span class="title">Predavač:</span>
-                                <input type="text" name="newSeminarPredavac" [(ngModel)]="newSeminar.predavac" class="body"/>
+                                <input type="text" name="newSeminarPredavac" [(ngModel)]="newSeminar.predavac" class="body" autocomplete="off"/>
                                 
                                 <i class="fas fa-check" (click)="addSeminar()" title="Potvrdite unos"></i>
                             </div>

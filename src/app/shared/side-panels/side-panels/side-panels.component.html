@@ -41,7 +41,7 @@
       </div>
       <div class="input-wrapper" *ngIf="reminderInputVisible">
         <input class="reminder-input" name="reminderText" type="text" placeholder="Unesite podsjetnik" [(ngModel)]="reminder.text" #reminderInput = ngModel minlength='5'
-        [ngClass]="{'input-invalid':reminderInput.touched && !reminderInput.valid}"/>
+        [ngClass]="{'input-invalid':reminderInput.touched && !reminderInput.valid}" autocomplete="off"/>
         <i class="fas fa-check" (click)="addReminder()"></i>
         <i class="fas fa-times ml-2" (click)="cancelReminderAdding()"></i>
         <p class="text-invalid" *ngIf="reminderInput.touched && !reminderInput.valid">Morate unijeti minimalno 5 karaktera</p>

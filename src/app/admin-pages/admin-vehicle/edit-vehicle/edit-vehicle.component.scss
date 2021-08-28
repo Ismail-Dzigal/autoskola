@@ -69,6 +69,10 @@
                             background-color: grey;
                             margin-left: auto;
                             margin-right: auto;
+                            img {
+                                padding-top: 30px;
+                                max-width: 100%;
+                            }
                         }
                         .submit-image-button {
                             margin-top: 10px;

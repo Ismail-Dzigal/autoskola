@@ -1050,6 +1050,7 @@ export const vehicles = [
         },
         "saobracajnaDozvola": 'AA5809887',
         "vlasnicka": 'BA1257584',
+        "slika": "assets/images/golfovi/golf_crveni.png",
         "instruktori": [
             {
                 "id": 1,
@@ -1104,6 +1105,7 @@ export const vehicles = [
         },
         "saobracajnaDozvola": 'AA4757787',
         "vlasnicka": 'BA1367713',
+        "slika": "assets/images/golfovi/golf_sivi.png",
         "instruktori": [
             {
                 "id": 1,
@@ -1148,6 +1150,7 @@ export const vehicles = [
         },
         "saobracajnaDozvola": 'AA8649756',
         "vlasnicka": 'BA1367825',
+        "slika": "assets/images/golfovi/golf_crveni.png",
         "instruktori": [],
         "intervencije":[],
         "dokumenti": []
@@ -1169,6 +1172,7 @@ export const vehicles = [
         },
         "saobracajnaDozvola": 'AA5987235',
         "vlasnicka": 'BA1958614',
+        "slika": "assets/images/golfovi/golf_sivi.png",
         "instruktori": [],
         "intervencije":[],
         "dokumenti": []
@@ -1190,6 +1194,7 @@ export const vehicles = [
         },
         "saobracajnaDozvola": 'AA1568945',
         "vlasnicka": 'BA2653478',
+        "slika": "assets/images/golfovi/golf_crveni.png",
         "instruktori": [],
         "intervencije":[],
         "dokumenti": []
