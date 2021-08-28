@@ -12,7 +12,7 @@ export const candidates = [
         "emailAdresa": "ismail@edu.fit.ba",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
-        "slika":"",
+        "slika":"assets/images/kandidati_instruktori/ismail_dzigal.png",
         "uplate": [
             {
                "id": 1,
@@ -192,7 +192,7 @@ export const candidates = [
         "emailAdresa": "sead@gmail.com",
         "lozinka": "654321",
         "ponovljenaLozinka": "654321",
-        "slika":"",
+        "slika": "assets/images/kandidati_instruktori/sead_hodzic.png",
         "uplate": [
             {
                "id": 1,
@@ -503,7 +503,7 @@ export const candidates = [
         "emailAdresa": "jasna@gmail.com",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
-        "slika":"",
+        "slika":"assets/images/kandidati_instruktori/jasna_rog.png",
         "uplate": [
             {
                "id": 1,
@@ -596,7 +596,7 @@ export const candidates = [
         "emailAdresa": "adisa@gmail.com",
         "lozinka": "654321",
         "ponovljenaLozinka": "654321",
-        "slika":"",
+        "slika":"assets/images/kandidati_instruktori/adisa_palic.png",
         "uplate": [
             {
                "id": 1,
@@ -903,7 +903,7 @@ export const instructors = [
         "emailAdresa": "hasib@gmail.com",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
-        "slika": "",
+        "slika": "assets/images/kandidati_instruktori/hasib_fijuljanin.png",
         "kandidati": [
             {
                 "id": 1,
@@ -974,7 +974,7 @@ export const instructors = [
         "emailAdresa": "mico@gmail.com",
         "lozinka": "123456",
         "ponovljenaLozinka": "123456",
-        "slika": "",
+        "slika": "assets/images/kandidati_instruktori/miodrag_mandic.png",
         "kandidati": [
             {
                 "id": 1,
