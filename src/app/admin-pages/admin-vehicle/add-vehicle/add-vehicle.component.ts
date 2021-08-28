@@ -32,6 +32,7 @@ export class AddVehicleComponent implements OnInit {
     },
     saobracajnaDozvola: '',
     vlasnicka: '',
+    slika:'',
     instruktori: [],
     intervencije: [],
     dokumenti: []
