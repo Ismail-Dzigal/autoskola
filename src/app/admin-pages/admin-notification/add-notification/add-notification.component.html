@@ -81,7 +81,6 @@
                                         <option *ngFor="let recipient of recipientsList" value ="{{recipient.id}}" >{{recipient.ime}} {{recipient.prezime}}</option>
                                     </select>
                                 </div>
-                                <span class="text-invalid" *ngIf="selectedRecipientIdVar.touched && selectedRecipientIdVar.errors?.required">Izaberite primaoca</span>
                             </div>
                         </div>
                 

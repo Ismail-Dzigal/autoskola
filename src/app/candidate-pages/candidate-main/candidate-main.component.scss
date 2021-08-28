@@ -72,6 +72,9 @@
                             background-color: grey;
                             margin-left: auto;
                             margin-right: auto;
+                            img {
+                                max-width: 100%;
+                            }
                         }
                     }
                     .col-md-10 {
