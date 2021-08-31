@@ -1,7 +1,7 @@
 <div class="content-wrapper">
-    <h5>Notifikacije</h5>
+    <h5>Primljene notifikacije</h5>
     <div class="notifications-wrapper">
-      <div class="notification" *ngFor="let notification of notificationsForAdmin; let i='index'">
+      <div class="notification" *ngFor="let notification of notificationsForAdminSorted; let i='index'">
         <p [ngClass]="{'red': notification.state === 'novo', 'blue': notification.state === 'u toku', 'green': notification.state === 'završeno'}">- {{notification.title}}</p>
         <div class="notification-body">
           <p>{{notification.createdAt | date: 'd/M/yyyy'}}</p>

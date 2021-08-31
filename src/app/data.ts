@@ -1215,7 +1215,7 @@ export const notificationsForAdmin = [
         "title": "Inspekcija",
         "body":"Zaustavila me je inspekcija. Sva dokumentacija je bila uredna",
         "sender": "Miodrag Mandić",
-        "createdAt": new Date('2021, 08, 12'),
+        "createdAt": new Date('2021, 08, 17'),
         "state": "u toku"
     }
 ];

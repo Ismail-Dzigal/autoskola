@@ -16,7 +16,7 @@
         [(ngModel)] = "user.username"
         name="username"
         #usernameVar = "ngModel"
-        [ngClass]="{'input-invalid':usernameVar.touched && !usernameVar.valid}" autocomplete="off">
+        [ngClass]="{'input-invalid':usernameVar.touched && !usernameVar.valid}" autocomplete="off" autofocus>
       </div>
       <div class="validation-wrapper">
         <span class="text-invalid" *ngIf="usernameVar.touched && usernameVar.errors?.required">Unesite korisničko ime</span>

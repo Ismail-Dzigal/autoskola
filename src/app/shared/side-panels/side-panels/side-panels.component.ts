@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { ToastrService } from 'ngx-toastr';
+import { orderBy } from 'lodash';
 
 @Component({
   selector: 'app-side-panels',
@@ -21,11 +22,15 @@ export class SidePanelsComponent implements OnInit {
   setNumber = -1;
   selectedStateId = 0;
 
+  notificationsForAdminSorted;
+
   constructor(private dataService: DataService,
               private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.notificationsForAdmin = this.dataService.getNotificationsForAdmin();
+    this.notificationsForAdminSorted = [...this.notificationsForAdmin].sort(this.compare);
+
     this.reminders = this.dataService.getReminders();
     this.states = [
       {
@@ -41,6 +46,20 @@ export class SidePanelsComponent implements OnInit {
         naziv: "završeno"
       }
     ]
+  }
+
+  compare(a, b) {
+
+    const valueA = a.id;
+    const valueB = b.id;
+  
+    let comparison = 0;
+    if (valueA > valueB) {
+      comparison = 1;
+    } else if (valueA < valueB) {
+      comparison = -1;
+    }
+    return comparison * -1;
   }
 
   openEditNotification = function(index){
@@ -73,6 +92,7 @@ export class SidePanelsComponent implements OnInit {
       }
       this.dataService.setNotificationForAdmin(this.notification);
       this.notificationsForAdmin = this.dataService.getNotificationsForAdmin();
+      this.notificationsForAdminSorted = [...this.notificationsForAdmin].sort(this.compare);
       this.checkVisible = false;
       this.setNumber = -1;
       return;
@@ -86,6 +106,7 @@ export class SidePanelsComponent implements OnInit {
   deleteNotificationForAdmin(id){
     this.dataService.deleteNotificationForAdmin(id);
     this.notificationsForAdmin = this.dataService.getNotificationsForAdmin();
+    this.notificationsForAdminSorted = [...this.notificationsForAdmin].sort(this.compare);
     this.toastr.success(`Notifikacija uspješno obrisana`);
   }
 
