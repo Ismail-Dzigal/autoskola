@@ -192,7 +192,7 @@
                     </div>
                     <div class="tables">
                         <div class="panel-headers">
-                            <button type="button" class="btn btn-success panel-button" (click)="showTable('instruktori')">Instruktori</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('instruktori')" [ngClass]="{'active-button':showInstruktori === true}">Instruktori</button>
                             <button type="button" class="btn btn-success panel-button" (click)="showTable('intervencije')">Intervencije</button>
                             <button type="button" class="btn btn-success panel-button" (click)="showTable('dokumenti')">Dokumenti</button>
                         </div>

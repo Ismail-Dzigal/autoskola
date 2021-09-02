@@ -186,9 +186,9 @@
                     </div>
                     <div class="tables">
                         <div class="panel-headers">
-                            <button type="button" class="btn btn-success panel-button" (click)="showTable('kandidati')">Kandidati</button>
-                            <button type="button" class="btn btn-success panel-button" (click)="showTable('seminari')">Seminari</button>
-                            <button type="button" class="btn btn-success panel-button" (click)="showTable('dokumenti')">Dokumenti</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('kandidati')" [ngClass]="{'active-button':showKandidati === true}">Kandidati</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('seminari')" [ngClass]="{'active-button':showSeminari === true}">Seminari</button>
+                            <button type="button" class="btn btn-success panel-button" (click)="showTable('dokumenti')" [ngClass]="{'active-button':showDokumenti === true}">Dokumenti</button>
                         </div>
                         <div *ngIf="showKandidati">
                             <div class="add-section kandidati">

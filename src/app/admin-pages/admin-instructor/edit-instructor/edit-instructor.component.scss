@@ -59,6 +59,9 @@
         }
         .main-content {
             margin-top: 25px;
+            .active-button {
+                box-shadow: 0 0 0 0.2rem rgb(200 0 0 / 50%);
+            }            
             .col-md-8 {
                 form {
                     .col-md-3 {
