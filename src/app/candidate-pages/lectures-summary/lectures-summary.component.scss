@@ -94,6 +94,11 @@
                         width: 99%;
                         text-align: center;
                         border: 2px solid rgb(128,128,128);
+                        tbody {
+                            tr:nth-child(even) {
+                                background-color: white;
+                            }
+                        }
                         th, td {
                             border: 1px solid rgb(128,128,128);
                             width: 10%;
@@ -114,7 +119,6 @@
                             }
                         }
                         td {
-                            background-color: rgb(252,246,246);
                             &:nth-child(3), &:nth-child(5) {
                                 text-align: left;
                             }

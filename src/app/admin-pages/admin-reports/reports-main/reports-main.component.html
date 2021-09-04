@@ -4,7 +4,6 @@
           <button class="btn btn-secondary mr-2" (click)="showTable('kandidati')">Kandidati</button>
           <button class="btn btn-secondary mr-2" (click)="showTable('instruktori')">Instruktori</button>
           <button class="btn btn-secondary mr-auto" (click)="showTable('vozila')">Vozila</button>
-          <button class="btn btn-secondary" [routerLink]="['/main']" routerLinkActive="router-link-active" >Nazad</button>
         </div>
     </div>
     <h3 class="candidates-header" *ngIf="showKandidati">Kandidati</h3>
@@ -131,7 +130,8 @@
 
     <div class="row buttons-wrapper p-4">
         <div class="col-md-12 d-flex justify-content-end">
-          <button class="btn btn-secondary" [routerLink]="['/main']" routerLinkActive="router-link-active" >Printaj</button>
+          <button class="btn btn-info mr-2" [routerLink]="['/main']" routerLinkActive="router-link-active" >Štampaj</button>
+          <button class="btn btn-danger" [routerLink]="['/main']" routerLinkActive="router-link-active">Nazad</button>
         </div>
     </div>
 </div>

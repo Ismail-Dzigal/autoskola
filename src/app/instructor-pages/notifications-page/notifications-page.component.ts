@@ -54,7 +54,7 @@ export class NotificationsPageComponent implements OnInit {
 
   submitSendNotificationForm(sendNotificationForm){
     if(!sendNotificationForm.valid){
-      this.toastr.error('Slanje notifikacije nije uspjelo');
+      this.toastr.error('Slanje notifikacije nije uspjelo. Provjerite da li ste unijeli naslov i sadržaj.');
       return;
     }
     if(this.notificationsForAdmin.length > 0){

@@ -61,8 +61,7 @@
                     <div class="col-md-12">
                         <h5>Pošalji notifikaciju</h5>
                         <div class="form-group">
-                            <label for="title">Naslov:</label>
-                            <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Naslov"
+                            <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Ovdje unesite naslov notifikacije"
                             required
                             minlength="5"
                             [(ngModel)] = "newNotification.title"
@@ -86,7 +85,7 @@
                         </div>
                         <span class="text-invalid-textarea" *ngIf="bodyVar.touched && bodyVar.errors?.required">Unesite sadržaj notifikacije</span>
                         <span class="text-invalid-textarea" *ngIf="bodyVar.touched && bodyVar.errors?.minlength">Sadržaj notifikacije mora imati minimalno 5 karaktera</span>
-                        <button type="submit" class="btn btn-success submit-button">Pošalji</button>
+                        <button type="submit" class="btn btn-success submit-button" style="margin-left: 785px">Pošalji</button>
                         <button class="btn btn-danger submit-button ml-3" [routerLink]="['/instructor-pages/instructor-main']" routerLinkActive="router-link-active">Odustani</button>
                     </div>
                 </div>

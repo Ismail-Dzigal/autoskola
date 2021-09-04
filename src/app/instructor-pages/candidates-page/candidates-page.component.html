@@ -42,11 +42,11 @@
            <div class="row list-wrapper">
                <div class="col-md-12 list-container">
                   <div class="row candidate" *ngFor="let candidate of filteredCandidates">
-                      <div class="col-md-11">
+                      <div class="col-md-10">
                           <p>{{candidate.imePrezime}}</p>
                       </div>
-                      <div class="col-md-1">
-                          <button  [routerLink]="['/instructor-pages/candidate/', candidate.candidateId]" routerLinkActive="router-link-active">Uredi</button>
+                      <div class="col-md-2">
+                          <button  [routerLink]="['/instructor-pages/candidate/', candidate.candidateId]" routerLinkActive="router-link-active">Uredi obuku</button>
                       </div>
                   </div>
                </div>
