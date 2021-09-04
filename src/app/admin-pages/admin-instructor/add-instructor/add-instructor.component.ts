@@ -46,7 +46,7 @@ export class AddInstructorComponent implements OnInit {
 
   submitAddInstructorForm(addInstructorForm: NgForm){
     if(!addInstructorForm.valid){
-      this.toastr.error('Dodavanje instruktora nije uspjelo');
+      this.toastr.error('Dodavanje instruktora nije uspjelo. Provjerite da li su uneseni svi potrebni podaci');
       return;
     }
     if(this.instructors.length > 0){

@@ -122,7 +122,7 @@ export class SidePanelsComponent implements OnInit {
 
   addReminder(){
     if(this.reminder.text.length < 5){
-      this.toastr.error('Dodavanje podsjetnika nije uspjelo');
+      this.toastr.error('Dodavanje podsjetnika nije uspjelo. Provjerite da li ste unijeli tekst podsjetnika');
       return;
     }
     if(this.reminders.length > 0){

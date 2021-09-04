@@ -58,7 +58,7 @@ export class AddVehicleComponent implements OnInit {
 
   submitAddVehicleForm(addVehicleForm: NgForm){
     if(!addVehicleForm.valid){
-      this.toastr.error('Dodavanje vozila nije uspjelo');
+      this.toastr.error('Dodavanje vozila nije uspjelo. Provjerite da li su uneseni svi potrebni podaci');
       return;
     }
     if(this.vehicles.length > 0){

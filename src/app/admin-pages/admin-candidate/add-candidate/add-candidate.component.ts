@@ -46,7 +46,7 @@ export class AddCandidateComponent implements OnInit {
 
   submitAddCandidateForm(addCandidateForm: NgForm){
     if(!addCandidateForm.valid){
-      this.toastr.error('Dodavanje kandidata nije uspjelo');
+      this.toastr.error('Dodavanje kandidata nije uspjelo. Provjerite da li su uneseni svi potrebni podaci');
       return;
     }
     if(this.candidates.length > 0){

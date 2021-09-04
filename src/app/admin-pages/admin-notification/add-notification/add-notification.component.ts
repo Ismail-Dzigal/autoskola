@@ -56,7 +56,7 @@ export class AddNotificationComponent implements OnInit {
       return;
     }
     if(!addNotificationForm.valid){
-      this.toastr.error('Slanje notifikacije nije uspjelo');
+      this.toastr.error('Slanje notifikacije nije uspjelo. Provjerite ispravnost unesenih podataka.');
       return;
     }
     if(this.notificationsFromAdmin.length > 0){
