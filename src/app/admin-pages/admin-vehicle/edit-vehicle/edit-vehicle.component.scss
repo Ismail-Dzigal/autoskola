@@ -223,13 +223,14 @@
                         }
 
                         #intervencije {
+                            width: 106%;
                             margin-top: 10px;
                             margin-left: 15px;
                             max-width: 750px;
                             text-align: center;
                             border: 2px solid rgb(128,128,128);
                             &.wide-table-intervencija {
-                                width: 106%;
+                                width: 100%;
                             }
                             th, td {
                                 border: 1px solid rgb(128,128,128);
