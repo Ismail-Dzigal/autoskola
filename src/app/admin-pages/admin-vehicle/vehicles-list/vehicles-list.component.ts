@@ -24,7 +24,7 @@ export class VehiclesListComponent implements OnInit {
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    this.filteredVehicles = this.listFilter ? this.performFilter(this.listFilter) : this.filteredVehicles;
+    this.filteredVehicles = this.listFilter ? this.performFilter(this.listFilter) : this.vehicles;
   }
 
   constructor(private dataService: DataService,

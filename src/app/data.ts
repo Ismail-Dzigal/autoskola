@@ -884,6 +884,30 @@ export const candidates = [
                 "ocjena": 4
             }
         ]
+    },
+    {
+        "id": 5,
+        "ime": "Kenan",
+        "prezime": "Zećo",
+        "imeOca": "Murat",
+        "jmbg": "1502983170015",
+        "mjestoRodjenja": "Sarajevo",
+        "drzavljanstvo": "Bosansko",
+        "brojLk": "12DFR5587",
+        "telefon": "+38761487858",
+        "emailAdresa": "zeco@gmail.com",
+        "lozinka": "123456",
+        "ponovljenaLozinka": "123456",
+        "slika":"",
+        "uplate": [],
+        "preostaliDug": 1020,
+        "ispiti": [],
+        "dokumenti": [
+        ],
+        "instructorId": 0,
+        "instructorImePrezime": "",
+        "primljeneNotifikacije": [],
+        "obuka": []
     }
 ];
 
@@ -1027,6 +1051,35 @@ export const instructors = [
                 "datumSlanja": new Date('2021, 08, 11'),
                 "recipientImePrezime": 'Miodrag Mandić' 
             }
+        ],
+        "poslaneNotifikacije": []
+    },
+    {
+        "id": 3,
+        "ime": "Vernes",
+        "prezime": "Salkić",
+        "imeOca": "Osman",
+        "jmbg": "2309982170026",
+        "mjestoRodjenja": "Saraejevo",
+        "drzavljanstvo": "Bosansko",
+        "brojLk": "56TRD7895",
+        "brojDozvole": "09ETG1234",
+        "zaduzenoVozilo": "",
+        "telefon": "061756986",
+        "emailAdresa": "vernes@gmail.com",
+        "lozinka": "123456",
+        "ponovljenaLozinka": "123456",
+        "slika": "",
+        "kandidati": [
+        
+        ],
+        "seminari": [
+     
+        ],
+        "dokumenti": [
+        ],
+        "vehicleId": 0,
+        "primljeneNotifikacije": [
         ],
         "poslaneNotifikacije": []
     }
